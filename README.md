@@ -34,6 +34,6 @@ Interface segregation
 Dependency inversion
 - Irepo interface, implemented by SqlRepo and MongoRepo
 - class Employee {
-  save(IRepo irepo) { irepo.save() }; }
+  save(IRepo irepo) { irepo.save() }; }, instead of injecting object, we are injecting abstraction
 - instead of creating new SqlRepo object inside Employee, it is injected into save method
-  
+- different from dependency injection, inversion of control(Spring framework)
