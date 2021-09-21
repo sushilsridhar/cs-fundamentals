@@ -37,3 +37,9 @@ Dependency inversion
   save(IRepo irepo) { irepo.save() }; }, instead of injecting object, we are injecting abstraction
 - instead of creating new SqlRepo object inside Employee, it is injected into save method
 - different from dependency injection, inversion of control(Spring framework)
+ 
+# logarithms  
+ 8->4->2->1 , how many times we divide 8 by 2 to get 1, 3 times, log2(8) = 3  
+ 2^3 = 8, can be written as,  
+ 3 = log2(8)
+
