@@ -4,10 +4,30 @@
  3 = log2(8)
 
 # Numbers  
+Decimal number is represented as,   
+eg: 5649 = 5 thousand 6 hundred 40 nine  == 5 * 10^3 + 6 * 10^2 + 4 * 10^1 + 9  
+similiarly 8bit binary is represented as,  
+eg: 29,   _    _    _    _    _    _    _    _    
+-2^7  2^6  2^5  2^4  2^3  2^2  2^1  2^0
+      
+0 0 0 1 1 1 0 1 == 1 * 2^0 + 1 * 2^2 + 1 * 2^3 + 1 * 2^4  
+
 - Decimal - max limit [0,9] - 76861879 - each bit can contain numbers between 0-9
 - Octal - max limit [0,7]
 - Terinary - max limit [0,2]
 - Binary - max limit [0,1] - 10011001 - each bit can contain either 0 or 1  
+
+# Binary - decimal, decimal - binary
+
+2|29 - 1    
+2|14 - 0    
+2|7  - 1  
+2|3  - 1  
+2|1  - 1    
+
+29 - 00011101  
+
+00011101 - 1 * 2^0 + 1 * 2^3 + 1 * 2^4 + 1 * 2^5 = 29   
 
 # Size of data type
 - max value of 8 bit  _    _    _    _    _    _    _    _  
@@ -29,3 +49,26 @@ total elements = 2^0 + 2^N-2 = 2^N-1 , formula = a((r^t) -1)/r-1 , answer = (2^N
 
 2^10 = 1024 ~~ 1000 = 10^3,  
 2^10 ~~ 10^3, cube on both sides, 2^30 ~~ 10^9, integer limit can also be written as ~~ [-2 * 10^9, 2 * 10^9]
+
+# Bit wise operators  
+& | ^ ~  
+
+byte a = 10 , binary = 0000 1010  
+byte a = -10, binary = ?  
+
+-a = 2's compliment of a = 1's compliment of a + 1 = ~a + 1  
+-a = ~a + 1  
+
+tricks    
+a = 10 , a = 13  
+
+if(a&1 == 0) a is even  
+if(a&1 == 1) a is odd  
+
+if(a|1 == a+1) a is even  
+if(a|1 == a) a is odd    
+
+if(a^1 == a+1) a is even  
+if(a^1 == a-1) a is odd  
+
+
