@@ -69,6 +69,22 @@ if(a|1 == a+1) a is even
 if(a|1 == a) a is odd    
 
 if(a^1 == a+1) a is even  
-if(a^1 == a-1) a is odd  
+if(a^1 == a-1) a is odd    
+
+Commutative property    
+a & b = b & a  
+a | b = b | a  
+a ^ b = b ^ a  
+
+Associative property  
+a & b & c = a & c & b = b & a  
+a | b | c = a | c | b = b | a  
+a ^ b ^ c = a ^ c ^ b = b ^ a  
+
+a ^ a = 0  
+a ^ 0 = a  
+0 ^ 0 = 0  
+0 ^ 1 = 1
+
 
 
