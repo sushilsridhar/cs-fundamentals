@@ -3,6 +3,9 @@
  2^3 = 8, can be written as,  
  3 = log2(8)
 
+# Formula  
+Sum of n natural numbers (1,2,3,4..) -> n(n+1)/2
+
 # Numbers  
 Decimal number is represented as,   
 eg: 5649 = 5 thousand 6 hundred 40 nine  == 5 * 10^3 + 6 * 10^2 + 4 * 10^1 + 9  
