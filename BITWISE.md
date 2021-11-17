@@ -27,7 +27,7 @@ a ^ b = b ^ a
 # Associative property  
 a & b & c  =  a & c & b  =  b & a & c  
 a | b | c  =  a | c | b  =  b | a | c  
-a ^ b ^ c  =  a ^ c ^ b  =  b ^ a | c  
+a ^ b ^ c  =  a ^ c ^ b  =  b ^ a ^ c  
 
 a ^ a = 0  
 a ^ 0 = a  
