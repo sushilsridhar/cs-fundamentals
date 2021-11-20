@@ -1,7 +1,7 @@
 # logarithms  
  8->4->2->1 , how many times we divide 8 by 2 to get 1, 3 times, log2(8) = 3  
  2^3 = 8, can be written as,  
- 3 = log2(8)
+ 3 = log2(8)  
 
 # Formula  
 Sum of n natural numbers (1,2,3,4..) -> n(n+1)/2
@@ -52,3 +52,9 @@ total elements = 2^0 + 2^N-2 = 2^N-1 , formula = a((r^t) -1)/r-1 , answer = (2^N
 
 2^10 = 1024 ~~ 1000 = 10^3,  
 2^10 ~~ 10^3, cube on both sides, 2^30 ~~ 10^9, integer limit can also be written as ~~ [-2 * 10^9, 2 * 10^9]
+
+# Numbers included and excluded
+[3-10] - including 3 and 10, there are total 8 numbers  
+[a-b]  - including a and b, there are total b-a+1 numbers  
+(a-b]  - excluding a and including b, there are total b-a numbers  
+(a-b)  - excluding a and b, there are total b-a-1 numbers
