@@ -4,3 +4,5 @@ BigO Defintion - Given a function f(N), if there atleast exists 2 constants, c &
 Execution time factors - programming language, OS, so time complexity should be always calculated on number of iterations.  
 BigO - keeps a upper bound, in general while calculating the complexity we keep the value which is upper bound (highest).  
  
+# BigO cheat sheet  
+https://www.bigocheatsheet.com
