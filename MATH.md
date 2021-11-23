@@ -4,7 +4,8 @@
  3 = log2(8)  
 
 # Formula  
-Sum of n natural numbers (1,2,3,4..) -> n(n+1)/2  
+Sum of n natural numbers (1,2,3,4..) -> n(n+1)/2   
+Sum of n-1 natural numbers (n-1, n-2, n-3, ... 0) -> n(n-1)/2  
 Number of odd numbers between 1-N (1,3,5,7,..) -> (n+1)/2  
 Number of even numbers between 1-N (2,4,6,8..) -> (n+1)/2  
 Sum of n odd numbers is n^2
