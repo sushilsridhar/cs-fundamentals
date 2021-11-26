@@ -8,7 +8,10 @@ Sum of n natural numbers (1,2,3,4..) -> n(n+1)/2
 Sum of n-1 natural numbers (n-1, n-2, n-3, ... 0) -> n(n-1)/2  
 Number of odd numbers between 1-N (1,3,5,7,..) -> (n+1)/2  
 Number of even numbers between 1-N (2,4,6,8..) -> (n+1)/2  
-Sum of n odd numbers is n^2
+Sum of n odd numbers is n^2  
+
+Sum of a particular sequence of numbers (ex: 5,6,7,8,9,10)- Arithmetic progression formula - n/2 * [2a + (n-1)*d]   
+where a is first term of AP and d is difference between two terms, which is 1 and n is total size.
 
 # Numbers  
 Decimal number is represented as,   
