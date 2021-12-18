@@ -65,3 +65,23 @@ total elements = 2^0 + 2^N-2 = 2^N-1 , formula = a((r^t) -1)/r-1 , answer = (2^N
 [a-b]  - including a and b, there are total b-a+1 numbers  
 (a-b]  - excluding a and including b, there are total b-a numbers  
 (a-b)  - excluding a and b, there are total b-a-1 numbers
+
+# Euclidean division    
+For a/b, a = b * q + r  
+where r is remainder and q is quotient, r = a - b * q  
+Note: In Java, this work only on positive numbers, for negative number division, check Divide_Without_Operators code in algorithms-ds-java project.  
+
+Remainder = Divident - Divisor * quotient  
+Divisor * quotient -> greatest multiple of divisor <= Divident  
+
+100%7 = 100 - 98: 7 * 14  
+-40%7 = -40 - (greatest multiple of 7 <=-40 : -42<=40) answer: -40 -(-42) = 2,   
+but in Java the answer for -40%7 is: -5, which is wrong,     
+to offset: a%b, if a<0, answer = a%b + b
+
+# % modulus operator - it limits data to a given range  
+35%10 = 5  
+x%10 = {0-9} in this range  
+{-infinity to infinity, any number} % M = {0 - M-1}, in this range  
+
+
