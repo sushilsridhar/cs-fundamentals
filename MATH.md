@@ -84,4 +84,9 @@ to offset: a%b, if a<0, answer = a%b + b
 x%10 = {0-9} in this range  
 {-infinity to infinity, any number} % M = {0 - M-1}, in this range  
 
+# Modular Arithmetic Formula
+- (a + b) % M = (a%M + b%M) % M  
+- (a * b) % M = (a%M * b%M) % M  
+
+eg: a=6, b=8, M=10, 14%10 = 4, (6%10 + 8%10) -> crossing the range, so (6%10 + 8%10) % 10 = 14%10 = 4  
 
