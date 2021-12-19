@@ -90,3 +90,11 @@ x%10 = {0-9} in this range
 
 eg: a=6, b=8, M=10, 14%10 = 4, (6%10 + 8%10) -> crossing the range, so (6%10 + 8%10) % 10 = 14%10 = 4  
 
+# Divisibility rule of numbers
+
+3 - sum of all digits should be divisible by 3    
+1%3=1, 10%3=1, 10^2%3=1, 10^x%3=1  
+
+number is 4372, -> 4*10^3 + 3*10^2 + 7*10^1 + 2*10^0 , take mod on both sides  
+4372%3 = (4*10^3 + 3*10^2 + 7*10^1 + 2*10^0)%3, -> apply Modular Arithmetic, take mod inside, (4 + 3 + 7 + 2)%3
+
