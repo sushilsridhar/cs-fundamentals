@@ -40,6 +40,13 @@ if(a|1 == a) a is odd
 if(a^1 == a+1) a is even  
 if(a^1 == a-1) a is odd    
 
+# Power function
+custom power function, pow(2, N, P) -> tc: O(n)  
+a<<n = a * 2^n  (provided there is no overflow)  
+if a = 1,   
+a<<n = 2^n, tc: O(1) for bit manipulation  
+always use a<<n to calculate the power, if n is within the 32 for int, and within limit for other data type   
+
 # Commutative property    
 a & b = b & a  
 a | b = b | a  
