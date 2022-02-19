@@ -14,7 +14,7 @@ problem with 1's complement
 ~a(a=0), 1 1 1 1 1 1 1 1, this is wrong  
 add 1, 0 0 0 0 0 0 0 1, this will become, 0 0 0 0 0 0 0 0 , the added 1 will overflow  
 1 1 1 1 1 1 1 1  
-0 0 0 0 0 0 0 1  
+0 0 0 0 0 0 0 1   
 
 # Left and Right shift 
 for left shift  <<, the MSD digit should be disguarded   
@@ -54,3 +54,8 @@ a ^ a = 0
 a ^ 0 = a  
 0 ^ 0 = 0  
 0 ^ 1 = 1
+
+a & a = a  
+a & 0 = 0  
+a | a = a  
+a | 0 = a 
