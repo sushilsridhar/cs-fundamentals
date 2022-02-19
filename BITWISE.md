@@ -22,6 +22,7 @@ for right shift >>, the MSD digit should be retained
 
 to check if the ith bit is set or not  
 return ((n >> i) & 1) == 1  
+return (n & (1 << i)) != 0  
 return (n & (1 << i)) == Math.pow(2, i)  
 
 In general  
