@@ -7,6 +7,15 @@ byte a = -10, binary = ?
 -a = 2's compliment of a = 1's compliment of a + 1 = ~a + 1  
 -a = ~a + 1  
 
+problem with 1's complement  
+0 = 0 0 0 0 0 0 0 0   
+-0= 0 0 0 0 0 0 0 0   
+
+~a(a=0), 1 1 1 1 1 1 1 1, this is wrong  
+add 1, 0 0 0 0 0 0 0 1, this will become, 0 0 0 0 0 0 0 0 , the added 1 will overflow  
+1 1 1 1 1 1 1 1  
+0 0 0 0 0 0 0 1  
+
 # Left and Right shift 
 for left shift  <<, the MSD digit should be disguarded   
 for right shift >>, the MSD digit should be retained   
