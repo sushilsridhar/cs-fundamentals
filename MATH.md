@@ -76,7 +76,8 @@ Divisor * quotient -> greatest multiple of divisor <= Divident
 
 100%7 = 100 - 98: 7 * 14  
 -40%7 = -40 - (greatest multiple of 7 <=-40 : -42<=40) answer: -40 -(-42) = 2,   
-but in Java the answer for -40%7 is: -5, which is wrong,     
+but in Java the answer for -40%7 is: -5, which is wrong,  
+
 to offset: a%b, if a<0, answer = a%b + b
 
 # % modulus operator - it limits data to a given range  
