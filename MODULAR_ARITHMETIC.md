@@ -10,7 +10,7 @@
 eg for 1: a=6, b=8, M=10, 14%10 = 4, (6%10 + 8%10) -> crossing the range, so (6%10 + 8%10) % 10 = 14%10 = 4    
 eg for 2: (3%5 = 8%5 = 13%5 = 18%5), adding m to numerator    
 
-# explanation for formula 4   
+# Explanation for formula 4   
 (a - b) % m = ((a % m) - (b % m) + m) % m  
 
 a%m range is 0 to m-1  
@@ -59,3 +59,38 @@ number is 4372, -> 4*10^3 + 3*10^2 + 7*10^1 + 2*10^0 , take mod on both sides
 number is 3484, -> 3*10^3 + 4*10^2 + 8*10^1 + 4*10^0 , take mod on both sides    
 3484%4 = (3*10^3 + 4*10^2 + 8*10^1 + 4*10^0)%4, -> apply Modular Arithmetic, take mod inside, (80 + 4)%4, 84%4 
 
+# Inverse modulus
+
+(a/b)%m = (a%m) / (b%m) ---> THIS IS WRONG FOR FRACTIONS  
+
+(a/b)%m = (a * b^-1) % m ---> ((a % m) * (b^-1 % m)) % m  
+
+(b^-1 % m) is called inverse modulus of b with respect to m   
+let the inverse mod of b = x,   
+(b * x) % m = 1, (we know that - (b * b^-1) % m = 1)  
+
+eg: a = 10, m = 7  
+x = 5, (10 * 5) % 7 = 1 --> a^-1 % m = 5  
+
+# How to calculate Inverse mod 
+
+a^-1 % m , 
+- inverse mod exists only if a and m are co-prime, 
+- gcd(a,m) = 1  
+
+**Brute force - O(m)**  
+
+for(1 to m-1) {  
+if(a * i % m == 1) {  
+return i;  
+}  
+}  
+
+**Fermat's theorem**  
+a^-1 % m , 
+- m should be a prime number
+
+**formula**
+- a^-1 % m = a^(m-2) % m   
+
+calculate a^(m-2) using power fn, with O(logn)
