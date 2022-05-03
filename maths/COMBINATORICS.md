@@ -44,15 +44,65 @@ s1 - 1 possible people
 
 
 - n * n-1 * n-2 * .. n  
-- formula -> n!  
+- **Permutation = n!**  
 
 N distinct objects can be arranged on N distinct places in N! ways  
 
+123456  
+abcdef -> can be arranged in 6! ways  
+
+123456  
+aabbcc  
+
+assume all are unique, can be arranged in 6! ways  
+aa duplicate can be arranged in 2! ways, same for bb and cc  
+
+6!/2! * 2! * 2!  
+
+- total n elements, a repeats 1 time, b repeats 2 times, c - 3 times, d - 4 times  
+- **Permutation with duplicates = (n!)/(a! * b! * c! * d!)**  
 
 
+# Selection and Arrangement - <sup>N</sup> P <sub> R </sub>
+
+5 people are going to watch a movie, only 2 tickets are there  
+
+5 * 4  
+s1 s2  
+
+select 2 people from 5 people, and arrange them  
+N distinct elements  -> R positions ( N >= R )
+
+- <sup>N</sup> P <sub> R </sub> , arranging N distinct elements in R distinct positions
 
 
+<sup>N</sup> P <sub> N </sub>, arranging N distinct elements in N distinct positions is N!  
+but we do not have N positions, we have only R positions available, so we need to nullify the rest of positions other than R, (N - R)  
+
+- **<sup>N</sup> P <sub> R </sub> = N!/(N-R)!**
+
+- we are selecting R objects from available N objects and permutating them on the available R positions  
 
 
+# Combinations
+
+- selection
+- out of N possible objects, if you want to select R objects, that's called combination
+
+<sup> N </sup> P <sub> R </sub> = (selection) (arrangement)  
+
+<sup> N </sup> P <sub> R </sub> = (<sup> N </sup> C <sub> R </sub>) * (R!)  
 
 
+**<sup> N </sup> C <sub> R </sub> = N!/(R!) * (N-R)!**
+
+example:  
+
+5 people are going to watch a movie, only 2 tickets are there  
+
+5 * 4  = 20  
+s1 s2   
+
+<sup> 5 </sup> P <sub> 2 </sub> = (<sup> 5 </sup> C <sub> 2 </sub>) * (2!)  
+
+<sup> 5 </sup> P <sub> 2 </sub> = (5! * 2!/2! * 3!) = 5!/3! = 20  
