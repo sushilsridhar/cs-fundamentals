@@ -84,7 +84,7 @@ but we do not have N positions, we have only R positions available, so we need t
 - we are selecting R objects from available N objects and permutating them on the available R positions  
 
 
-# Combinations
+# Combinations - <sup> N </sup> C <sub> R </sub>
 
 - selection
 - out of N possible objects, if you want to select R objects, that's called combination
@@ -106,3 +106,73 @@ s1 s2
 <sup> 5 </sup> P <sub> 2 </sub> = (<sup> 5 </sup> C <sub> 2 </sub>) * (2!)  
 
 <sup> 5 </sup> P <sub> 2 </sub> = (5! * 2!/2! * 3!) = 5!/3! = 20  
+
+
+# Properties of combinations
+
+- <sup> N </sup> C <sub> 0 </sub> = 1 , (0! = 1)
+
+- <sup> N </sup> C <sub> 1 </sub> = N 
+
+- <sup> N </sup> C <sub> 2 </sub> = (N * (N-1))/2
+
+- <sup> N </sup> C <sub> R </sub> = <sup> N </sup> C <sub> N-R </sub>
+
+- <sup> N </sup> C <sub> R </sub> + <sup> N </sup> C <sub> R+1 </sub> = <sup> N+1 </sup> C <sub> R+1 </sub>
+
+
+# Calculate <sup> N </sup> C <sub> R </sub> % m
+
+<sup> N </sup> C <sub> R </sub> % m = ( N!/(R! * (N-R)!) ) % m  
+
+(N! % m) * ( R! <sup>-1</sup> % m ) * ( (N-R)! <sup>-1</sup> % m)
+
+- if m is prime, apply fermat's theorem
+- R! & m are co-prime , iterate from 1 t0 m-1 and find
+
+**<ins>Solution using combination properties</ins>**
+
+- <sup> N </sup> C <sub> R </sub> + <sup> N </sup> C <sub> R+1 </sub> = <sup> N+1 </sup> C <sub> R+1 </sub>
+
+replace N+1 with N, R+1 with R
+
+<sup> N-1 </sup> C <sub> R-1 </sub> + <sup> N-1 </sup> C <sub> R </sub> = <sup> N </sup> C <sub> R </sub>
+
+
+**<ins>Logical explanation</ins>**
+
+ <sup> N </sup> C <sub> R </sub> = <sup> N-1 </sup> C <sub> R </sub> + <sup> N-1 </sup> C <sub> R-1 </sub>
+ 
+ <sup> N-1 </sup> C <sub> R-1 </sub> -> selecting R out of N  
+ 
+ 1 2 3 4 5 ... N  
+ 
+ 1 -> either select one or not select one, only two options  
+ 
+ select 1     -> <sup> N-1 </sup> C <sub> R-1 </sub>  
+ not select 1 -> <sup> N-1 </sup> C <sub> R </sub>
+
+
+**<ins>Code</ins>**
+
+solving a larger problem by solving a smaller sub problem using recursion  
+TLE - find optimized approach using DP
+
+```
+  private int calculate(int n, int r, int m) {
+
+        if(r == 0 || n == r) {
+            return 1;
+        }
+
+        if(r == 1) {
+            return n%m;
+        }
+
+        int x = calculate(n-1, r, m)%m;
+        int y = calculate(n-1, r-1, m)%m;
+
+        return (x+y)%m;
+    }
+```
+
