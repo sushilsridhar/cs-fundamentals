@@ -7,8 +7,10 @@ Deals with the selection of objects according to some pattern and number of ways
 # Product rule - AND
 
 If two events a1 and a2 can occur in m and n ways, then the number of ways of performing both (a1 AND a2) together is   
-- m * n  
+> m * n  
 
+<ins>eg:</ins>  
+  
 delhi  
 | | |   
 jaipur  
@@ -24,8 +26,9 @@ t1, t2 - trains
 # Addition rule - OR
 
 If two events a1 and a2 can occur in m and n ways, then the number of ways of performing either (a1 OR a2) is  
-- m + n   
+> m + n   
 
+<ins>eg:</ins>  
 delhi  
 f1 f2 f3 t1 t2  - there are 3 flights and 2 trains to reach jaipur  
 jaipur  
@@ -34,7 +37,7 @@ total number of ways to reach jaipur is 3 + 2 = 5
 
 # Permutation
 
-- Arrangement  
+> Arrangement  
 
 s1 s2 s3 -> arrange 3 people in the seats  
 
@@ -43,8 +46,9 @@ s2 - 2 possible people
 s1 - 1 possible people  
 
 
-- n * n-1 * n-2 * .. n  
-- **Permutation = n!**  
+<ins>Permutation formula</ins>  
+> n * n-1 * n-2 * .. n  
+> n!
 
 N distinct objects can be arranged on N distinct places in N! ways  
 
@@ -59,8 +63,9 @@ aa duplicate can be arranged in 2! ways, same for bb and cc
 
 6!/2! * 2! * 2!  
 
-- total n elements, a repeats 1 time, b repeats 2 times, c - 3 times, d - 4 times  
-- **Permutation with duplicates = (n!)/(a! * b! * c! * d!)**  
+<ins>Permutation with duplicates formula</ins>
+> total n elements, a repeats 1 time, b repeats 2 times, c - 3 times, d - 4 times  
+> (n!)/(a! * b! * c! * d!)
 
 
 # Selection and Arrangement - <sup>N</sup> P <sub> R </sub>
@@ -73,30 +78,31 @@ s1 s2
 select 2 people from 5 people, and arrange them  
 N distinct elements  -> R positions ( N >= R )
 
-- <sup>N</sup> P <sub> R </sub> , arranging N distinct elements in R distinct positions
+> <sup>N</sup> P <sub> R </sub> , arranging N distinct elements in R distinct positions
 
 
 <sup>N</sup> P <sub> N </sub>, arranging N distinct elements in N distinct positions is N!  
 but we do not have N positions, we have only R positions available, so we need to nullify the rest of positions other than R, (N - R)  
 
-- **<sup>N</sup> P <sub> R </sub> = N!/(N-R)!**
+<ins><sup>N</sup> P <sub> R </sub>formula</ins>
+> <sup>N</sup> P <sub> R </sub> = N!/(N-R)!
 
-- we are selecting R objects from available N objects and permutating them on the available R positions  
+> we are selecting R objects from available N objects and permutating them on the available R positions  
 
 
 # Combinations - <sup> N </sup> C <sub> R </sub>
 
-- selection
-- out of N possible objects, if you want to select R objects, that's called combination
+> selection  
+> out of N possible objects, if you want to select R objects, that's called combination
 
 <sup> N </sup> P <sub> R </sub> = (selection) (arrangement)  
 
 <sup> N </sup> P <sub> R </sub> = (<sup> N </sup> C <sub> R </sub>) * (R!)  
 
+<ins><sup> N </sup> C <sub> R </sub> formula </ins>
+> <sup> N </sup> C <sub> R </sub> = N!/(R!) * (N-R)!
 
-**<sup> N </sup> C <sub> R </sub> = N!/(R!) * (N-R)!**
-
-example:  
+<ins>example:</ins>  
 
 5 people are going to watch a movie, only 2 tickets are there  
 
@@ -132,7 +138,7 @@ s1 s2
 
 **<ins>Solution using combination properties</ins>**
 
-- <sup> N </sup> C <sub> R </sub> + <sup> N </sup> C <sub> R+1 </sub> = <sup> N+1 </sup> C <sub> R+1 </sub>
+> <sup> N </sup> C <sub> R </sub> + <sup> N </sup> C <sub> R+1 </sub> = <sup> N+1 </sup> C <sub> R+1 </sub>
 
 replace N+1 with N, R+1 with R
 
@@ -141,7 +147,7 @@ replace N+1 with N, R+1 with R
 
 **<ins>Logical explanation</ins>**
 
- <sup> N </sup> C <sub> R </sub> = <sup> N-1 </sup> C <sub> R </sub> + <sup> N-1 </sup> C <sub> R-1 </sub>
+ > <sup> N </sup> C <sub> R </sub> = <sup> N-1 </sup> C <sub> R </sub> + <sup> N-1 </sup> C <sub> R-1 </sub>
  
  <sup> N-1 </sup> C <sub> R-1 </sub> -> selecting R out of N  
  
@@ -156,6 +162,13 @@ replace N+1 with N, R+1 with R
 **<ins>Code</ins>**
 
 solving a larger problem by solving a smaller sub problem using recursion  
+
+<ins>Base case: using combination properties</ins>  
+> <sup> N </sup> C <sub> 0 </sub> = 1  
+> <sup> 1 </sup> C <sub> 1 </sub> = 1  
+> <sup> N </sup> C <sub> 1 </sub> = N  
+
+
 TLE - find optimized approach using DP
 
 ```
