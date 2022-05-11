@@ -12,7 +12,11 @@ if n%i == 0,
 Divisors - The divisor is any number that divides another number  
 factors - A factor, however, is a divisor that divides the number entirely and leaves no remainder
 
-So, all factors of a number are its divisors
+So, all factors of a number are its divisors  
+
+<ins>co-prime definition</ins>  
+15 and 8, Factors of 15 are 1, 3, 5, 15 and factors of 8 are 1, 2, 4, 8  
+The only common factor is 1 and hence they are co-prime
 
 # Sieve of Eratosthenes
 
