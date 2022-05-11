@@ -134,7 +134,7 @@ s1 s2
 (N! % m) * ( R! <sup>-1</sup> % m ) * ( (N-R)! <sup>-1</sup> % m)
 
 - if m is prime, apply fermat's theorem
-- R! & m are co-prime , iterate from 1 t0 m-1 and find
+- if m is not prime, and R! & m are co-prime , iterate from 1 t0 m-1 and find
 
 **<ins>Solution using combination properties</ins>**
 
