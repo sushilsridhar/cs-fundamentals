@@ -135,7 +135,7 @@ s1 s2
 
 **<ins>Conditions for using inverse modulus</ins>**
 - if m is prime, apply fermat's theorem
-- if m is not prime, and R! & m are co-prime , iterate from 1 t0 m-1 and find  
+- if m is not prime, and R! & m are co-prime , iterate from 1 to m-1 and find  
 
 **<ins>Solution using combination properties</ins>**
 
