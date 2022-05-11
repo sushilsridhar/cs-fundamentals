@@ -74,9 +74,15 @@ x = 5, (10 * 5) % 7 = 1 --> a^-1 % m = 5
 
 # How to calculate Inverse mod 
 
-a^-1 % m , 
-- inverse mod exists only if a and m are co-prime, 
-- gcd(a,m) = 1  
+a^-1 % m  
+
+**<ins>conditions:</ins>**
+> inverse mod exists only if a and m are co-prime,   
+> gcd(a,m) = 1  
+
+<ins>co-prime means</ins>  
+15 and 8, Factors of 15 are 1, 3, 5, 15 and factors of 8 are 1, 2, 4, 8  
+The only common factor is 1 and hence they are co-prime
 
 **Brute force - O(m)**  
 
@@ -90,7 +96,7 @@ return i;
 a^-1 % m , 
 - m should be a prime number
 
-**formula**
-- a^-1 % m = a^(m-2) % m   
+<ins>formula</ins>
+> a^-1 % m = a^(m-2) % m   
 
 calculate a^(m-2) using power fn, with O(logn)
