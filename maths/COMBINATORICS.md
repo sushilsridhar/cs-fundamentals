@@ -170,7 +170,7 @@ solving a larger problem by solving a smaller sub problem using recursion
 > <sup> N </sup> C <sub> 1 </sub> = N  
 
 
-TLE - find optimized approach using DP
+recursion solution causing TLE - find optimized approach using DP
 
 ```
   private int calculate(int n, int r, int m) {
@@ -190,3 +190,31 @@ TLE - find optimized approach using DP
     }
 ```
 
+<ins>DP solution</ins>  
+```
+  private static int dpSolution(int A, int B, int C) {
+
+        int n = A;
+        int r = B;
+        int m = C;
+
+        int minValue = Math.min(n, r);
+        int[][] matrix = new int[n+1][r+1];
+
+        for(int i=0; i<=n; i++) {
+            for(int j=0; j<=minValue; j++) {
+
+                if(j==0 || j==i) {
+                    matrix[i][j] = 1;
+                } else if(i==0) {
+                    matrix[i][j] = 0;
+                } else {
+                    matrix[i][j] = matrix[i-1][j-1] + matrix[i-1][j];
+                    matrix[i][j] = matrix[i][j]%m;
+                }
+            }
+        }
+
+        return matrix[n][r]%m;
+    }
+```
