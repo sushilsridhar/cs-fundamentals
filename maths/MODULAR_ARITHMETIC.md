@@ -1,16 +1,20 @@
-# Modular Arithmetic Formula
-- (a + b) % m = ((a % m) + (b % m)) % m  
+# Modular Arithmetic Formula  
 
-- (a % m) = (a + m) % m  
+<ins>Addition</ins>
+> (a + b) % m = ((a % m) + (b % m)) % m  
   
-- (a * b) % m = ((a % m) * (b % m)) % m  
+> (a % m) = (a + m) % m    
 
-- (a - b) % m = ((a % m) - (b % m) + m) % m
+<ins>Multiplicaiton</ins>  
+> (a * b) % m = ((a % m) * (b % m)) % m  
+
+<ins>Subtraction</ins>     
+> (a - b) % m = ((a % m) - (b % m) + m) % m  
 
 eg for 1: a=6, b=8, M=10, 14%10 = 4, (6%10 + 8%10) -> crossing the range, so (6%10 + 8%10) % 10 = 14%10 = 4    
 eg for 2: (3%5 = 8%5 = 13%5 = 18%5), adding m to numerator    
 
-# Explanation for formula 4   
+# Explanation for Subtraction formula   
 (a - b) % m = ((a % m) - (b % m) + m) % m  
 
 a%m range is 0 to m-1  
@@ -61,42 +65,92 @@ number is 3484, -> 3*10^3 + 4*10^2 + 8*10^1 + 4*10^0 , take mod on both sides
 
 # Inverse modulus
 
-(a/b)%m = (a%m) / (b%m) ---> THIS IS WRONG FOR FRACTIONS  
+<ins>Division - below formula is wrong for fractions </ins>  
+(a/b)%m = (a%m) / (b%m)
 
-(a/b)%m = (a * b^-1) % m ---> ((a % m) * (b^-1 % m)) % m  
+<ins>Division - the right formula</ins>
+> (a/b)%m = (a * b^-1) % m  
+> (a/b)%m = ((a % m) * (b^-1 % m)) % m  
 
-(b^-1 % m) is called inverse modulus of b with respect to m   
+> (b^-1 % m) is called inverse modulus of b with respect to m  
+    
 let the inverse mod of b = x,   
 (b * x) % m = 1, (we know that - (b * b^-1) % m = 1)  
 
+value of x will be of range 0 to m-1,  
 eg: a = 10, m = 7  
-x = 5, (10 * 5) % 7 = 1 --> a^-1 % m = 5  
+assume x = 5,   
+(10 * 5) % 7 = 1 --> a^-1 % m = 5, which is within the range 0 to m-1    
 
-# How to calculate Inverse mod 
+**<ins>condition for inverse mod to exist:</ins>**  
 
-a^-1 % m  
-
-**<ins>conditions:</ins>**
+a^-1 % m 
 > inverse mod exists only if a and m are co-prime,   
-> gcd(a,m) = 1  
+> that is, gcd(a,m) = 1  
 
 <ins>co-prime means</ins>  
 15 and 8, Factors of 15 are 1, 3, 5, 15 and factors of 8 are 1, 2, 4, 8  
 The only common factor is 1 and hence they are co-prime
 
-**Brute force - O(m)**  
+**<ins>Applicaton of Inverse mod</ins>**  
+> some problems ask to return,  
+> ans % (10^9 + 7), if ans is a fraction (ans = a/b), we need to use inverse mod  
 
-for(1 to m-1) {  
-if(a * i % m == 1) {  
-return i;  
-}  
-}  
+# How to calculate Inverse mod 
 
-**Fermat's theorem**  
+**<ins>Brute force approach</ins>**  
+
+we know that, (a * a^-1) % m = 1  
+
+```
+  for(1 to m-1) {  
+    if((a * i) % m == 1) {  
+      return i;  
+    }  
+  }  
+```  
+i is the inverse mod,  
+tc: O(m)  
+
+**<ins>Fermat's theorem</ins>**  
+
 a^-1 % m , 
-- m should be a prime number
+> for fermat's theorem to be valid, m should be a prime number
 
-<ins>formula</ins>
+<ins>Formula</ins>
 > a^-1 % m = a^(m-2) % m   
 
-calculate a^(m-2) using power fn, with O(logn)
+<ins>Code</ins>  
+
+calculate a^(m-2) using power fn,  
+
+tc: O(log n)  
+sc: O(log n)  
+```
+    private static int powerFunction(int a, int n, int m) {
+
+        if(a == 0) {
+            return 0;
+        }
+
+        if(n == 0) {
+            return 1;
+        }
+
+        int halfPower = powerFunction(a, n/2, m);
+        long power = 0;
+
+        if(n%2 == 1) {
+            power = ((long)halfPower%m * halfPower%m * (a%m + m)) % m;
+        } else {
+            power = ((long)halfPower%m * halfPower%m) % m;
+        }
+
+        return (int)power;
+    }
+```
+
+**<ins>(10^9 + 7) is a prime number, apply Fermat's theorem</ins>**  
+> some problems ask to return,  
+> ans % m, if ans is a fraction (ans = a/b) and given m = (10^9 + 7), which is a prime number,  
+> we can directly apply fermat's theorem
