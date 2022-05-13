@@ -101,6 +101,10 @@ The only common factor is 1 and hence they are co-prime
 **<ins>Brute force approach</ins>**  
 
 we know that, (a * a^-1) % m = 1  
+let a^-1 = x, if (a * x) % m = 1, then x is the inverse mod value  
+the range of the x will be from 1 to m-1,  
+
+tc: O(m)  
 
 ```
   for(1 to m-1) {  
@@ -108,14 +112,19 @@ we know that, (a * a^-1) % m = 1
       return i;  
     }  
   }  
-```  
-i is the inverse mod,  
-tc: O(m)  
+```     
 
 **<ins>Fermat's theorem</ins>**  
 
 a^-1 % m , 
 > for fermat's theorem to be valid, m should be a prime number
+
+Statement, a^m-1 is congruent to 1 mod m  
+congruent means, (a congruent b)%m means, a%m = b%m  
+
+(a^m-1)%m = 1 % m, multiply by a^-1 on both sides,  
+(a^m-1)%m * (a^-1)%m = a^-1 % m,  
+(a^m-2) % m = a^-1 % m
 
 <ins>Formula</ins>
 > a^-1 % m = a^(m-2) % m   
