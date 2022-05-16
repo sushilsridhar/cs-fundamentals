@@ -82,7 +82,7 @@ eg: a = 10, m = 7
 assume x = 5,   
 (10 * 5) % 7 = 1 --> a^-1 % m = 5, which is within the range 0 to m-1    
 
-**<ins>condition for inverse mod to exist:</ins>**  
+# Condition for inverse mod to exist
 
 a^-1 % m 
 > inverse mod exists only if a and m are co-prime,   
