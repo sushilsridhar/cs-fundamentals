@@ -29,39 +29,62 @@ range is (-(m-1), m-1), since the range is -ve, we add +m to make it +ve
 
 new range (1, 2m-1)
 
-# Euclidean division    
-For a/b, a = b * q + r  
-where r is remainder and q is quotient, r = a - b * q  
+# Euclidean division   
+
+For a/b, where is a is Divident and b is Divisor  
+> a = b * q + r  
+> where r is remainder and q is quotient,   
+
+r = a - b * q    
+
 Note: In Java, this work only on positive numbers, for negative number division, check Divide_Without_Operators code in algorithms-ds-java project.  
 
-Remainder = Divident - Divisor * quotient  
-Divisor * quotient -> greatest multiple of divisor <= Divident  
+**<ins> In other words</ins>**  
+> Remainder = Divident - Divisor * quotient  
+> Divisor * quotient -> is greatest multiple of divisor <= Divident  
 
-100%7 = 100 - 98: 7 * 14  
+<ins>example</ins>  
+100%7 = 100 - 98 , 98 is 7 * 14 (which is greatest multiple of 7 less than 100)  
 -40%7 = -40 - (greatest multiple of 7 <=-40 : -42<=-40) answer: -40 -(-42) = 2,   
+
 but in Java the answer for -40%7 is: -5, which is wrong, so  
 
-# to offset Java mod operation
-a%b, if a<0, answer = a%b + b
+## to offset Java mod operation
+> a%b, if a<0, answer = a%b + b  
+
+-40%7 = -5 + 7 = 2  
 
 # % modulus operator - it limits data to a given range  
-35%10 = 5  
-x%10 = {0-9} in this range  
-{-infinity to infinity, any number} % M = {0 to M-1}, in this range  
+> 35%10 = 5  
+> x%10 = {0 to 9}, between this range   
+
+{-infinity to infinity, any number} % M = {0 to M-1}, between this range  
 
 # Divisibility rule of numbers - taking advantage of mod
 
-3 - sum of all digits should be divisible by 3    
-1%3=1, 10%3=1, 10^2%3=1, 10^x%3=1  
+<ins>number 3</ins>    
+> 3 - sum of all digits should be divisible by 3        
 
-number is 4372, -> 4*10^3 + 3*10^2 + 7*10^1 + 2*10^0 , take mod on both sides  
-4372%3 = (4*10^3 + 3*10^2 + 7*10^1 + 2*10^0)%3, -> apply Modular Arithmetic, take mod inside, (4 + 3 + 7 + 2)%3  
+we know that,   
+1 % 3 = 1, 10 % 3 = 1, 10<sup>2</sup> % 3 = 1, 10<sup>x</sup> % 3 = 1     
 
-4 - sum of last two digits should be divisible by 4  
-10^2%4 = 0, 10^3%4 = 0, 10^4%4 = 0  
+number is 4372, can be represented as  
+4372 = 4 * 10<sup>3</sup> + 3 * 10<sup>2</sup> + 7 * 10<sup>1</sup> + 2 * 10<sup>0</sup> , take mod on both sides  
 
-number is 3484, -> 3*10^3 + 4*10^2 + 8*10^1 + 4*10^0 , take mod on both sides    
-3484%4 = (3*10^3 + 4*10^2 + 8*10^1 + 4*10^0)%4, -> apply Modular Arithmetic, take mod inside, (80 + 4)%4, 84%4 
+4372 % 3 = (4 * 10<sup>3</sup> + 3 * 10<sup>2</sup> + 7 * 10<sup>1</sup> + 2 * 10<sup>0</sup>)%3,   
+
+apply Modular Arithmetic, take mod inside, (4 + 3 + 7 + 2)%3  
+
+<ins>number 4</ins>  
+> 4 - sum of last two digits should be divisible by 4  
+  
+10<sup>2</sup> % 4 = 0, 10<sup>3</sup> % 4 = 0, 10<sup>4</sup> % 4 = 0  
+
+number is 3484, can be represented as   
+3484 = 3 * 10<sup>3</sup> + 4 * 10<sup>2</sup> + 8 * 10<sup>1</sup> + 4 * 10<sup>0</sup>, take mod on both sides      
+3484%4 = (3 * 10<sup>3</sup> + 4 * 10<sup>2</sup> + 8 * 10<sup>1</sup> + 4 * 10<sup>0</sup>)%4,   
+
+apply Modular Arithmetic, take mod inside, (80 + 4)%4, 84 % 4   
 
 # Binary Exponentiation
 
