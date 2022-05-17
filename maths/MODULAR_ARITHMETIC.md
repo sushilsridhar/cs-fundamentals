@@ -69,22 +69,22 @@ number is 3484, -> 3*10^3 + 4*10^2 + 8*10^1 + 4*10^0 , take mod on both sides
 (a/b)%m = (a%m) / (b%m)
 
 <ins>Division - the right formula</ins>
-> (a/b)%m = (a * b^-1) % m  
-> (a/b)%m = ((a % m) * (b^-1 % m)) % m  
+> (a/b)%m = (a * b<sup>-1</sup>) % m  
+> (a/b)%m = ((a % m) * (b<sup>-1</sup> % m)) % m  
 
-> (b^-1 % m) is called inverse modulus of b with respect to m  
+> (b<sup>-1</sup> % m) is called inverse modulus of b with respect to m  
     
 let the inverse mod of b = x,   
-(b * x) % m = 1, (we know that - (b * b^-1) % m = 1)  
+(b * x) % m = 1, (we know that - (b * b<sup>-1</sup>) % m = 1)  
 
 value of x will be of range 0 to m-1,  
 eg: a = 10, m = 7  
 assume x = 5,   
-(10 * 5) % 7 = 1 --> a^-1 % m = 5, which is within the range 0 to m-1    
+(10 * 5) % 7 = 1 --> a<sup>-1</sup> % m = 5, which is within the range 0 to m-1    
 
 # Condition for inverse mod to exist
 
-a^-1 % m 
+a<sup>-1</sup> % m 
 > inverse mod exists only if a and m are co-prime,   
 > that is, gcd(a,m) = 1  
 
@@ -94,14 +94,14 @@ The only common factor is 1 and hence they are co-prime
 
 **<ins>Applicaton of Inverse mod</ins>**  
 > some problems ask to return,  
-> ans % (10^9 + 7), if ans is a fraction (ans = a/b), we need to use inverse mod  
+> ans % (10<sup>9</sup> + 7), if ans is a fraction (ans = a/b), we need to use inverse mod  
 
 # How to calculate Inverse mod 
 
 **<ins>Brute force approach</ins>**  
 
-we know that, (a * a^-1) % m = 1  
-let a^-1 = x, if (a * x) % m = 1, then x is the inverse mod value  
+we know that, (a * a<sup>-1</sup>) % m = 1  
+let a<sup>-1</sup> = x, if (a * x) % m = 1, then x is the inverse mod value  
 the range of the x will be from 1 to m-1,  
 
 tc: O(m)  
@@ -116,22 +116,22 @@ tc: O(m)
 
 **<ins>Fermat's theorem</ins>**  
 
-a^-1 % m , 
+a<sup>-1</sup> % m , 
 > for fermat's theorem to be valid, m should be a prime number
 
-Statement, a^m-1 is congruent to 1 mod m  
+Statement, a<sup>m-1</sup> is congruent to 1 mod m  
 congruent means, (a congruent b)%m means, a%m = b%m  
 
-(a^m-1)%m = 1 % m, multiply by a^-1 on both sides,  
-(a^m-1)%m * (a^-1)%m = a^-1 % m,  
-(a^m-2) % m = a^-1 % m
+(a<sup>m-1</sup>)%m = 1 % m, multiply by a<sup>-1</sup> on both sides,  
+(a<sup>m-1</sup>)%m * (a<sup>-1</sup>)%m = a<sup>-1</sup> % m,  
+(a<sup>m-1</sup>) % m = a<sup>-1</sup> % m
 
 <ins>Formula</ins>
-> a^-1 % m = a^(m-2) % m   
+> a<sup>-1</sup> % m = a<sup>(m-2)</sup> % m   
 
 <ins>Code</ins>  
 
-calculate a^(m-2) using power fn,  
+calculate a<sup>(m-2)</sup> using power fn,  
 
 tc: O(log n)  
 sc: O(log n)  
@@ -159,7 +159,39 @@ sc: O(log n)
     }
 ```
 
-**<ins>(10^9 + 7) is a prime number, apply Fermat's theorem</ins>**  
+**<ins>(10<sup>9</sup> + 7) is a prime number, apply Fermat's theorem</ins>**  
 > some problems ask to return,  
-> ans % m, if ans is a fraction (ans = a/b) and given m = (10^9 + 7), which is a prime number,  
-> we can directly apply fermat's theorem
+> ans % m, if ans is a fraction (ans = a/b) and given m = (10<sup>9</sup> + 7), which is a prime number,  
+> we can directly apply fermat's theorem  
+
+# Binary Exponentiation
+
+a<sup>n</sup> = a * a * a * ... n times  
+
+> a<sup>8</sup> = a<sup>4</sup> * a<sup>4</sup>, problem divided into half
+
+tc: O(log n)  
+sc: O(log n)  
+```
+    private static int powerFunction(int a, int n, int m) {
+
+        if(a == 0) {
+            return 0;
+        }
+
+        if(n == 0) {
+            return 1;
+        }
+
+        int halfPower = powerFunction(a, n/2, m);
+        long power = 0;
+
+        if(n%2 == 1) {
+            power = ((long)halfPower%m * halfPower%m * (a%m + m)) % m;
+        } else {
+            power = ((long)halfPower%m * halfPower%m) % m;
+        }
+
+        return (int)power;
+    }
+```
