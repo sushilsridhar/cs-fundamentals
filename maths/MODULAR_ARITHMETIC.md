@@ -63,6 +63,38 @@ number is 4372, -> 4*10^3 + 3*10^2 + 7*10^1 + 2*10^0 , take mod on both sides
 number is 3484, -> 3*10^3 + 4*10^2 + 8*10^1 + 4*10^0 , take mod on both sides    
 3484%4 = (3*10^3 + 4*10^2 + 8*10^1 + 4*10^0)%4, -> apply Modular Arithmetic, take mod inside, (80 + 4)%4, 84%4 
 
+# Binary Exponentiation
+
+a<sup>n</sup> = a * a * a * ... n times  
+
+> a<sup>8</sup> = a<sup>4</sup> * a<sup>4</sup>, problem divided into half
+
+tc: O(log n)  
+sc: O(log n)  
+```
+    private static int powerFunction(int a, int n, int m) {
+
+        if(a == 0) {
+            return 0;
+        }
+
+        if(n == 0) {
+            return 1;
+        }
+
+        int halfPower = powerFunction(a, n/2, m);
+        long power = 0;
+
+        if(n%2 == 1) {
+            power = ((long)halfPower%m * halfPower%m * (a%m + m)) % m;
+        } else {
+            power = ((long)halfPower%m * halfPower%m) % m;
+        }
+
+        return (int)power;
+    }
+```
+
 # Inverse modulus
 
 <ins>Division - below formula is wrong for fractions </ins>  
@@ -159,39 +191,33 @@ sc: O(log n)
     }
 ```
 
+
+# Apply Fermat's theorem
+
 **<ins>(10<sup>9</sup> + 7) is a prime number, apply Fermat's theorem</ins>**  
 > some problems ask to return,  
-> ans % m, if ans is a fraction (ans = a/b) and given m = (10<sup>9</sup> + 7), which is a prime number,  
+> ans % m, if ans is a fraction (ans = a/b = a * b<sup>-1</sup>) and given m = (10<sup>9</sup> + 7), which is a prime number,  
 > we can directly apply fermat's theorem  
+> b<sup>-1</sup> % m = b<sup>(m-2)</sup> % m 
 
-# Binary Exponentiation
+**<ins> Calculate b factorial in, a<sup>b!</sup> % m </ins>**
 
-a<sup>n</sup> = a * a * a * ... n times  
+fermat's theorem  
 
-> a<sup>8</sup> = a<sup>4</sup> * a<sup>4</sup>, problem divided into half
+> a<sup>m</sup> = a mod m  
+> a<sup>m-1</sup> = 1 mod m  
 
-tc: O(log n)  
-sc: O(log n)  
-```
-    private static int powerFunction(int a, int n, int m) {
+we need to calculate a <sup>b!</sup>, if we can express a <sup>b!</sup> as a <sup>m-1</sup>  * a <sup>m-1</sup>....  
 
-        if(a == 0) {
-            return 0;
-        }
+> a <sup>b!</sup> = (a <sup>m-1</sup> * a <sup>m-1</sup> * a <sup>m-1</sup> .. a<sup>x</sup> ) % m  
+> a <sup>b!</sup> = (1 mod m) * (1 mod m) * ... a <sup>x</sup> % m  
+> a <sup>b!</sup> = a <sup>x</sup> % m  
 
-        if(n == 0) {
-            return 1;
-        }
+b! is expressed as m-1, the remaining left over number will be,  
+x = b! % (m-1)  
 
-        int halfPower = powerFunction(a, n/2, m);
-        long power = 0;
+find x and using fast exponential fn to calculate a <sup> x </sup>  
+  
+tc: O(B + log x)  
+sc: O(log x)  
 
-        if(n%2 == 1) {
-            power = ((long)halfPower%m * halfPower%m * (a%m + m)) % m;
-        } else {
-            power = ((long)halfPower%m * halfPower%m) % m;
-        }
-
-        return (int)power;
-    }
-```
