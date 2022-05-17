@@ -124,7 +124,7 @@ congruent means, (a congruent b)%m means, a%m = b%m
 
 (a<sup>m-1</sup>)%m = 1 % m, multiply by a<sup>-1</sup> on both sides,  
 (a<sup>m-1</sup>)%m * (a<sup>-1</sup>)%m = a<sup>-1</sup> % m,  
-(a<sup>m-1</sup>) % m = a<sup>-1</sup> % m
+(a<sup>m-2</sup>) % m = a<sup>-1</sup> % m
 
 <ins>Formula</ins>
 > a<sup>-1</sup> % m = a<sup>(m-2)</sup> % m   
