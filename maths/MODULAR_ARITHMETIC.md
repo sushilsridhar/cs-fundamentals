@@ -118,10 +118,11 @@ sc: O(log n)
     }
 ```  
 
-<ins>Notes:</ins>    
+<ins>Notes:</ins>      
+[Java Operator Precedence Rules](https://math.hws.edu/eck/cs124/javanotes6/c2/s5.html)  
 (long)halfPower % m, in this expression, Simply put, a cast takes precedence over a mod operation,  
 
-[Java Operator Precedence Rules](https://math.hws.edu/eck/cs124/javanotes6/c2/s5.html)  
+
 
 
 # Inverse modulus
