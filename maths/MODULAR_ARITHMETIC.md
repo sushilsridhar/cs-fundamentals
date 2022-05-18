@@ -86,7 +86,7 @@ number is 3484, can be represented as
 
 apply Modular Arithmetic, take mod inside, (80 + 4)%4, 84 % 4   
 
-# Binary Exponentiation
+# Binary Exponentiation (fast power)  
 
 a<sup>n</sup> = a * a * a * ... n times  
 
@@ -116,7 +116,13 @@ sc: O(log n)
 
         return (int)power;
     }
-```
+```  
+
+<ins>Notes:</ins>    
+(long)halfPower % m, in this expression, Simply put, a cast takes precedence over a mod operation,  
+
+[Java Operator Precedence Rules](https://math.hws.edu/eck/cs124/javanotes6/c2/s5.html)  
+
 
 # Inverse modulus
 
