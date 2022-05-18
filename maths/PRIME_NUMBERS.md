@@ -35,3 +35,11 @@ The only common factor is 1 and hence they are co-prime
 
 # Sieve of Eratosthenes
 
+
+
+# Goldbach's conjecture 
+ 
+> Goldbach's conjecture states that every even integer greater than 2 can be expressed as the sum of two primes    
+> This conjecture is not proven yet but verified uptil 4 * 10<sup>18</sup> integers  
+    
+
