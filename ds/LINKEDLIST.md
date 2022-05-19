@@ -3,8 +3,9 @@
 > Linkedlist overcomes the drawbacks of arrays/dynamic arrays  
 
 <ins>Drawbacks of arrays/dynamic arrays</ins>  
-even if enough memory segments are available in RAM, array needs contiguous memory location to store,  
-which is not memory efficient
+
+> even if enough memory segments are available in RAM, array needs contiguous memory location to store,  
+> which is not memory efficient
 
 ![dynamic arrays](https://user-images.githubusercontent.com/16437905/169188095-0e01d3ad-54b9-4eb1-b7d5-66131064310e.jpg)
 
@@ -26,7 +27,11 @@ since memory segments is not contiguous we lose random access (which is O(1) com
             this.val = val;
         }
     }
-```
+```  
+val - occupies 4 bytes  
+next - occupies 4 bytes (memory addresses are integers)  
+
+Linkedlist requires 4bytes extra compared to arrays  
 
 # When to choose Linkedlist
 
