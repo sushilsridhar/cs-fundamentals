@@ -29,4 +29,28 @@ T – Type
 E – Element  
 K – Key  
 N – Number   
-V – Value  
+V – Value    
+
+<ins>Example</ins>  
+
+```
+LinkedList<Integer> list = new LinkedList<>();    
+
+public class LinkedList<E> {
+
+    private static class Node<E> {
+        E data;
+        Node<E> next;
+
+        Node(E data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    public boolean add(E e) {
+        linkToLast(e);
+        return true;
+    }
+}
+```
