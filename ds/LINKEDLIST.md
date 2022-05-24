@@ -35,6 +35,8 @@ Linkedlist requires 4bytes extra compared to arrays
 
 **<ins>Doubly Linked List</ins>**    
 
+Java LinkedList is implemented using Doubly linked list  
+
 > Can traverse in reverse  
 > Operations can be performed if given a middle node instead of head  
 
@@ -89,3 +91,9 @@ Node pointer = head;
 
 head contains the address to the start of the linkedlist,  
 for traversing the linkedlist, copy head to another variable and use it
+
+# Edge cases 
+
+dry run for,  
+linkedlist size = 0, head is null  
+linkedlist size 1,2,3    
