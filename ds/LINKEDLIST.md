@@ -33,12 +33,53 @@ next - occupies 4 bytes (memory addresses are integers)
 
 Linkedlist requires 4bytes extra compared to arrays  
 
+**<ins>Doubly Linked List</ins>**    
+
+> Can traverse in reverse  
+> Operations can be performed if given a middle node instead of head  
+
+![dll](https://user-images.githubusercontent.com/16437905/169951918-e8cd248d-b5e6-4cd8-94d2-c6ec520c375d.png)  
+
+```
+    private class Node<E> {
+        E data;
+        Node<E> prev;
+        Node<E> next;
+
+        Node(Node<E> prev, E data, Node<E> next) {
+            this.data = data;
+            this.prev = prev;
+            this.next = next;
+        }
+    }
+```
+In case of integers,  
+data - occupies 4 bytes    
+prev - occupies 4 bytes  
+next - occupies 4 bytes (memory addresses are integers)     
+
+Doubly linked list requires extra memory than singly linked list  
+
 # When to choose Linkedlist
 
 > if you do not want O(1) random access time of array  
 > if you want to use RAM memory efficiently, which is a scare resource for you  
 
 # Time complexity
+
+| Operations | Doubly linked list | Singly linked list |
+:---: | :---: | :---: |
+add()         | O(1)  | O(n)
+addFirst()    | O(1)  | O(1)
+addLast()     | O(1)  | O(n) or O(1) (with tail pointer)
+add(k, data)  | O(k)  | O(k)
+get(k)        | O(k)  | O(k)
+getFirst()    | O(1)  | O(1)
+getLast()     | O(1)  | O(n) or O(1) (with tail pointer)
+remove(k)     | O(k)  | O(k)
+removeFirst() | O(1)  | O(1)
+removeLast()  | O(1)  | O(n)
+set(k, data)  | O(k)  | O(k)
 
 
 # Do not update HEAD pointer
