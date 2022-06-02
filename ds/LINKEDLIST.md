@@ -96,4 +96,12 @@ for traversing the linkedlist, copy head to another variable and use it
 
 dry run for,  
 linkedlist size = 0, head is null  
-linkedlist size 1,2,3    
+linkedlist size 1,2,3  
+
+# Real world applications
+
+1. <ins>Implementation of stacks and queues</ins>
+2. <ins>Implementation of graphs</ins> : Adjacency list representation of graphs is most popular which is uses linked list to store adjacent vertices
+3. <ins>Image viewer – Previous and next images are linked</ins>, hence can be accessed by next and previous button
+4. <ins>Previous and next page in web browser</ins> – We can access previous and next url searched in web browser by pressing back and next button since, they are linked as linked list
+5. <ins>Music Player – Songs in music player are linked to previous and next song</ins>. you can play songs either from starting or ending of the list
