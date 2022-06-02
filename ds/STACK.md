@@ -18,11 +18,22 @@
 can be implemented using   
 arrays, dynamic arrays, singly linked list, doubly linked list, queues  
 
-**<ins>Java implementation</ins>**    
+**<ins>Java Default implementation</ins>**    
 
-Stack is implemented using Vector class, which internally uses array   
+<ins>Stack</ins>  
+> Stack class in java internally use Vector class which is a synchronised dynamic array   
+  
+Vector is used by Stack class because, Stack and Vector are legacy classes created before Arraylist   
 
-> ArrayDeque class is preferred instead of Stack class for LIFO operations  
+<ins>ArrayDeque</ins>  
+
+Deque<Integer> stack = new ArrayDeque<Integer>();  
+
+> Java Doc says,  
+> 
+> A more complete and consistent set of LIFO stack operations is provided by the Deque   
+> interface and its implementations, which should be used in preference to Stack class  
+
 
 # Real world applications
 
