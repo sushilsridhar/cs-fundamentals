@@ -7,6 +7,8 @@
 ArrayList  
 Vector  
 
+find out what are the ds that uses array internally?
+
 
 Vectors are synchronized, ArrayLists are not.
 Data Growth Methods
