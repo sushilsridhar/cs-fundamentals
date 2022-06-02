@@ -3,10 +3,17 @@
 > Last in First out
 
 <ins>Operations</ins>  
-- push  
-- pop  
-- peek  
-- size  
+1. push  
+2. pop
+3. peek  
+4. size  
+
+Insertion and extraction done at one end only
+
+# Structure
+
+![stack](https://user-images.githubusercontent.com/16437905/171616539-beb603b4-4296-4489-9cc4-6344ee7eb713.jpeg)
+
 
 # When to use stacks
 
@@ -35,10 +42,24 @@ Deque<Integer> stack = new ArrayDeque<Integer>();
 > interface and its implementations, which should be used in preference to Stack class  
 
 
+# Expression Evaluation  
+  
+<ins>Reverse Polish Notation</ins>     
+> Infix to Postfix
+  
+A + B --> AB+  
+3 * 4 --> 34*
+
+7 * 4 + 1 - 3 * 4 --> 74 * 1 + 34 * -   
+computer does not know that multiplication(or any operator's precedence) has higher precedence,   
+so infix expression is converted to postfix using stack, and the postfix expression is evaluated using stack  
+
+No brackets or parentheses is required in this notation and it is used in RPN calculators  
+
 # Real world applications
 
 1. Undo/Redo
 2. Back button
 3. Program/Function call stack
 4. Compiler bracket checks
-5. Expression evaluation
+5. Expression evaluation (RPN Calculators)
