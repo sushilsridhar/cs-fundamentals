@@ -41,6 +41,17 @@ Deque<Integer> stack = new ArrayDeque<Integer>();
 > A more complete and consistent set of LIFO stack operations is provided by the Deque   
 > interface and its implementations, which should be used in preference to Stack class  
 
+# Time Complexity
+  
+Best implementation is using linked list  
+
+| Operations | Stack implemented using linked list
+:---: | :---:
+push()         | O(1)
+pop()          | O(1)
+peek()         | O(1)
+size()         | O(1)
+  
 
 # Expression Evaluation  
   
