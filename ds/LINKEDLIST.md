@@ -38,7 +38,9 @@ Linkedlist requires 4bytes extra compared to arrays
 Java LinkedList is implemented using Doubly linked list  
 
 > Can traverse in reverse  
-> Operations can be performed if given a middle node instead of head  
+> Operations can be performed if given a middle node instead of head     
+
+<ins>LRU Cache</ins>: implementing a queue using doubly linkedlist, so that you can delete elements from middle of the queue  
 
 ![dll](https://user-images.githubusercontent.com/16437905/169951918-e8cd248d-b5e6-4cd8-94d2-c6ec520c375d.png)  
 
@@ -65,7 +67,7 @@ Doubly linked list requires extra memory than singly linked list
 # When to choose Linkedlist
 
 > if you do not want O(1) random access time of array  
-> if you want to use RAM memory efficiently, which is a scare resource for you  
+> if you want to use RAM memory efficiently, which is a scare resource for you. 
 
 # Time complexity
 
