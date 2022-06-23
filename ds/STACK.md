@@ -17,13 +17,13 @@ Insertion and extraction done at one end only
 
 # When to use stacks
 
-> To keep track of the lastest/last operation made,   
+> To keep track of the lastest / last operation made,   
 > add to the top and remove from the top  
 
 # Implemenation
 
 can be implemented using   
-arrays, dynamic arrays, singly linked list, doubly linked list, queues  
+arrays, dynamic arrays, singly linked list, doubly linked list  
 
 **<ins>Java Default implementation</ins>**    
 
