@@ -32,18 +32,24 @@ arrays, dynamic arrays, singly linked list, doubly linked list
   
 Vector is used by Stack class because, Stack and Vector are legacy classes created before Arraylist   
 
-<ins>ArrayDeque</ins>  
-
-Deque<Integer> stack = new ArrayDeque<Integer>();  
+<ins>Deque interface</ins>   
 
 > Java Doc says,  
 > 
 > A more complete and consistent set of LIFO stack operations is provided by the Deque   
 > interface and its implementations, which should be used in preference to Stack class  
 
+<ins>LinkedList class implements Deque</ins>
+
+Deque<Integer> stack = new LinkedList<>();
+
+<ins>ArrayDeque class implements Deque</ins>
+
+Deque<Integer> stack = new ArrayDeque<Integer>(); 
+
 # Time Complexity
   
-Best implementation is using linked list  
+Best implementation is using linked list? check this    
 
 | Operations | Stack implemented using linked list
 :---: | :---:
