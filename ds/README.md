@@ -1,4 +1,7 @@
-# Collections
+# Java Collections
+
+![Screenshot 2022-06-25 at 8 16 31 PM](https://user-images.githubusercontent.com/16437905/175778730-7e5b02de-5511-4cc0-bfe6-0186e42aa17e.png)
+
 
 # Java Generics
 
