@@ -41,11 +41,11 @@ Vector is used by Stack class because, Stack and Vector are legacy classes creat
 
 <ins>LinkedList class implements Deque</ins>
 
-Deque<Integer> stack = new LinkedList<>();
+Deque\<Integer> stack = new LinkedList<>();
 
 <ins>ArrayDeque class implements Deque</ins>
 
-Deque<Integer> stack = new ArrayDeque<Integer>(); 
+Deque\<Integer> stack = new ArrayDeque<>(); 
 
 # Time Complexity
   
