@@ -15,3 +15,5 @@ Insert at back, remove from start
 2. Buffer for devices like keyboard
 3. Applied as waiting lists for a single shared resource like CPU, Disk, Printer
 
+
+maintaining candidate list for potential answers
