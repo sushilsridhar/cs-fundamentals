@@ -54,6 +54,13 @@ but in Java the answer for -40%7 is: -5, which is wrong, so
 
 -40%7 = -5 + 7 = 2  
 
+**<ins>formula for both positive and negative numbers</ins>**  
+> a%b = (a%b + b)%b  
+
+<ins>example:</ins>  
+40%7 = (5 + 7)%7 = (13)%7 = 5   
+-40%7 = (-5 + 7)%7 = 2%7 = 2  
+
 # % modulus operator - it limits data to a given range  
 > 35%10 = 5  
 > x%10 = {0 to 9}, between this range   
