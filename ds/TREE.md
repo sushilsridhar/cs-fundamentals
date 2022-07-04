@@ -1,7 +1,13 @@
 # Tree
 
-> all other data structures are linear,   
-> tree have hierarchy  
+> tree is a hierarchical data structure,  
+> all other data structures are linear   
+ 
+<ins>Node</ins>: entity that holds info  
+<ins>Edge</ins>: connects two nodes  
+
+<ins>Height</ins>: distance from the root to the farthest leaf node  
+<ins>Depth</ins>: distance of that node from root node  
 
 # Binary Tree
 
@@ -66,15 +72,23 @@ below tree without a left side or right side is called skewed tree.
 
 # Traversal 
 <ins>Pre-order traversal</ins>  
-root -> left -> right , (root first)    
+root -> left -> right , (root first)      
+using stack: process root, put right in stack, assign the pointer to left  
 
 <ins>In-order traversal</ins>  
 left -> root -> right , (root middle)   
+using stack: put root in stack, assign pointer to left, when pointer is null, pop and process root and assign pointer to right  
 
 <ins>Post-order traversal</ins>  
 left -> right -> root , (root last)  
+using stack: process root, put left in stack, assign the pointer to right, when pointer is null pop and assign the node to pointer  
+reverse the answer to get postorder     
+
+<ins>Level-order traversal</ins>  
+process nodes by level,  
+
 
       
 # Real world application
-- DOM (Document Object Model)
-- computer folder directory
+1. DOM (Document Object Model)
+2. computer folder directory
