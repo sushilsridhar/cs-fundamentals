@@ -24,7 +24,7 @@
 </pre>
 
 <ins>Time Complexity for Searching</ins>  
-> O(n)
+> O(n), need to visit all nodes to find
 
 # Binary Search Tree
 
@@ -48,7 +48,7 @@ For every node, recursively, the value of
 </pre>
 
 <ins>Time Complexity for Searching</ins>  
-> O(n), there is a possibility of tree being skewed tree
+> O(h), we can skip some part of the tree because of nature of BST, however at every step we go one level down until we reach the height of the tree
 
 # Balanced Binary Search Tree
 below tree, with no of nodes in LST ~~ approx equal to no of nodes in RST, is called balanced binary search tree (height balanced binary search tree)      
