@@ -41,7 +41,7 @@ there is a possibility of tree being skewed tree, so it is O(n)
 </pre>
 
 # Balanced Binary Search Tree
-below tree, with no of nodes in LST ~~ approx equal to no of nodes in RST, is called balanced binary search tree  
+below tree, with no of nodes in LST ~~ approx equal to no of nodes in RST, is called balanced binary search tree (height balanced binary search tree)      
 
 > searching tc: O(logn)
 
