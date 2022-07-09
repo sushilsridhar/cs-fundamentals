@@ -17,33 +17,41 @@
 <ins>Programming Paradigm</ins> - recursion  
 <ins>Observation</ins> - left sub tree and right sub tree of binary tree are also binary trees    
 
-> searching tc: O(n)  
 <pre>
             1
        2         3
     4     5         6
 </pre>
 
+<ins>Time Complexity for Searching</ins>  
+> O(n)
+
 # Binary Search Tree
 
-For every node, the value of 
-1. LST <= root value  
-2. RST > root value  
+For every node, recursively, the value of 
+1. all elements of LST <= root value  
+2. all elements of RST > root value  
 
-> searching tc: O(n) 
-
-there is a possibility of tree being skewed tree, so it is O(n)  
-
+<ins>Valid Binary Search Tree</ins>  
+> max on left subtree < node.val < min on right subtree
 <pre>
             10
        5         11
     4     8          13
 </pre>
 
+<ins>Invalid Binary Search Tree</ins>
+<pre>
+            10
+       5         11
+    4     12          13
+</pre>
+
+<ins>Time Complexity for Searching</ins>  
+> O(n), there is a possibility of tree being skewed tree
+
 # Balanced Binary Search Tree
 below tree, with no of nodes in LST ~~ approx equal to no of nodes in RST, is called balanced binary search tree (height balanced binary search tree)      
-
-> searching tc: O(logn)
 
 <pre>
             10
@@ -54,14 +62,19 @@ below tree, with no of nodes in LST ~~ approx equal to no of nodes in RST, is ca
 <ins>condition for balanced binary search tree</ins>  
 > | height(LST) - height(RST)| <= 1  
 
-
 <ins>Self balanced binary search tree</ins>  
 1. AVL Tree   
 2. Red black Tree  
 
+
+<ins>Time Complexity for Searching</ins>  
+> O(logn),
+> we are reducing the search space by half at every step, and since height is also balanced, it can't be a skewed tree  
+
 # Skewed Tree  
-below tree without a left side or right side is called skewed tree. 
-> searching tc: O(n)  
+below tree without a left side or right side is called skewed tree  
+
+<ins>Time Complexity for Searching</ins>: O(n)
 
 <pre>
 1
