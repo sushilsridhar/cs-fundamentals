@@ -10,7 +10,7 @@
 
 Insertion and extraction done at one end only
 
-# Structure
+# Stack structure
 
 ![stack](https://user-images.githubusercontent.com/16437905/171616539-beb603b4-4296-4489-9cc4-6344ee7eb713.jpeg)
 
