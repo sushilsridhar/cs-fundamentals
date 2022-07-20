@@ -60,6 +60,13 @@ In Priority Queue, a collection of elements are associated in a specific order
 <ins>Structure</ins>  
 ![deque](https://user-images.githubusercontent.com/16437905/179668429-cb754a35-a9c4-4df1-ba3e-ca1111522376.png)
 
+<ins>Deque Structure in Java</ins>
+> Deque implementation (ArrayDeque class) is done using circular array in Java  
+
+Deque in Java is circular, the last element is connected to the first element. In a normal deque when the rear reaches the end then there may be a possibility that the beginning vacant positions cannot be utilized. Circular deque solves the limitation by connecting the rear and front  
+
+![circular-queue](https://user-images.githubusercontent.com/16437905/179886946-b4f41447-848f-43d8-97c5-8f37f62d85d8.png)
+
 <ins>Operations</ins>:   
 Deque Interface methods,  
 
@@ -80,12 +87,12 @@ This abstract interface is implemented by concrete classes, LinkedList class and
 Deque\<Integer> deque = new LinkedList<>();
 
 <ins>ArrayDeque implements Deque</ins>  
-Resizable-array implementation of the Deque interface, 
+Resizable-circular array implementation of the Deque interface, 
 
 Deque\<Integer> deque = new ArrayDeque<>();
 
 
-# Why ArrayDeque is better than LinkedList? 
+# Why ArrayDeque is better than LinkedList for Queue and Deque implementation? 
 1. <ins>LinkedList has additional overhead</ins> for creating new node objects (new memory locations for data and address), which has a performance impact 
 2. Elements in <ins>LinkedList are stored in a non-contiguous way, which does not help cache hits</ins>, however ArrayDeque uses arrays which is contiguous and helps cache hits
 
