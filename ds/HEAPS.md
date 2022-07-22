@@ -42,3 +42,15 @@ for a index i,
 2. right child is at index 2 * i + 2
 3. it's parent is at index (i - 1)/2
 
+# Types of Heap
+
+<ins>Max Heap</ins>  
+1. Must be CBT
+2. Every node should be greater than it's children
+
+<ins>Min Heap</ins>  
+1. Must be CBT
+2. Every node should be smaller than it's children
+
+there is no relationships between the two children nodes   
+
