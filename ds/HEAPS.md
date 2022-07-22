@@ -12,6 +12,8 @@ It is a kind of binary tree
 1. fully filled up to 2nd last level  
 2. is filled from left -> right for last level
 
+height of the complete binary tree is O(logn)  
+
 ![cbt](https://user-images.githubusercontent.com/16437905/180133603-8cfb6792-6462-4c38-8799-2d8ed93a1778.png)
 
 for a given number of nodes, structurally only one complete binary search tree is possible  
