@@ -23,17 +23,18 @@ total number of unique function calls, n
 ![fbonacci dp](https://user-images.githubusercontent.com/16437905/180906809-d4d731c0-c34d-485d-ab9f-bbffbd9cf58e.png)
 
 
-# When to use dp?
+# When to use DP?
 
 we can solve a problem using dp when the problem has,  
 
 <ins>Optimal Substructure</ins>  
 If the optimal answer of the problem can be obtained by the optimal answer of the subproblems  
 
-<ins>Overlapping subproblems</ins>  
+<ins>Overlapping subproblems</ins> (not mandatory)  
 reptition of subproblems  
 
-we can use dp only for problems which are <ins> Directed Acyclic graphs</ins>  
+we can use dp only for problems which are <ins> Directed Acyclic graphs</ins> (DAG)  
+there should be no loop in states for calculating optimal answer of subproblems  
 
 # Memoization
 
@@ -43,8 +44,7 @@ we can use dp only for problems which are <ins> Directed Acyclic graphs</ins>
 > actuall function calls > number of unique function calls  
 
 # Code structure
-tc: O(n)  
-sc: O(n)
+tc: O(n), sc: O(n)
 
 ```
 int[] dp = new int[n+1]; --> initialized with {-1}
