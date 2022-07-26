@@ -33,7 +33,7 @@ If the optimal answer of the problem can be obtained by the optimal answer of th
 <ins>Overlapping subproblems</ins> (not mandatory)  
 reptition of subproblems  
 
-we can use dp only for problems which are <ins> Directed Acyclic graphs</ins> (DAG)  
+we can use dp only for problems whose states are <ins> Directed Acyclic graphs</ins> (DAG)  
 there should be no loop in states for calculating optimal answer of subproblems  
 
 # Memoization
