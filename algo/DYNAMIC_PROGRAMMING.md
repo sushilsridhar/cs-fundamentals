@@ -66,10 +66,38 @@ int fibonacci(int[] dp, int n) {
     }
 ```
 
-<ins>Two ways of solving DP problems</ins>  
+# Two approaches to solve DP problems
+
 <ins>Top-down way</ins>  
 > recursion + memoization  
 
+Look at n and try to divide it in to subproblems and try to find the solution for the subproblems,  
+
+recurrence relation,  
+> fib(n) = fib(n-1) + fib(n-2)  
+
+```   
+       fib(n)
+    /          \ 
+fib(n-1)      fib(n-2)
+```
+
 <ins>Bottom-up way</ins>  
 > Iterative + tabulation  
+
+start with subproblems, calculate their solutions and use them to calculate parent problem, keep doing until n is reached,  
+
+```
+int[] f = new int[n+1];
+f[1] = 0;
+f[2] = 1;
+for(int i=3; i<=n; i++) {
+    f[i] = f[i-1] + f[i-2]
+}
+```
+Instead a f array, we can just use two variables, to reduce space complexity to O(1),  
+In most cases, the Iterative approach will help to save space,   
+
+> memoization and tabulation are same
+
 
