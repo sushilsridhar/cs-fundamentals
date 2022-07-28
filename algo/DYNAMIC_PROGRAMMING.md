@@ -100,4 +100,6 @@ In most cases, the Iterative approach will help to save space,
 
 > memoization and tabulation are same
 
+# Time complexity
 
+identify the number of unique states and multiply it with time taken to process single state
