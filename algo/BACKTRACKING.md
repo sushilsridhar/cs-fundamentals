@@ -19,3 +19,44 @@ mostly the code is iterative
 > we basically backtracked
 
 ![Screenshot 2022-08-02 at 9 08 41 AM](https://user-images.githubusercontent.com/16437905/182286775-af7e92ab-d6b3-4f50-b3e2-3b99f15daa88.png)
+
+# Code structure
+
+> do  
+> function call  
+> undo  
+
+generate a state by adding something, process it and undo the addition to get back to previous state,    
+from the previous state, generate a another new state by adding another thing  
+
+generate binary array of size n,   
+
+```
+private static void backtracking(int index, int n, ArrayList<Integer> list) {
+
+                if(index == n) {
+                    for(int i: list) {
+                        System.out.print(i+" ");
+                    }
+                    System.out.println("");
+                    return;
+                }
+
+---> do         list.add(index, 0);
+---> fn         backtracking(index+1, n, list);
+---> undo       list.remove(index);
+
+                list.add(index, 1);
+                backtracking(index+1, n, list);
+                list.remove(index);
+    }
+
+```
+if n = 2, 
+<pre>
+output
+0 0  
+0 1  
+1 0  
+1 1  
+</pre>
