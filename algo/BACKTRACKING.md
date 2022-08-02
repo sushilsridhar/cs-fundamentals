@@ -1,1 +1,21 @@
 # Backtracking
+
+<ins>Top Down</ins>  
+solving a bigger problem by solving the smaller instance of the same given problem,  
+mostly the code is recursive  
+
+<ins>Bottom Up</ins>  
+start with a smaller subproblem for which answer is known, from that try to build the answer of the bigger problem,  
+mostly the code is iterative 
+
+<ins>Exception</ins>
+> Backtracking is bottom up approach, using recursion
+
+![Screenshot 2022-08-02 at 8 38 13 AM](https://user-images.githubusercontent.com/16437905/182283500-bf9811ce-1a52-4713-bad2-72d65042d667.png)
+
+# What is Backtracking?
+
+> we came back from current state to previous state and found a new route,   
+> we basically backtracked
+
+![Screenshot 2022-08-02 at 9 08 41 AM](https://user-images.githubusercontent.com/16437905/182286775-af7e92ab-d6b3-4f50-b3e2-3b99f15daa88.png)
