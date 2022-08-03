@@ -48,6 +48,8 @@ generate a state by adding something, process it and undo the addition to get ba
 from the previous state, generate a another new state by adding another thing  
 
 generate binary array of size n,   
+tc: O(n * 2^n)  
+sc: O(n)  
 
 ```
 private static void backtracking(int index, int n, ArrayList<Integer> list) {
