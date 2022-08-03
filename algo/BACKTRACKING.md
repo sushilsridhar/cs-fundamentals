@@ -23,19 +23,21 @@ mostly the code is iterative
 # Code structure
 
 <ins>intuition</ins>  
-intuition is trying out every combination like brute force, to generate a combinations  
-there are two options in selection,  
-either include that value or exclude that value in the ans container and move on to next index, when index is outofbound the base case is reached, process and return   
+intuition is trying out every combination like brute force, to generate a combinations there are two options in selection,  
+either include that value or exclude that value in the answer container and move on to next index, when index is out of bound the base case is reached, process and return   
 
-<ins>general time and space complexity</ins>  
+<ins>general time complexity</ins>  
 O(2^n), where n is the total number of function calls that reaches the base case,   
 for n=1, there are two choices, so two function calls, for n=2, there are 4 choices,  
 
-total number of function calls is 2^0 + 2^1 + 2^2 ... 2^n ~ approx 2^n
+total number of function calls is 2^0 + 2^1 + 2^2 ... 2^n ~ approx 2^n  
 
-space complexity is O(h), where h is the height of tree, at any point the max number of functions calls in the stack is n,  
-if n=2, 2^n = 2^2 = 4 function calls are possible, due to sequencetial execution, in the stack there are only two levels of function calls, at any point,  
-so space complexity is O(n)
+<ins>general space complexity</ins>   
+space complexity is O(h), where h is the height of tree,   
+at any point the max number of functions calls in the stack is n,  
+
+if n=2, 2^n = 2^2 = 4 function calls are possible, due to sequential execution, in the stack there are only two levels of function calls,   
+at any point, so space complexity is O(n)
     
 <ins>pseudocode</ins>  
 > do  
