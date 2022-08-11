@@ -58,4 +58,12 @@ from any node, we can go to any other node
 ![Screenshot 2022-08-11 at 8 42 17 AM](https://user-images.githubusercontent.com/16437905/184059232-7838270f-c1af-448e-acff-383d099f1cb7.png)
 
 
+# Simple Graphs
+
+> no self loop  
+> no multiple edges to the same neighbour  
+
+<ins>All Trees are Graphs</ins>  
+
+
 
