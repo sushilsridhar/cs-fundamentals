@@ -66,4 +66,69 @@ from any node, we can go to any other node
 <ins>All Trees are Graphs</ins>  
 
 
+# How to represent graphs
+
+Graph -> { Vertices, edges }
+
+<ins>Adjacency matrix</ins>  
+
+<pre>
+1 -> 2 -> 3
+  <-
+</pre>
+| | 1 | 2 | 3 |
+:---: | :---: | :---: | :---: |
+1 | 0 | 1 | 0
+2 | 1 | 0 | 1
+3 | 0 | 0 | 0
+
+sc: O(v^2)  
+
+cons  
+1. too much space
+2. adding more node, each take O(n2) complexity  
+
+
+<ins>Adjacency list</ins>     
+
+<pre>
+ 1 - 2 
+    / \
+   3 - 4
+</pre>
+
+<pre>
+Vertex | Edges
+| 1 |  - 2
+| 2 |  - 3 - 4 - 1
+| 3 |  - 2 - 4 
+| 4 |  - 2 - 3
+</pre>
+
+V: 1 2 3 4  
+E: each edge makes two entry in edges list, so 2E
+
+sc: O(V + 2E)
+
+
+# Traversal in Graphs
+
+<ins>Breadth First Search</ins>  
+same as doing level order traversal in graphs,  
+
+> explore the breadth first, explore all nodes in the same level or breadth first  
+
+> use queue to maintain order of elements in same level  
+
+
+<ins> Depth First Search</ins>  
+
+
+
+
+
+
+
+
+
 
