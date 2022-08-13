@@ -105,7 +105,7 @@ Vertex | Edges
 | 4 |  - 2 - 3
 </pre>
 
-V: 1 2 3 4  
+V: 1 2 3 4, four entries that hold just a reference to edges list    
 E: each edge makes two entry in edges list, so 2E
 
 sc: O(V + 2E)
