@@ -1,17 +1,31 @@
-# logarithms  
- 8->4->2->1 , how many times we divide 8 by 2 to get 1, 3 times, log2(8) = 3  
+# Logarithms  
+ 8 -> 4 -> 2 -> 1 , how many times to divide 8 by 2 to get 1? 3 times,   
+ log<sub>2</sub>(8) = 3    
+ 
  2^3 = 8, can be written as,  
- 3 = log2(8)  
+ 3 = log<sub>2</sub>(8)  
 
 # Formula  
-Sum of n natural numbers (1,2,3,4..) -> n(n+1)/2   
-Sum of n-1 natural numbers (n-1, n-2, n-3, ... 0) -> n(n-1)/2  
-Number of odd numbers between 1-N (1,3,5,7,..) -> (n+1)/2  
-Number of even numbers between 1-N (2,4,6,8..) -> (n+1)/2  
-Sum of n odd numbers is n^2  
 
-Sum of a particular sequence of numbers (ex: 5,6,7,8,9,10)- Arithmetic progression formula - n/2 * [2a + (n-1)*d]   
-where a is first term of AP and d is difference between two terms, which is 1 and n is total size.
+Sum of n natural numbers (1,2,3,4..)  
+n(n+1)/2   
+
+Sum of n-1 natural numbers (n-1, n-2, n-3, ... 0)  
+n(n-1)/2  
+
+Number of odd numbers between 1-N (1,3,5,7,..)  
+(n+1)/2  
+
+Number of even numbers between 1-N (2,4,6,8..)  
+(n+1)/2  
+
+Sum of n odd numbers is n^2   
+
+<ins>Arithmetic Progression</ins>    
+Sum of a particular sequence of numbers (ex: 5,6,7,8,9,10)  
+
+Arithmetic progression formula = n/2 * [2a + (n-1) * d]     
+where a is first term of AP and d is difference between two terms, which is 1 and n is total size  
 
 # Numbers  
 Decimal number is represented as,   
@@ -68,17 +82,23 @@ total elements = 2^0 + 2^N-2 = 2^N-1 , formula = a((r^t) -1)/r-1 , answer = (2^N
 
 [-2<sup>31</sup>, 2<sup>31</sup> -1]
 
--2<sup>31</sup> = -2 * 2<sup>10</sup> * 2<sup>10</sup> * 2<sup>10</sup>  
-2<sup>31</sup> -1 = 2 * 2<sup>10</sup> * 2<sup>10</sup> * 2<sup>10</sup> -1  
+<pre>
+-2<sup>31</sup>   = -2  *  2<sup>10</sup>  *  2<sup>10</sup>  *  2<sup>10</sup>  
+2<sup>31</sup> -1 =  2  *  2<sup>10</sup>  *  2<sup>10</sup>  *  2<sup>10</sup> -1  
 
-[-2 * 10<sup>3</sup> * 10<sup>3</sup> * 10<sup>3</sup>, 2 * 10<sup>3</sup> * 10<sup>3</sup> * 10<sup>3</sup> -1]   
+[-2  *  10<sup>3</sup>  *  10<sup>3</sup>  *  10<sup>3</sup>,  2  *  10<sup>3</sup>  *  10<sup>3</sup>  *  10<sup>3</sup>  -1]   
+</pre>
+
 
 integer limit can also be written as approx,   
 
 > [-2 * 10<sup>9</sup>, 2 * 10<sup>9</sup>]  
 
 # Numbers Included and Excluded
-[3-10] - including 3 and 10, there are total 8 numbers  
 [a-b]  - including a and b, there are total b-a+1 numbers  
 (a-b]  - excluding a and including b, there are total b-a numbers  
-(a-b)  - excluding a and b, there are total b-a-1 numbers
+(a-b)  - excluding a and b, there are total b-a-1 numbers  
+
+<ins>example</ins>  
+[3-10] - including 3 and 10, there are total 8 numbers, (10-3+1 = 8)    
+
