@@ -57,10 +57,27 @@ total elements = 2^0 + 2^N-2 = 2^N-1 , formula = a((r^t) -1)/r-1 , answer = (2^N
 - 2 bytes = 16 bits = [-2^16-1, -2^16-1 -1] = [-32768, 32767] -> range for short int  
 - 4 bytes = 32 bits = [-2^32-1, 2^32-1 -1]  = [-2,147,483,648, 2,147,483,647] -> range for integer
 
-2^10 = 1024 ~~ 1000 = 10^3,  
-2^10 ~~ 10^3, cube on both sides, 2^30 ~~ 10^9, integer limit can also be written as ~~ [-2 * 10^9, 2 * 10^9]
+# Understanding Problem Constraints
 
-# Numbers included and excluded
+> 2<sup>10</sup> = 1024 ~~ 1000 = 10<sup>3</sup>,  
+> 2<sup>10</sup> ~~ 10<sup>3</sup>  
+
+<ins>int range</ins>  
+
+4 bytes = 32 bits = [-2<sup>32-1</sup>, 2<sup>32-1</sup> -1]  
+
+[-2<sup>31</sup>, 2<sup>31</sup> -1]
+
+-2<sup>31</sup> = -2 * 2<sup>10</sup> * 2<sup>10</sup> * 2<sup>10</sup>  
+2<sup>31</sup> -1 = 2 * 2<sup>10</sup> * 2<sup>10</sup> * 2<sup>10</sup> -1  
+
+[-2 * 10<sup>3</sup> * 10<sup>3</sup> * 10<sup>3</sup>, 2 * 10<sup>3</sup> * 10<sup>3</sup> * 10<sup>3</sup> -1]   
+
+integer limit can also be written as approx,   
+
+> [-2 * 10<sup>9</sup>, 2 * 10<sup>9</sup>]  
+
+# Numbers Included and Excluded
 [3-10] - including 3 and 10, there are total 8 numbers  
 [a-b]  - including a and b, there are total b-a+1 numbers  
 (a-b]  - excluding a and including b, there are total b-a numbers  
