@@ -56,3 +56,25 @@ for a index i,
 
 there is no relationships between the two children nodes   
 
+# When to think of heaps?
+
+A max heap will have the largest number at the top of it. Once the top number is removed, 
+it will have the second-largest number at the top. 
+Once the second-largest number is removed, we will have the third-largest number at the top.
+
+# Java implementation
+
+PriorityQueue class implements Queue interface, this class provides the implementation of heaps in java,  
+
+<ins>min heap</ins>  
+min heap is the default settings for PriorityQueue,  
+
+PriorityQueue<Integer> pq = new PriorityQueue<>();  
+
+<ins>max heap</ins>   
+  
+PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());  
+
+  
+TODO how to pass custom comparator to PriorityQueue
+  
