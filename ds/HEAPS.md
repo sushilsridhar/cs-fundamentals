@@ -99,4 +99,14 @@ PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 ```
   
 TODO how to pass custom comparator to PriorityQueue
-  
+
+```
+ PriorityQueue<Points> minHeap = new PriorityQueue<>((p1, p2) -> {
+            if(p1.getDistance() > p2.getDistance()) {
+                return 1;
+            } else if(p1.getDistance() < p2.getDistance()) {
+                return -1;
+            }
+            return 0;
+        });
+```
