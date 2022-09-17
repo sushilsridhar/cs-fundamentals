@@ -61,7 +61,7 @@ there is no relationships between the two children nodes
 
 # Heapify 
 
-> Algorithm to create a heap data structure
+> Algorithm to create a heap data structure with a given group of elements  
 
 <ins>preconditions</ins>  
 1. entire tree should be a complete binary tree
@@ -71,11 +71,17 @@ there is no relationships between the two children nodes
 
 
 
-# When to think of heaps?
+# When to choose heaps?
 
-A max heap will have the largest number at the top of it. Once the top number is removed, 
-it will have the second-largest number at the top. 
-Once the second-largest number is removed, we will have the third-largest number at the top.
+> when a particular order needs to be maintained for a group of elements,  
+> even after removing or adding elements the order is maintained    
+
+<ins>example</ins>  
+if given a set of elements, find the max, find the second max, find the n max?  
+
+A max heap will have the largest number at the top of it, Once the top number is removed, 
+it will have the second-largest number at the top  
+Once the second-largest number is removed, we will have the third-largest number at the top  
 
 # Implementation
 
@@ -83,22 +89,27 @@ can be implemented using dynamic array,
 
 <ins>**Java Implementation**</ins>  
 
-PriorityQueue class implements Queue interface, this class provides the implementation of heaps in java,  
+PriorityQueue class implements Queue interface, this class provides the implementation of heaps in java,   
+PriorityQueue internally uses dynamic array,  
+
+**<ins>Ordering of elements in PriorityQueue</ins>**  
 
 <ins>min heap</ins>  
-min heap is the default settings for PriorityQueue,  
+min heap is the default settings for PriorityQueue, it is increasing order      
 
 ```
 PriorityQueue<Integer> pq = new PriorityQueue<>();  
 ```
 
 <ins>max heap</ins>   
+to create max heap, we need to specify the ordering, which is decreasing order  
 
 ```
 PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());  
 ```
-  
-TODO how to pass custom comparator to PriorityQueue
+
+<ins>custom comparator</ins>  
+Passing custom logic to handle the ordering of elements,  
 
 ```
  PriorityQueue<Points> minHeap = new PriorityQueue<>((p1, p2) -> {
@@ -110,3 +121,14 @@ TODO how to pass custom comparator to PriorityQueue
             return 0;
         });
 ```
+
+
+# Time Complexity
+  
+| Operations | PriorityQueue
+:---: | :---:
+add()          | O(log n)
+poll()         | O( TODO )
+peek()         | O(1)
+
+
