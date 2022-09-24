@@ -14,7 +14,7 @@ there are different databases created for a specific purpose, redshift/bigtable 
 hence separating analytics data from other databases, will help in using different databases suited for their purpose  
 
 <ins>DBMS</ins>  
-> software to manage databases 
+> software to store data and provides a way to interact with that data 
 
 OS file system, the first dbms
 
