@@ -62,14 +62,53 @@ there is no relationships between the two children nodes
 # Heapify 
 
 > Algorithm to create a heap data structure with a given group of elements  
-
+   
 <ins>preconditions</ins>  
 1. entire tree should be a complete binary tree
 2. left subtree should be a MAX heap / MIN heap (depends on which heap is being built)
 3. right subtree should be a MAX heap / MIN heap (depends on which heap is being built)
 
+since heaps are represented in linear format with arrays,   
+1, 8, 70, 80, 10, 5 - heaps  
 
+by default the left and right subtree and entire subtree is a complete binary tree  
 
+<ins>implementation</ins>  
+<pre>
+    1, 8, 70, 80, 10, 5
+
+                1
+           8            70
+      80     10      5
+</pre>
+
+start with parent of last leaf node,    
+check if parent is greater than both left and right nodes, if left is greater, swap left and parent,  
+point the pointer to current position of parent after swapping, again check if parent is greater than left and right,  
+keep doing until we reach the leaf node  
+
+repeat this for next parent, starting with 70, then 8, then 1  
+
+<ins>after heapify</ins>  
+<pre>
+    80, 10, 70, 8, 1, 5
+
+               80
+         10           70
+      8     1       5
+</pre>
+
+<ins>heapify is not online</ins>  
+heap is a online datastructure, where we add elements as need arises  
+
+but certain algorithms are not online, we need to know all the elements before processing, like merge sort,  
+we can not add elements on the fly, 
+
+> the algorithm of creating heap using heapify is not online  
+
+<ins>time and space complexity</ins>   
+tc: O(n)    
+sc: O(1)  
 
 # When to choose heaps?
 
@@ -98,14 +137,14 @@ PriorityQueue internally uses dynamic array,
 min heap is the default settings for PriorityQueue, it is increasing order      
 
 ```
-PriorityQueue<Integer> pq = new PriorityQueue<>();  
+PriorityQueue<Integer> minHeap = new PriorityQueue<>();  
 ```
 
 <ins>max heap</ins>   
 to create max heap, we need to specify the ordering, which is decreasing order  
 
 ```
-PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());  
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());  
 ```
 
 <ins>custom comparator</ins>  
@@ -128,7 +167,7 @@ Passing custom logic to handle the ordering of elements,
 | Operations | PriorityQueue
 :---: | :---:
 add()          | O(log n)
-poll()         | O( TODO )
+poll()         | O(log n)
 peek()         | O(1)
 
 
