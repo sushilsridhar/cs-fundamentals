@@ -38,7 +38,7 @@ used by db for storage optimization, the first few bytes of the string contains 
 
 storing empty string: it occupies one byte to store size of the string as 0  
 
-**<ins>Text</ins>**  
+<ins>Text</ins>  
 these can not be indexed, varchar can be indexed,   
 tiny text - 255B   
 text - 64KB  
