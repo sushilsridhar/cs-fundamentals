@@ -18,4 +18,17 @@ hence separating analytics data from other databases, will help in using differe
 
 OS file system, the first dbms
 
+# Sql database
 
+Databases that are based on relational model, this relational model represents data as a collections of relations (tables)  
+eg: sql, mysql
+
+# No sql database 
+
+Databases that do not follow relational model of storing data
+
+<ins>types</ins>  
+  1. Graph database (neo4j)
+  2. Column database (cassandra)
+  3. Document database (mongodb, elastic search)
+  4. key-value pair database (redis)
