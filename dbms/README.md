@@ -23,6 +23,17 @@ OS file system, the first dbms
 Databases that are based on relational model, this relational model represents data as a collections of relations (tables)  
 eg: sql, mysql
 
+<ins>Set Theory</ins>  
+
+> relation = set = table  
+
+set{A,B} = set{B,A}  
+list{A,B} != list{B,A}  
+
+every row/tuple is a value in the set,  
+the order of rows/tuples inside a set does not matter, 
+set can not have duplicate values  
+
 # No sql database 
 
 Databases that do not follow relational model of storing data
