@@ -55,7 +55,25 @@ int - 4bytes {-2B, 2B} --> commonly used
 big int - 8bytes {-9Z, 9Z}  
 
 **<ins>Floating data type</ins>**  
-decimal(p,s)  
+1. decimal(p,s)  
 where p is precision and s is scale, number of values after decimal  
 
 305.02, can be saved as 30502 with p as 5, and s as 2  
+max of decimal value is (p can have 1-65 digits) 10<sup>64</sup>  
+
+decimal can store <ins>exact values</ins> as we use precision and scaler,
+
+2. float - 4 bytes  
+3. double - 8 bytes  
+
+float and double store <ins>approximate values</ins>, need to write additional logic to hanlde the approximations
+
+
+**<ins>Boolean</ins>**    
+tinyint - 1byte,  
+boolean is alias of tinyint  
+
+**<ins>Enum</ins>**    
+a set of constants, 
+
+
