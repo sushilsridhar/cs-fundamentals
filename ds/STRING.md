@@ -1,9 +1,10 @@
 # String
 
-> It is a non primitive data type, build on top of character array   
+immutable, once created can't be changed  
+since it can't be changed, it can be shared 
 
-1. immutable, once created can't be changed
-2. since it can't be changed, it can be shared
+
+> It is a non primitive data type, build on top of character array   
 
 <ins>Official definition</ins>  
 ```
@@ -44,7 +45,7 @@ if hello is found in string pool, it is reused else new hello object is created 
 String t4 = new String("hello").intern();   
 ```
 
-<ins>Where to store String pool or Heap ?</ins> 
+<ins>Where to store, String pool or Heap ?</ins> 
 
 | declaration | stored in | is the object same?
 :---: | :---: | :---:
@@ -87,17 +88,23 @@ String t6 = new String("hello");            | heap          | different
 
 ```
 
+# String methods  
+
+
 # When to think of Strings? 
 
 When n number of String objects with same value (string literals) are to be created multiple times, Java String class can save heap space by using the concept of string pool and intern, it reduces load on memory and improves performance 
 
-
 # Disadvantages
 
+If the use case is to edit or update the same string multiple times, since Strings are constants, instead of altering, 
+new String objects are created in heap every time, wasting lot of memory space  
 
 # Mutable Strings
 
-String buffer string builder
+<ins>String Buffer</ins>  
+
+<ins>String Builder</ins>   
 
 
 
