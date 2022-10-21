@@ -2,6 +2,8 @@
 
 > It is a non primitive data type, build on top of character array   
 
+1. immutable, once created can't be changed
+2. since it can't be changed, it can be shared
 
 <ins>Official definition</ins>  
 ```
@@ -12,12 +14,6 @@ String buffers support mutable strings
 Because String objects are immutable they can be shared 
 ```       
 
-<ins>points</ins>  
-1. immutable, once created can't be changed
-2. since it can't be changed, it can be shared
-3. stored inside string pool which is inside heap space
-
-
 <ins>String literals are implemented as instances of String class</ins>  
 ```
 String a = "abc"; -> object of String class  
@@ -26,21 +22,29 @@ char c1 = "hello".charAt(1);
 int len = "hello".length;
 ```
 
-String buffer string builder
+# How strings are stored in memory?
 
-string pool 
-interning 
+> String pool is a special storage inside heap memory where string literals are stored  
 
-# String pool
+<ins>String interning</ins> 
 
-string pool is a area inside heap memory where string literals are stored
+```
+String t = "hello"; 
+```
 
-<ins></ins>
+When a string literal is created, the JVM first checks that literal in the String Constant Pool, If the literal is already present in the pool, its reference is returned and stored in the variable, 
 
-String t4 = new String("hello").intern(); 
+However, if the string literal is not found, the JVM creates a new string object in the String Constant Pool and returns its reference  
 
+> same can triggered manually by using intern method
 
-<ins>how strings are storage in memory?</ins> 
+if hello is found in string pool, it is reused else new hello object is created in string pool  
+
+```
+String t4 = new String("hello").intern();   
+```
+
+<ins>Where to store String pool or Heap ?</ins> 
 
 | declaration | stored in | is the object same?
 :---: | :---: | :---:
@@ -82,4 +86,18 @@ String t6 = new String("hello");            | heap          | different
   }
 
 ```
+
+# When to think of Strings? 
+
+When n number of String objects with same value (string literals) are to be created multiple times, Java String class can save heap space by using the concept of string pool and intern, it reduces load on memory and improves performance 
+
+
+# Disadvantages
+
+
+# Mutable Strings
+
+String buffer string builder
+
+
 
