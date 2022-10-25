@@ -6,7 +6,7 @@
 # Java Generics
 
 Using Generics it is possible to create classes that work with different data types,   
-and provides type safety feature
+and provides type safety feature at compile time  
 
 <ins>Java 1.4</ins>  
 
@@ -57,3 +57,64 @@ public class LinkedList<E> {
     }
 }
 ```
+
+# Variance
+<ins>Invariant: Type parameters must match exactly</ins>  
+
+```
+ArrayList<Integer> intArrList = new ArrayList<>();
+ArrayList<Number> numArrList = intArrList; // Not ok
+ArrayList<Integer> anotherIntArrList = intArrList; // Ok
+```
+
+<ins>Covariance: accept subtypes</ins>  
+Arrays are covariant,       
+an array of type T[] may contain elements of type T and its subtypes  
+an array of type S[] is a subtype of T[] if S is a subtype of T   
+
+```
+Number[] nums = new Number[5];
+nums[0] = new Integer(1); // Ok
+nums[1] = new Double(2.0); // Ok
+```
+
+<ins>Contravariance: accept supertypes</ins>    
+
+
+# Invariant: Generics are invariant
+
+Type parameters must match exactly  
+
+List\<Goods> is expected, java does not allow List\<Sand> even though Sand is subtype of Goods  
+
+```
+    public static void main(String[] args) {
+        Truck t = new Truck();
+        List<Sand> sandBags = new ArrayList<>(2);
+        sandBags.add(new Sand());
+        sandBags.add(new Sand());
+        t.insertAll(sandBags); // -> error
+    }
+       
+    static class Vehicle<T> {
+
+        void insertAll(List<T> items) {
+            filled += items.size();
+            this.items.addAll(items);
+        }
+    }        
+    
+    static class Goods {}
+    static class Sand extends Goods {}                                                            
+    static class Truck extends Vehicle<Goods> {}
+```
+
+
+<ins>Type Erasure</ins> 
+
+
+<ins>wildcards</ins>    
+
+
+
+
