@@ -67,8 +67,9 @@ ArrayList<Number> numArrList = intArrList; // Not ok
 ArrayList<Integer> anotherIntArrList = intArrList; // Ok
 ```
 
-<ins>Covariance: accept subtypes</ins>  
+<ins>Covariant: accept subtypes</ins>  
 Arrays are covariant,       
+
 an array of type T[] may contain elements of type T and its subtypes  
 an array of type S[] is a subtype of T[] if S is a subtype of T   
 
@@ -78,35 +79,83 @@ nums[0] = new Integer(1); // Ok
 nums[1] = new Double(2.0); // Ok
 ```
 
-<ins>Contravariance: accept supertypes</ins>    
+<ins>Contravariant: accept supertypes</ins>    
 
 
-# Invariant: Generics are invariant
+# Java Generics is invariant
 
-Type parameters must match exactly  
+Type parameters must match exactly, this is called invariant    
 
 List\<Goods> is expected, java does not allow List\<Sand> even though Sand is subtype of Goods  
 
+<ins>Why invariant</ins>   
+
+lets say if java allows any list as parameter to insertAll method,    
+
+at run time, java does not know what list is passed(what is the type of T),   
+java needs to explicitly check whether this type T is subtype or supertype or same type as defined in Stack<T>,   
+  
+but at run time, Stack<Integer> is same as Stack<String>, it accepts any type,    
+this check happens only at compile time, 
+
 ```
+        Stack<T> items = new Stack<>();
+
+        void insertAll(List<T> items) {
+            filled += items.size(); // check if filled <= capacity
+            this.items.addAll(items);
+        }
+
+```
+
+```
+public class Generics {
     public static void main(String[] args) {
+
         Truck t = new Truck();
+        t.insert(new Cement());
         List<Sand> sandBags = new ArrayList<>(2);
         sandBags.add(new Sand());
         sandBags.add(new Sand());
-        t.insertAll(sandBags); // -> error
+        t.insertAll(sandBags); // -> error because java generics is invariance
+        t.printStatus();
     }
-       
+
+    static class Goods {}
+    static class Cement extends Goods {}
+    static class Sand extends Goods {}
+    static class Person {}
+    static class Student extends Person {}
+
     static class Vehicle<T> {
+        Stack<T> items = new Stack<>();
+        int capacity = 10;
+        private int filled = 0;
+        
+        void printStatus() {
+            items.forEach(t -> System.out.println(t));
+        }
 
         void insertAll(List<T> items) {
-            filled += items.size();
+            filled += items.size(); // check if filled <= capacity
             this.items.addAll(items);
         }
-    }        
-    
-    static class Goods {}
-    static class Sand extends Goods {}                                                            
+
+        void insert(T item) {
+            filled++; // check if filled <= capacity
+            items.add(item);
+        }
+        
+        T unload () {
+            T item = items.pop();
+            filled--; // check if filled >= 0
+            return item;
+        }
+    }
+
+    static class SchoolBus extends Vehicle<Person> {}
     static class Truck extends Vehicle<Goods> {}
+}
 ```
 
 
