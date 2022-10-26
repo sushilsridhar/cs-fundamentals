@@ -86,28 +86,36 @@ nums[1] = new Double(2.0); // Ok
 
 Type parameters must match exactly, this is called invariant    
 
-List\<Goods> is expected, java does not allow List\<Sand> even though Sand is subtype of Goods  
+if List\<Goods> is expected, java does not allow List\<Sand> even though Sand is subtype of Goods  
 
 <ins>Why invariant</ins>   
 
-lets say if java allows any list as parameter to insertAll method,    
-
-at run time, java does not know what list is passed(what is the type of T),   
-java needs to explicitly check whether this type T is subtype or supertype or same type as defined in Stack<T>,   
+lets say if java allows list of any type(different than T) as parameter to insertAll method,    
   
-but at run time, Stack<Integer> is same as Stack<String>, it accepts any type,    
-this check happens only at compile time, 
-
 ```
         Stack<T> items = new Stack<>();
 
-        void insertAll(List<T> items) {
+        void insertAll(List<AnyType different than T> items) {
             filled += items.size(); // check if filled <= capacity
             this.items.addAll(items);
         }
 
 ```
 
+at run time, java does not know what is the type(T) of List<T> is passed,   
+
+> also at run time, object of any type can be added inside Datastructures,  
+
+Stack\<Integer> is same as Stack\<String>, the type check happens only at compile time,      
+  
+> thus the stack<T> get polluted with objects of different data types at run time,    
+> to enforce type safety in generics, it is made invariant   
+
+else, 
+  
+java needs to explicitly check whether this type T passed in insertAll method is subtype or supertype or same type as defined in Stack<T>,   
+
+<ins>code to show invariant </ins>   
 ```
 public class Generics {
     public static void main(String[] args) {
@@ -162,8 +170,61 @@ public class Generics {
 <ins>Type Erasure</ins> 
 
 
-<ins>wildcards</ins>    
+# Wildcards
 
+<ins>covariant and contravariant in generics is created used wildcards</ins>      
 
+Type parameters must match exactly, this is called invariant    
+
+if List\<Goods> is expected, java does not allow List\<Sand> even though Sand is subtype of Goods,    
+  
+> to enable above scenario, generics have wildcards  
+
+<ins>example</ins>    
+in, insertAll(List<? extends T> items), List\<Sand extends Goods> is accepted, Sand is a subtype of Goods class, this is covariant, as subtypes are accepted   
+
+<ins>code to show covariant</ins>   
+
+```
+public class Generics {
+    public static void main(String[] args) {
+
+        Truck t = new Truck();
+        t.insert(new Cement());
+        ArrayList<Sand> sandBags = new ArrayList<>(2);
+        sandBags.add(new Sand());
+        sandBags.add(new Sand());
+        t.insertAll(sandBags);
+        t.printStatus();
+    }
+  
+  static class Vehicle<T> {
+        Stack<T> items = new Stack<>();
+
+        void insertAll(List<? extends T> items) {
+            filled += items.size(); // check if filled <= capacity
+            this.items.addAll(items);
+        }
+
+        void insert(T item) {
+            filled++; // check if filled <= capacity
+            items.add(item);
+        }
+    }
+
+  static class Truck extends Vehicle<Goods> {}
+
+}
+```
+<ins>syntax for contravariant</ins>   
+
+List\<? super Goods> is accepted, any class which is parent of Goods is accepted, hence contravariant 
+
+```
+      void insertAll(List<? super T> items) {
+            filled += items.size(); // check if filled <= capacity
+            this.items.addAll(items);
+        }
+```
 
 
