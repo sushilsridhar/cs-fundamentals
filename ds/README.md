@@ -108,6 +108,21 @@ at run time, java does not know what is the type(T) of List<T> is passed,
 
 Stack\<Integer> is same as Stack\<String>, the type check happens only at compile time,      
   
+<ins>Proof</ins>      
+stringList holds objects of int and boolean at run time 
+
+```
+    ArrayList<Object> objList = new ArrayList<>();
+    objList.add(10);
+    objList.add(true);
+            
+    ArrayList<String> stringList = (ArrayList) objList;
+
+    for(Object x: stringList) {
+        System.out.println(x);
+    }
+
+```
 > thus the stack<T> get polluted with objects of different data types at run time,    
 > to enforce type safety in generics, it is made invariant   
 
@@ -165,10 +180,6 @@ public class Generics {
     static class Truck extends Vehicle<Goods> {}
 }
 ```
-
-
-<ins>Type Erasure</ins> 
-
 
 # Wildcards in Java Generics
 
