@@ -170,9 +170,9 @@ public class Generics {
 <ins>Type Erasure</ins> 
 
 
-# Wildcards
+# Wildcards in Java Generics
 
-<ins>covariant and contravariant in generics is created used wildcards</ins>      
+> covariant and contravariant in generics is created used wildcards 
 
 Type parameters must match exactly, this is called invariant    
 
