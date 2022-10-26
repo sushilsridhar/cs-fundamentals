@@ -1,6 +1,6 @@
 # Java
 
-<ins>Java is pass by value</ins>  
+<ins>pass by value</ins>  
 ```
 int a = 10;
 function(a);
