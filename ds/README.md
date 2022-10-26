@@ -3,6 +3,40 @@
 ![Screenshot 2022-06-25 at 8 16 31 PM](https://user-images.githubusercontent.com/16437905/175778730-7e5b02de-5511-4cc0-bfe6-0186e42aa17e.png)
 
 
+
+<ins>List</ins>     
+```
+1. ArrayList   : fast access, contiguous memory location     
+2. LinkedList  : non-contiguous memory location, efficient usage of storage space, 
+                 needs extra memory for node creation  
+
+3. Vector (contains implementation of Stack)     
+               : same as ArrayList, but thread safe hence slow
+```
+
+<ins>Queue</ins>     
+```
+1. PriorityQueue   : to create a Heap, to create a ordered queue 
+
+Deque implementations
+2. LinkedList (contains implementation of Queue, Stack, ArrayDeque) 
+                   : non-contiguous memory location, efficient usage of storage space, 
+                     needs extra memory for node creation   
+                   
+3. ArrayDeque      : insert and remove from both ends of queue
+
+```
+
+<ins>Set</ins>     
+```
+
+```
+
+<ins>Map</ins>     
+```
+
+```
+
 # Java Generics
 
 Using Generics it is possible to create classes that work with different data types,   
