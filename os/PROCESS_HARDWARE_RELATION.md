@@ -17,7 +17,7 @@ the activity monitor in mac, get all details of processes from PCB,
 # Hardwares
 
 <ins>Core</ins>     
-Core = processor = CPU, if the chip is dual core, it means, the system has two CPUs
+Core = processor = microprocessor = CPU, if the chip is dual core, it means, the system has two CPUs
 
 <ins>Quad-core Processor chip</ins>   
 ![quad-core](https://user-images.githubusercontent.com/16437905/199170376-586ca845-4e60-4f30-ac73-cd5fb90dff48.png)
@@ -38,4 +38,23 @@ RAM, Processor etc, are within the same single chip,
 example: microcontroller in a calculator (embedded system)    
 
 ![microcontroller-calculator](https://user-images.githubusercontent.com/16437905/199242241-75e0ff60-9424-4771-a6a3-e6b026607a9e.jpg)
+
+<ins>Microprocessor and Microcontroller</ins>   
+
+![mp-vs-mc](https://user-images.githubusercontent.com/16437905/199255122-d4379b75-f3bd-4d9d-b26c-91dffed5b63f.png)
+
+
+# Tear down of MacBook Air 13' 2015
+
+<ins>SSD</ins>    
+![ssd-1](https://user-images.githubusercontent.com/16437905/199257224-6ce4eb24-d390-4fe6-bf67-38b71009fdf7.png)   
+![ssd-2](https://user-images.githubusercontent.com/16437905/199257425-662716f6-a61d-4844-ae78-54424af8d1ba.png)
+
+
+<ins>Processor</ins>        
+![logic board](https://user-images.githubusercontent.com/16437905/199258040-3585c8df-87f2-4dbc-8b36-013335ae470b.png)
+![logic board 2](https://user-images.githubusercontent.com/16437905/199258083-559501eb-9371-448c-941f-54dac1ca7283.png)
+
+<ins>RAM</ins>    
+![ram](https://user-images.githubusercontent.com/16437905/199258147-1108bb42-8012-4a50-8439-1fda01bdf807.png)
 
