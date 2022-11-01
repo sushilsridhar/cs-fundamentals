@@ -1,14 +1,14 @@
 # Journey of Process
 
-1. Developer codes the app, and compiles the app into a file (.class, jar, war incase of java), which is stored in hardware
-2. when user starts the application, the compiled code (inside a file) is moved to RAM, 
-3. Each instruction in the file is executed by the CPU by using the cores it have
+<ins>Step 1</ins>: Developer codes the app, and compiles the app into a file (.class, jar, war - incase of java), which is stored in hardware
 
-<ins>Program</ins>    
-a set of instructions, compiled code stored in hardware   
+> <ins>Program</ins> - a set of instructions, compiled code stored in hardware  
 
-<ins>Process</ins>    
-A program that is in running state, the compiled code is moved to RAM and CPU starts executing it 
+<ins>Step 2</ins>: When user starts the application, the compiled code (inside a file) is moved to RAM, 
+    
+> <ins>Process</ins> - A program that is in running state, the compiled code is moved to RAM and CPU starts executing it
+
+<ins>Step 3</ins>: Each instruction in the file is executed by the CPU by using the cores it have
 
 <ins>Process control block (PCB)</ins>    
 for every process that gets created, a PCB is created for it, it contains all the information about the process,    
