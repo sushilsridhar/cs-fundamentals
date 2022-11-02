@@ -55,6 +55,6 @@ separate the task from the threads is very important
 Runnable classes holds the instructions, is the object to hold the instructions/task, which can be passed to the executors
 
 
-
+blocking queue is used to create the threads pool concept
 
 
