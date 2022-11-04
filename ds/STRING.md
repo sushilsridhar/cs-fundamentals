@@ -95,6 +95,45 @@ String t6 = new String("hello");            | heap          | different
 
 When n number of String objects with same value (string literals) are to be created multiple times, Java String class can save heap space by using the concept of string pool and intern, it reduces load on memory and improves performance 
 
+<ins>Proof that Strings saves heap space</ins>  
+
+Because of String immutability and intern pool, heap space is saved for String t1 and t2 and shared across multiple threads,    
+
+```
+    public static void main(String[] args) {
+        
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                String t1 = "hello";
+                String t2 = new String("hello").intern();
+                String t3 = new String("hello");
+
+                int a = 10;
+                ArrayList<Integer> l = new ArrayList<>();
+                System.out.println(Thread.currentThread().getName()+" "+
+                        "t1:"+ System.identityHashCode(t1) +" "+
+                        "t2:"+ System.identityHashCode(t2) +" "+
+                        "t3:"+ System.identityHashCode(t3) +" "+
+
+                        "a:"+ System.identityHashCode(a)  +" "+
+                        "l:"+ System.identityHashCode(l));
+            }
+        };
+
+        Thread t = new Thread(r);
+        Thread t1 = new Thread(r);
+
+        t.start();
+        t1.start();
+    }
+    
+    /*
+      Thread-0 t1:2095837363 t2:2095837363 t3:1915490654 a:1980996547 l:856759141
+      Thread-1 t1:2095837363 t2:2095837363 t3:696981276  a:1980996547 l:659356765
+    */
+```
+
 # Disadvantages
 
 If the use case is to edit or update the same string multiple times, since Strings are constants, instead of altering, 
