@@ -14,6 +14,15 @@
 for every process that gets created, a PCB is created for it, it contains all the information about the process,    
 the activity monitor in mac, get all details of processes from PCB,   
 
+<ins>What a process needs?</ins>    
+> memory  
+> computing power 
+
+memory is RAM, measured in bytes  
+computing power is CPU, measured in flops (floating point operations per second) which is proportional to ghz 
+
+Every process has a single thread by default, more can be created once process starts,  
+
 [Relationship between threads and hardware](https://github.com/sushilsridhar/cs-fundamentals/blob/main/os/THREADS_HARDWARE_RELATION.md)
 
 # Hardwares
