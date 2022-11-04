@@ -19,7 +19,7 @@ void function(int[] arr) {
 
 # Immutability 
 
-Immutability applies only to Java Objects, it makes no sense to talk about the primitive types being mutable,     
+Immutability applies only to String and Wrapper classes, it makes no sense to talk about the primitive types being mutable,     
 If you change the value of a variable like this
 ```
 int x = 5;
