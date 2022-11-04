@@ -14,6 +14,8 @@
 for every process that gets created, a PCB is created for it, it contains all the information about the process,    
 the activity monitor in mac, get all details of processes from PCB,   
 
+[Relationship between threads and hardware](https://github.com/sushilsridhar/cs-fundamentals/blob/main/os/THREADS_HARDWARE_RELATION.md)
+
 # Hardwares
 
 <ins>Core</ins>     
