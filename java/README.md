@@ -59,9 +59,22 @@ if wrapper classes were mutable, all three Foo objects will have wrong values,
     /*  1 2 3 */
  ```
 
+# Where variables in java are stored?
+
+where static variables are stored
+
+
+
 # add these 
-research on jvm 
-why generics doesn't support primitive types
-type erasure
-why wrapper classes are created for primitive types
-autoboxing
+research on jvm       
+why generics doesn't support primitive types      
+type erasure      
+why wrapper classes are created for primitive types     
+autoboxing      
+
+static class, what is the use of static class, linkedlist node static class         
+enums, how enums are stored, what are enums   
+
+string vs char[] array for storing password     
+interface vs abstract class       
+
