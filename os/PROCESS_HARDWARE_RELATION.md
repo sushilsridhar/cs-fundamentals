@@ -4,7 +4,7 @@
 
 <ins>Step 2</ins>: When user starts the application, the compiled code (inside a file) is moved to RAM, 
     
-<ins>Step 3</ins>: Each instruction in the file is executed by the CPU cores by using the threads inside them
+<ins>Step 3</ins>: Each instruction in the file is moved from RAM to CPU, and executed by the CPU by using the threads inside them
 
 > <ins>Program</ins> - a set of instructions, compiled code stored in hardware  
 
