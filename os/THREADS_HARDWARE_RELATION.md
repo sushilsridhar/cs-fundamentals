@@ -1,29 +1,13 @@
+# What happens before threads?
+<ins>Program</ins> - defined set of procedures or instructions to follow, it is not alive   
+<ins>Process</ins> - when it is executed, it becomes alive, it is called process
+
+long story - [Journey of Process](https://github.com/sushilsridhar/cs-fundamentals/blob/main/os/PROCESS_HARDWARE_RELATION.md)    
+in short - run the program, it becomes process, process creates threads to execute instructions  
+
+
 # Threads
 
-concurrency
-is doing multiple task at same time,
-
-it can achieved via parallelism or it can be achieved via doing task asynchronously
-
-parallelism -,
-
-example,
-
-two customer coming inside hotel at same time, ordering different at same time, after 20mins, getting the food at same time
-
-in the background we don't know how many chefs cooked the food, or only one single chef asynchronously did cooking or multiple chefs parrally cooked the food
-
-
-
-program -> defined set of procedures or instructions to follow, it is not alive,
-
-when it executed, it becomes alive, it is called process
-
-run the program, it becomes process
-
-process needs, memory and computing power
-
-memory is RAM, measured in bytes and computing power is CPU, measured in flops (floating point operations per second) which is proportional to ghz
 
 
 thread -> sequence of instructions sent to RAM, it has no memory, it inside the process and uses process memory which is shared
@@ -56,5 +40,28 @@ Runnable classes holds the instructions, is the object to hold the instructions/
 
 
 blocking queue is used to create the threads pool concept
+
+
+# Concurrency
+
+concurrency
+is doing multiple task at same time,
+
+it can achieved via parallelism or it can be achieved via doing task asynchronously
+
+parallelism -,
+
+example,
+
+two customer coming inside hotel at same time, ordering different at same time, after 20mins, getting the food at same time
+
+in the background we don't know how many chefs cooked the food, or only one single chef asynchronously did cooking or multiple chefs parrally cooked the food
+
+
+
+
+
+
+
 
 
