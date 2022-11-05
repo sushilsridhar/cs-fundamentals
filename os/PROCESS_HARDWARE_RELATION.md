@@ -4,7 +4,7 @@
 
 <ins>Step 2</ins>: When user starts the application, the compiled code (inside a file) is moved to RAM, 
     
-<ins>Step 3</ins>: Each instruction in the file is moved from RAM to CPU, and executed by the CPU by using the threads inside them
+<ins>Step 3</ins>: Each instruction in the file is moved by CPU from RAM to core, and executed by the CPU by creating threads inside the core of CPU
 
 > <ins>Program</ins> - a set of instructions, compiled code stored in hardware  
 
@@ -27,8 +27,11 @@ Every process has a single thread by default, more can be created once process s
 
 # Hardwares
 
+processor = microprocessor = CPU
+
 <ins>Core</ins>     
-Core = processor = microprocessor = CPU, if the chip is dual core, it means, the system has two CPUs
+Core is the execution unit, where the CPU executes the instructions, if the chip is dual core, it means, the system has two execution units,        
+the CPU can run two threads in parrallel
 
 <ins>Quad-core Processor chip</ins>   
 ![quad-core](https://user-images.githubusercontent.com/16437905/199170376-586ca845-4e60-4f30-ac73-cd5fb90dff48.png)
@@ -62,7 +65,7 @@ example: microcontroller in a calculator (embedded system)
 ![ssd-2](https://user-images.githubusercontent.com/16437905/199257425-662716f6-a61d-4844-ae78-54424af8d1ba.png)
 
 
-<ins>Processor</ins>        
+<ins>Processor (CPU and GPU)</ins>        
 ![logic board](https://user-images.githubusercontent.com/16437905/199258040-3585c8df-87f2-4dbc-8b36-013335ae470b.png)
 ![logic board 2](https://user-images.githubusercontent.com/16437905/199258083-559501eb-9371-448c-941f-54dac1ca7283.png)
 
