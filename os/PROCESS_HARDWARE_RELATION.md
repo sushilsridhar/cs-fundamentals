@@ -27,11 +27,15 @@ Every process has a single thread by default, more can be created once process s
 
 # Hardwares
 
-processor = microprocessor = CPU
+> processor = microprocessor = CPU
+
+> core = hardware threads     
 
 <ins>Core</ins>     
 Core is the execution unit, where the CPU executes the instructions, if the chip is dual core, it means, the system has two execution units,        
-the CPU can run two threads in parrallel
+the CPU can run two threads in parrallel,       
+
+Quad-core: CPU can run 4 threads in parrallel, this core is called hardware threads       
 
 <ins>Quad-core Processor chip</ins>   
 ![quad-core](https://user-images.githubusercontent.com/16437905/199170376-586ca845-4e60-4f30-ac73-cd5fb90dff48.png)
