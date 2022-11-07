@@ -54,6 +54,37 @@ multiple software threads executing on different hardware threads at the same ti
 ![Screenshot 2022-11-07 at 1 18 03 PM](https://user-images.githubusercontent.com/16437905/200254311-f68a3220-bb0d-408c-8f65-48c9b46caa47.png)
 
 
+# How to write multi-threaded program?
+
+<ins>Create a task that needed to be run parallely</ins>    
+main thread is the default thread, order in which the multiple threads run is decided by CPU scheduling algorithm   
+  
+```
+public class TestThread {
+    public static void main(String[] args) {
+
+        System.out.println(Thread.currentThread().getName()+" hello world");
+        Task task = new Task();
+        Thread t = new Thread(task);
+        t.start();
+        System.out.println(Thread.currentThread().getName()+" hello world");
+    }
+}
+
+class Task implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getName()+" hello world");
+    }
+}
+  
+main hello world
+main hello world
+Thread-0 hello world
+  
+```
+
 # check below items
 
 thread -> sequence of instructions sent to RAM, it has no memory, it inside the process and uses process memory which is shared
