@@ -36,7 +36,7 @@ each core is independent and can execute different threads at the same time
 
 # Concurrency
 
-When a system can have multiple threads in different stages of execution at the same time, not necessarily making progress in parrallel,  
+A system having multiple software threads in different stages of execution at the same time, not necessarily making progress in parrallel,  
 
 <ins>example</ins>    
 A process in single core CPU, there can be many software threads, but since there is only one hardware thread, multiple threads may run in the core taking turns, but not at the same time, this is called concurrency   
@@ -46,6 +46,8 @@ A process in single core CPU, there can be many software threads, but since ther
 # Parallelism
 
 > Concurrency + progress in parallel
+
+multiple software threads executing on different hardware threads at the same time, is called Parallelism
 
 ![Screenshot 2022-11-07 at 1 17 30 PM](https://user-images.githubusercontent.com/16437905/200254204-04fc163e-5ae4-460a-85fd-340d74817797.png)
 
@@ -84,23 +86,6 @@ Runnable classes holds the instructions, is the object to hold the instructions/
 
 
 blocking queue is used to create the threads pool concept
-
-
-# Concurrency
-
-concurrency
-is doing multiple task at same time,
-
-it can achieved via parallelism or it can be achieved via doing task asynchronously
-
-parallelism -,
-
-example,
-
-two customer coming inside hotel at same time, ordering different at same time, after 20mins, getting the food at same time
-
-in the background we don't know how many chefs cooked the food, or only one single chef asynchronously did cooking or multiple chefs parrally cooked the food
-
 
 
 
