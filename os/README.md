@@ -38,5 +38,21 @@ pausing or switching of programs before its completion - CPU Scheduling is possi
 <ins>Non pre-emptive OS</ins>    
 OS can not switch or pause a program once it has started
 
+# CPU Scheduling
 
+If we have Pre-emptive OS, we can schedule some other process, when a process is waiting/idle, to make the system more efficient    
+
+<ins>Context Switching</ins>    
+when a CPU switches a task, it will have to store its previous state to the memory, and it will also have to load the previous state of the next task in the memory,        
+
+> this loading and saving processes takes extra time, this is the problem of context switching    
+
+<ins>Starvation</ins>   
+a process with the longest waiting time, will starve for CPU in SRTF algo(Shortest remaining time first)    
+
+<ins>Throughput</ins>   
+number of processes executed per second   
+
+<ins>Latency</ins>    
+Average time it takes for a process to complete from the time the CPU knows about it    
 
