@@ -8,7 +8,23 @@ in short - run the program, it becomes process, process creates threads to execu
 
 # Threads
 
+> A unit of CPU execution
 
+<ins>example</ins>    
+When letters are typed in word processor software, there are multiple tasks which happens at the same time,     
+grammer check, spelling check, autosave, display to UI, suggestions, check for updates, all these can be run parrallely,    
+
+> all threads have their own stack memory and share a common heap memory 
+
+![Screenshot 2022-11-07 at 12 57 21 PM](https://user-images.githubusercontent.com/16437905/200250949-291ae0aa-d461-4458-8230-f9221e82333b.png)
+
+
+<ins>Data sharing</ins>   
+all threads inside a process share a common heap space, processes can't share data with other processes, IntelliJ can't share data with Ms Word,    
+but processes can communicate with eachother, which is called IPC (Inter Process Communication)
+
+
+# check below items
 
 thread -> sequence of instructions sent to RAM, it has no memory, it inside the process and uses process memory which is shared
 
