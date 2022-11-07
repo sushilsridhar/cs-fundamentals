@@ -40,6 +40,14 @@ Quad-core: CPU can run 4 threads in parrallel, this core is called hardware thre
 <ins>Quad-core Processor chip</ins>   
 ![quad-core](https://user-images.githubusercontent.com/16437905/199170376-586ca845-4e60-4f30-ac73-cd5fb90dff48.png)
 
+<ins>GPU</ins>      
+Graphical Processing unit, is a specialized processing unit for enhanced mathematical computation capability, ideal for computer graphics       
+
+GPUs have 1000s of smaller cores,      
+GPUs have a lot of cores (each of which is simpler than say a CPU core) because they do a lot of similar processing at the same time, repeating and brute force type of task,       
+
+![logo](https://user-images.githubusercontent.com/16437905/200256352-988756e4-8c47-4e83-8b65-d3851ac954df.png)
+
 <ins>RAM</ins>    
 ![ram](https://user-images.githubusercontent.com/16437905/199171006-46eb6efb-4061-4da3-b28c-148761986036.jpeg)
 
