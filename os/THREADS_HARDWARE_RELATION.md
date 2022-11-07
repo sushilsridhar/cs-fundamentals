@@ -14,7 +14,7 @@ in short - run the program, it becomes process, process creates threads to execu
 When letters are typed in word processor software, there are multiple tasks which happens at the same time,     
 grammer check, spelling check, autosave, display to UI, suggestions, check for updates, all these can be run parrallely,    
 
-> all threads have their own stack memory and share a common heap memory 
+> all threads inside a process have their own stack memory and share a common heap memory 
 
 ![Screenshot 2022-11-07 at 12 57 21 PM](https://user-images.githubusercontent.com/16437905/200250949-291ae0aa-d461-4458-8230-f9221e82333b.png)
 
@@ -30,7 +30,7 @@ thread -> sequence of instructions sent to RAM, it has no memory, it inside the 
 
 process has memory and thread, thread is a sequence of instructions recieved from process, which is sent to RAM for execution
 
-all threads inside the process, have access to same memory inside the process
+all threads inside a process, have access to same memory inside the process
 
 hardware and software threads are there
 
