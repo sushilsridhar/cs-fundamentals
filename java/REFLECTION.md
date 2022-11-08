@@ -13,21 +13,6 @@ Java object exists only inside JVM, it is programming lanugage construct,
 objClass is an object, a reference to a class itself, a place in memory which has the definition of class itself,               
 the blueprint itself can be refered as object and can be pointed to, passsed around             
 
-
-<ins>GSON library</ins>         
-Gson know what fields are inside the Person object by using reflection, 
-
-```
-        Gson gson = new Gson();
-
-        Person person = new Person(2, "john");
-        String json = gson.toJson(person);
-        System.out.println("json: "+json);
-
-        Person p = gson.fromJson("{\"age\":2,\"name\":\"john\"}", Person.class);
-        System.out.println("obj: "+p.age +" "+ p.name);
-```
-
 <ins>Example of reading Fields using reflection</ins>           
 ```
     printFields(person);
@@ -49,10 +34,52 @@ Gson know what fields are inside the Person object by using reflection,
         }
     }
     
-json: {"age":2,"name":"john"}
-obj: 2 john
 Field: age value: 2
 Field: name value: john
 Field: color value: red
 Field: wheels value: 4    
 ```
+
+<ins>GSON library</ins>         
+Gson know what fields are inside the Person object by using reflection, 
+
+```
+        Gson gson = new Gson();
+
+        Person person = new Person(2, "john");
+        String json = gson.toJson(person);
+        System.out.println("json: "+json);
+
+        Person p = gson.fromJson("{\"age\":2,\"name\":\"john\"}", Person.class);
+        System.out.println("obj: "+p.age +" "+ p.name);
+        
+        json: {"age":2,"name":"john"}
+        obj: 2 john
+```
+
+<ins>Jackson library</ins>              
+uses reflection for conversion,         
+
+```
+        ObjectMapper mapper = new ObjectMapper();
+        String pJson = mapper.writeValueAsString(person);
+        System.out.println(pJson);
+
+        Person personObjectMapper = mapper.readValue("{\"age\":2,\"name\":\"john\"}", Person.class);
+        System.out.println(personObjectMapper.age+" "+ personObjectMapper.name);
+        
+        {"age":2,"name":"john"}
+        2  john
+```
+
+
+# GSON vs Jackson   
+
+<ins>Gson</ins>         
+to use just import single library,              
+> does not require getters and setters for bean class, hence simple to use      
+
+<ins>Jackson</ins>              
+to use, need multiple libraries, jackson core, jackson databind, etc,           
+> require getters, setters and default public constructor for bean class, making it complex than gson                
+
