@@ -17,8 +17,11 @@
 <ins>Queue</ins>     
 ```
 1. PriorityQueue   : to create a Heap, to create a ordered queue 
-
+```
+```
+Deque extends Queue interface
 Deque implementations
+
 2. LinkedList (contains implementation of Queue, Stack, ArrayDeque) 
                    : non-contiguous memory location, efficient usage of storage space, 
                      needs extra memory for node creation   
