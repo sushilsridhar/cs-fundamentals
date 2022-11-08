@@ -61,15 +61,17 @@ Gson know what fields are inside the Person object by using reflection,
 uses reflection for conversion,         
 
 ```
+        Vehicle vehicle = new Vehicle(4, "white");
+
         ObjectMapper mapper = new ObjectMapper();
-        String pJson = mapper.writeValueAsString(person);
+        String pJson = mapper.writeValueAsString(vehicle);
         System.out.println(pJson);
 
-        Person personObjectMapper = mapper.readValue("{\"age\":2,\"name\":\"john\"}", Person.class);
-        System.out.println(personObjectMapper.age+" "+ personObjectMapper.name);
+        Vehicle vObjMapper = mapper.readValue("{\"color\":\"white\",\"wheels\":4}", Vehicle.class);
+        System.out.println(vObjMapper.wheels+" "+ vObjMapper.color);
         
-        {"age":2,"name":"john"}
-        2  john
+        {"color":"white","wheels":4}
+        4 white
 ```
 
 
@@ -81,5 +83,7 @@ to use just import single library,
 
 <ins>Jackson</ins>              
 to use, need multiple libraries, jackson core, jackson databind, etc,           
-> require getters, setters and default public constructor for bean class, making it complex than gson                
+> require getters, setters and default public constructor for bean class, making it complex than gson 
+
+Throws error, if fields are missing in Bean, on conversion from json to Bean,               
 
