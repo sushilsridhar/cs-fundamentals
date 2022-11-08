@@ -48,4 +48,11 @@ Gson know what fields are inside the Person object by using reflection,
             System.out.println("Field: " + field.getName() + " value: " + value);
         }
     }
+    
+json: {"age":2,"name":"john"}
+obj: 2 john
+Field: age value: 2
+Field: name value: john
+Field: color value: red
+Field: wheels value: 4    
 ```
