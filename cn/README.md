@@ -8,7 +8,7 @@ Transport layer is managed by OS,
 
 Application - creation of data    
 Presentation - encrypt/decrypt, format data   
-Session - create ports and sessions    
+Session - create sessions    
 
 Transport - transmit data using transmission protocols like TCP, UDP    
 Network - IP (Internet Protocol layer)
