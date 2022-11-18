@@ -40,7 +40,19 @@ OS can not switch or pause a program once it has started
 
 # CPU Scheduling
 
-If we have Pre-emptive OS, we can schedule some other process, when a process is waiting/idle, to make the system more efficient    
+If we have Pre-emptive OS, we can schedule some other process, when a process is waiting/idle, to make the system more efficient,         
+
+CPU scheduling takes care of    
+scheduling and executing the software threads of a process inside hardware threads    
+and also scheduling the different processes     
+
+<ins>Software threads assigned to hardware threads</ins>    
+
+![Screenshot 2022-10-31 at 7 11 32 PM](https://user-images.githubusercontent.com/16437905/202689784-e53269e1-153c-4012-9f08-02e6145a16c1.png)
+
+Concurrency frameworks exists at different layers,    
+
+![Screenshot 2022-11-18 at 3 57 13 PM](https://user-images.githubusercontent.com/16437905/202680760-dc495d85-5855-475b-b66c-41c516e26a53.png)
 
 <ins>Context Switching</ins>    
 when a CPU switches a task, it will have to store its previous state to the memory, and it will also have to load the previous state of the next task in the memory,        
