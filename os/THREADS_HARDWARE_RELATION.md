@@ -60,7 +60,10 @@ multiple software threads executing on different hardware threads at the same ti
 
 <ins>Create a task that needed to be run parallely</ins>    
 main thread is the default thread, order in which the multiple threads run is decided by CPU scheduling algorithm   
-  
+
+Runnable functions are the tasks    
+Runnable classes holds the instructions, it is the object that hold the instructions/task, which can be passed to the executors
+
 ```
 public class TestThread {
     public static void main(String[] args) {
@@ -87,38 +90,12 @@ Thread-0 hello world
   
 ```
 
-# check below items
+<ins>Executors</ins>    
 
-thread -> sequence of instructions sent to RAM, it has no memory, it inside the process and uses process memory which is shared
+> Using Executors it is easy to manage a pool of threads, otherwise we need to write lot of boiler plate code   
 
-process has memory and thread, thread is a sequence of instructions recieved from process, which is sent to RAM for execution
-
-all threads inside a process, have access to same memory inside the process
-
-hardware and software threads are there
-
-
-software threads run on hardware thread, hardware threads runs on CPU
-
-executor service framework in java, check this
-
-
-hardware thread is the Core, if the number of cores is 4, it means, the number of hardware threads is 4, it is fixed when you buy a CPU
-
-
-we can't create hardware threads, but we can create software threads in java
-
-
-ideally, in real world create threads with executors in java, and fix the thread pool size according to number of cores,
-
-runnable functions are the tasks
-
-separate the task from the threads is very important
-
-Runnable classes holds the instructions, is the object to hold the instructions/task, which can be passed to the executors
-
-
-blocking queue is used to create the threads pool concept
+In real world threads are created with executors in java, and the thread pool size is fixed according to number of cores,   
+using this, we have a main thread, along the pool of worker threads,    
 
 
 
