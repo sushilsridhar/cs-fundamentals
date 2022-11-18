@@ -32,12 +32,25 @@ Deque implementations
 
 <ins>Set</ins>     
 ```
+check below items and update
 
+HashSet
+store unique elements and search them
+TreeSet
+thread safe
+order by comparator/natural
+LinkedHashSet
+if we need ordering (insertion) of the items in a set
 ```
 
 <ins>Map</ins>     
 ```
+check below items and update
 
+HashMap
+simplest way to store key-value pairs
+LinkedHashMap
+ordering of keys
 ```
 
 # Java Generics
