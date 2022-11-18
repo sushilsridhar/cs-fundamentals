@@ -10,6 +10,8 @@ in short - run the program, it becomes process, process creates threads to execu
 
 > A unit of CPU execution
 
+A stream of instructions are sent to CPU, A thread is a single instruction that is executed
+
 <ins>example</ins>    
 When letters are typed in word processor software, there are multiple tasks which happens at the same time,     
 grammer check, spelling check, autosave, display to UI, suggestions, check for updates, all these can be run parrallely,    
