@@ -19,9 +19,7 @@ Protocols:
 
 
 <ins>Physical Layer</ins>     
-The physical layer receives the frames from the Data Link Layer and 
-generates information on bits of electrical impulses or light depending on the medium being optical or electrical, 
-and transmits them physically 
+The physical layer receives the frames from the Data Link Layer and generates information on bits of electrical impulses or light depending on the medium being optical or electrical and transmits them physically bit by bit
 
 Protocols: 
 
