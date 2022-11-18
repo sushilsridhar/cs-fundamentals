@@ -51,6 +51,13 @@ HashMap
 simplest way to store key-value pairs
 LinkedHashMap
 ordering of keys
+
+add iterable interface and for each benefits
+HashMap<String, Integer> hashmap = new HashMap<>();
+
+for(String key: hashmap.keySet()) {
+Integer i = hashmap.get(key);
+}
 ```
 
 # Java Generics
@@ -288,4 +295,8 @@ List\<? super Goods> is accepted, any class which is parent of Goods is accepted
         }
 ```
 
+usecases for this, check this
+
+Collections.copy
+addall methods of all collections
 
