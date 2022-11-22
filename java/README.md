@@ -1,7 +1,26 @@
 
+![JDK](https://user-images.githubusercontent.com/16437905/203354543-09a45992-fbfb-4030-8c2b-f2434d56a34f.png)
 
-# JRE 
 
+# Java code to Byte code 
+
+<ins>HelloWorld.java</ins>    
+```
+public class HelloWorld {
+    public HelloWorld() {}
+    
+    public static void main(String[] args) {
+
+        int a = 1;
+        int b = 2;
+
+        int c = a + b;
+        System.out.println("Hello World :D");
+        System.out.println(c + 5);
+    }
+}
+```
+<ins>HelloWorld.class</ins>  
 ```
 // class version 52.0 (52)
 // access flags 0x21
@@ -62,4 +81,10 @@ public class HelloWorld {
 }
 
 ```
+
+[List of Java Bytecode instructions](https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions)
+
+.class file contains the bytecode that will be executed by      
+
+
 
