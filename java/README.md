@@ -15,6 +15,9 @@ JDK - JRE + compiler and debugger + things needed for development
 ```
 ![jdk-jre-jvm](https://user-images.githubusercontent.com/16437905/203471701-0a03afb1-4188-41d0-8c99-694b5233611d.png)
 
+# JVM Architecture
+
+
 # Java code to Bytecode 
 
 .class file contains the bytecode that will be executed and converted to machine code by JVM - check what is machine code  
