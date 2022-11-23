@@ -4,6 +4,10 @@
 
 # Java code to Byte code 
 
+.class file contains the bytecode that will be executed and converted to machine code by JVM - check what is machine code  
+
+[List of Java Bytecode instructions](https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions)
+
 <ins>HelloWorld.java</ins>    
 ```
 public class HelloWorld {
@@ -81,10 +85,6 @@ public class HelloWorld {
 }
 
 ```
-
-[List of Java Bytecode instructions](https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions)
-
-.class file contains the bytecode that will be executed by      
 
 
 
