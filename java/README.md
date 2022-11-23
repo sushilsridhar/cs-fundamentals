@@ -1,8 +1,21 @@
 
-![JDK](https://user-images.githubusercontent.com/16437905/203354543-09a45992-fbfb-4030-8c2b-f2434d56a34f.png)
+# Java Virtual Machine     
+The Java Virtual Machine (JVM) is the virtual machine that runs the Java bytecodes. The JVM doesn't understand Java source code; that's why you need compile your *.java files to obtain *.class files that contain the bytecodes understood by the JVM.        
 
+It's also the entity that allows Java to be a "portable language" (write once, run anywhere). Indeed, there are specific implementations of the JVM for different systems (Windows, Linux, macOS), the aim is that with the same bytecodes they all give the same results.
 
-# Java code to Byte code 
+> JDK JRE JVM all are platform dependent  
+
+> Java code, byte code are platform independent               
+
+```
+JVM - runs the bytecode      
+JRE - JVM + Java Packages Classes(like util, math, lang, awt,swing etc) + runtime libraries     
+JDK - JRE + compiler and debugger + things needed for development
+```
+![jdk-jre-jvm](https://user-images.githubusercontent.com/16437905/203471701-0a03afb1-4188-41d0-8c99-694b5233611d.png)
+
+# Java code to Bytecode 
 
 .class file contains the bytecode that will be executed and converted to machine code by JVM - check what is machine code  
 
