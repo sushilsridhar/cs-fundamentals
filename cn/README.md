@@ -46,3 +46,10 @@ Session      - create sessions
 Transport    - TCP, UDP (transport Protocol are used)  
 Network      - IP layer (Internet Protocol layer), 
 ```
+
+
+# Questions
+socket vs session
+check InetAddress class which is implementation of IP protocol
+
+check the libraries of TCP IP HTTP implemenetation
