@@ -90,14 +90,6 @@ Thread-0 hello world
   
 ```
 
-<ins>Executors</ins>    
-
-> Using Executors it is easy to manage a pool of threads, otherwise we need to write lot of boiler plate code   
-
-In real world threads are created with executors in java, and the thread pool size is fixed according to number of cores,   
-using this, we have a main thread, along the pool of worker threads,    
-
-
 
 
 
