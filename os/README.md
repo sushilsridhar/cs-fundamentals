@@ -54,6 +54,11 @@ Concurrency frameworks exists at different layers,
 
 ![Screenshot 2022-11-18 at 3 57 13 PM](https://user-images.githubusercontent.com/16437905/202680760-dc495d85-5855-475b-b66c-41c516e26a53.png)
 
+<ins>Scheduling Algorithms</ins>    
+First Come First Serve (FCFS)   
+Shortest Remining Time First (SRTF)   
+Round Robin - after every quantum of time, pause the current process and pick up a new one    
+
 <ins>Context Switching</ins>    
 when a CPU switches a task, it will have to store its previous state to the memory, and it will also have to load the previous state of the next task in the memory,        
 
