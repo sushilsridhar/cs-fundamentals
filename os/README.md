@@ -56,7 +56,7 @@ Concurrency frameworks exists at different layers,
 
 <ins>Scheduling Algorithms</ins>    
 First Come First Serve (FCFS)   
-Shortest Remining Time First (SRTF)   
+Shortest Remaining Time First (SRTF)   
 Round Robin - after every quantum of time, pause the current process and pick up a new one    
 
 <ins>Context Switching</ins>    
