@@ -63,6 +63,7 @@ Router has one public IP to all the devices connected to it,
 eg: Computer, phone, TV - all connected to single wifi have same Public IP address, which is used to connect to internet    
 
 # MAC
+any part of the system, that comes in contact with internet has MAC address
 mac address - unique address in hardware of a computer to identify 
 MAC addresses are used in the medium access control protocol sublayer of the data link layer. As typically represented, MAC addresses are recognizable as six groups of two hexadecimal digits, separated by hyphens, colons, or without a separator.
 
@@ -77,6 +78,28 @@ Network address translation (NAT) is a method of mapping an IP address space int
 As network address translation modifies the IP address information in packets,
 
 
+
+# DDNS 
+DNS stands for domain name system, and a dynamic DNS gives a permanent domain name to a computer, such as mybusiness.ddns.com, and automatically keeps track of that computer's IP address, even if it changes. Therefore, when someone on the outside internet wants to contact your computer, they can contact mybusiness.ddns.com, and the dynamic DNS service will know how to contact your computer. It's like having a personal assistant whose job it is to know how to reach you at all times.
+
+dns how to deploy app with ddns, how it works, 
+
+how dns works
+
+how to buy static ip from ISP find out
+
+why ipv5 does not exist
+
+
+port number is unique to application running on same IP
+
+https: 443
+http : 80, what is relation between protocols and port number
+
+# application layer
+
+client server architecuter
+peer to peer architecture
 
 # Questions
 socket vs session
