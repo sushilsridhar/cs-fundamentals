@@ -48,8 +48,44 @@ Network      - IP layer (Internet Protocol layer),
 ```
 
 
+# IP
+
+IPV4    
+0-255 . 0-255 . 0-255 . 0-255 , - 32 bits total - 2^32 combinations
+IPV6 128bits, 2^128 combinations
+
+<ins>Private IP</ins>   
+Router assigns different IPs to all devices connected to it,    
+eg:, Computer, phone, TV - all connected to single wifi have different private IP address
+
+<ins>Public IP</ins>
+Router has one public IP to all the devices connected to it,    
+eg: Computer, phone, TV - all connected to single wifi have same Public IP address, which is used to connect to internet    
+
+# MAC
+mac address - unique address in hardware of a computer to identify 
+MAC addresses are used in the medium access control protocol sublayer of the data link layer. As typically represented, MAC addresses are recognizable as six groups of two hexadecimal digits, separated by hyphens, colons, or without a separator.
+
+find out where MAC is written, is it inside ROM, add ROM photos in hardware section
+
+<ins>NAT</ins>     
+Network Address Translation
+to reuse private address, as IP address numbers are limited
+![NAT](https://user-images.githubusercontent.com/16437905/203917514-e2174dcf-bb48-4002-bd53-9fab59940ebb.png)
+Network address translation (NAT) is a method of mapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device.[1] The technique was originally used to bypass the need to assign a new address to every host when a network was moved, or when the upstream Internet service provider was replaced, but could not route the network's address space. It has become a popular and essential tool in conserving global address space in the face of IPv4 address exhaustion. One Internet-routable IP address of a NAT gateway can be used for an entire private network.[2]
+
+As network address translation modifies the IP address information in packets,
+
+
+
 # Questions
 socket vs session
 check InetAddress class which is implementation of IP protocol
 
 check the libraries of TCP IP HTTP implemenetation
+
+network layer creates the route which will be used to transfer, you need receiver IP address for it
+
+public IP is different than the IP system shows
+
+IP address changes when i connect to hotspot and wife, different IP assigned to me
