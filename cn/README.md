@@ -98,8 +98,11 @@ http : 80, what is relation between protocols and port number
 
 # application layer
 
-client server architecuter
-peer to peer architecture
+client server architecuter - centralized data,  clients consumes and server own any data
+peer to peer architecture - same apps running on end devices , blockchain bit torrent, no centralized server, everyone is client as weell as server 
+
+# Socket
+
 
 # Questions
 socket vs session
@@ -109,6 +112,4 @@ check the libraries of TCP IP HTTP implemenetation
 
 network layer creates the route which will be used to transfer, you need receiver IP address for it
 
-public IP is different than the IP system shows
 
-IP address changes when i connect to hotspot and wife, different IP assigned to me
