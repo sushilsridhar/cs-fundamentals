@@ -28,27 +28,20 @@ They model the real world entities, we encapsulate the attributes and behaviours
 ![oop](https://user-images.githubusercontent.com/16437905/204456497-59c6811a-076f-47e7-8f41-bc44b900cfe3.png)
 
 
+<ins>Functional programming</ins>     
 
-<ins>Functional programming</ins> -     
+> The principles of functional programming are centered around the idea of pure functions,  
+  
+> a pure function returns the same output for a given set of inputs like a mathematical evaluation,   
 
-
-
-A functional language (ideally) allows you to write a mathematical function, i.e. a function that takes n arguments and returns a value.
- that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.
+they should avoid shared state (global state), and side effects and data should be immutable  
+  
+Functions are treated as data, meaning you can use them as parameters, return them, build functions from other functions, and build custom functions,
  
- In FP, functions are treated as data, meaning you can use them as parameters, return them, build functions from other functions, and build custom functions. Functions in FP have to be pure functions, they should avoid shared state, and side effects and data should be immutable.
- 
- This involves a focus on creating code that avoids changing state and mutating data.
+In the below example, the code to handle the ordering is like a mathematical evaluation, for a given input we will get the same output,  
+instead of creating an entire class for performing a standalone action, we simply use a pure function (lambda function in java)
 
-instead of implementing an entire class for performing a standalone action, we simply implemented a function.
-
-However in functional programming data itself is code to other piece of code. Everything in functional programming revolves around pure functions where to achieve a task function is being called which internally may call another function.
-The principles of functional programming are centered around the idea of pure functions .
-
-functions return the same output for a given set of inputs 
-This means functions are not allowed to use any global variable or context. Every time in every case for same inputs same output will be returned.
-
-custom comparator
+custom comparator,     
 Passing custom logic to handle the ordering of elements,
 ```
  PriorityQueue<Points> minHeap = new PriorityQueue<>((p1, p2) -> {
@@ -72,4 +65,10 @@ representation of a complex system in terms of idea (data & behaviour)
 1. Encapsulation    
 2. Inheritance      
 3. Polymorphism   
+
+
+<ins>Encapsulation</ins>  
+1. stores data and behaviour of an idea together
+2. hides unneccessary details to the outside world
+3. only expose what we want to clients using access modifiers
 
