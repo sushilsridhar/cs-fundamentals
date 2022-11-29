@@ -50,9 +50,8 @@ Network      - IP layer (Internet Protocol layer),
 
 # IP
 
-IPV4    
-0-255 . 0-255 . 0-255 . 0-255 , - 32 bits total - 2^32 combinations
-IPV6 128bits, 2^128 combinations
+IPV4: 0-255 . 0-255 . 0-255 . 0-255 , 32 bits total - 2^32 combinations   
+IPV6: 128bits, 2^128 combinations     
 
 <ins>Private IP</ins>   
 Router assigns different IPs to all devices connected to it,    
@@ -66,9 +65,12 @@ eg: Computer, phone, TV - all connected to single wifi have same Public IP addre
 NAT helps in reusing the private IP address, as IP address numbers are limited
 
 ![NAT](https://user-images.githubusercontent.com/16437905/203917514-e2174dcf-bb48-4002-bd53-9fab59940ebb.png)
-Network address translation (NAT) is a method of mapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device.[1] The technique was originally used to bypass the need to assign a new address to every host when a network was moved, or when the upstream Internet service provider was replaced, but could not route the network's address space. It has become a popular and essential tool in conserving global address space in the face of IPv4 address exhaustion. One Internet-routable IP address of a NAT gateway can be used for an entire private network.[2]
+Network address translation (NAT) is a method of mapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device. The technique was originally used to bypass the need to assign a new address to every host when a network was moved, or when the upstream Internet service provider was replaced, but could not route the network's address space. It has become a popular and essential tool in conserving global address space in the face of IPv4 address exhaustion. One Internet-routable IP address of a NAT gateway can be used for an entire private network
 
-As network address translation modifies the IP address information in packets,
+the mapping of IP address is stored inside NAT table in router,   
+
+![nat-table](https://user-images.githubusercontent.com/16437905/204550936-a8d54990-90f5-445d-97d6-5dc6e93f6925.png)
+
 
 
 # MAC
