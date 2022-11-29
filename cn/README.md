@@ -102,7 +102,11 @@ http : 80, what is relation between protocols and port number
 client server architecuter - centralized data,  clients consumes and server own any data
 peer to peer architecture - same apps running on end devices , blockchain bit torrent, no centralized server, everyone is client as weell as server 
 
-# Socket
+
+# HTTP 
+http is stateless protocol, tcp is stateful 
+
+it is application layer protocol, it uses TCP at transport layer
 
 
 # Questions
