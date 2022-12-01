@@ -15,3 +15,8 @@ representation of a complex system in terms of idea (data & behaviour)
 1. stores data and behaviour of an idea together
 2. hides unneccessary details to the outside world
 3. only expose what we want to clients using access modifiers
+
+
+<ins>Class</ins>: Blueprint    
+<ins>Object</ins>: Real world entity        
+<ins>Constructor</ins>: default, custom, copy constructor   
