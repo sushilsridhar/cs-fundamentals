@@ -20,3 +20,16 @@ representation of a complex system in terms of idea (data & behaviour)
 <ins>Class</ins>: Blueprint    
 <ins>Object</ins>: Real world entity        
 <ins>Constructor</ins>: default, custom, copy constructor   
+
+<ins>shallow copy</ins>:  point to same address   
+<ins>Deep copy</ins>: creates new object (no sharing of object)   
+
+<ins>Inheritance</ins>    
+OOP allows us to design hierarchial systems with categorisation         
+reduces duplicate code        
+
+<ins>Super keyword</ins>: allows access to parent class members from child class    
+
+<ins>Polymorphism</ins>: ability of somethings to have multiple forms   
+
+
