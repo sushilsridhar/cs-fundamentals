@@ -25,11 +25,20 @@ representation of a complex system in terms of idea (data & behaviour)
 <ins>Deep copy</ins>: creates new object (no sharing of object)   
 
 <ins>Inheritance</ins>    
-OOP allows us to design hierarchial systems with categorisation         
-reduces duplicate code        
+1. OOP allows us to design hierarchial systems with categorisation         
+2. reduces duplicate code        
 
-<ins>Super keyword</ins>: allows access to parent class members from child class    
+<ins>Access modifiers</ins>: public, default, private, protected, classes can have only public or default modifier    
+<ins>Super keyword</ins>: allows access to parent class members from child class ( attributes, methods and constructors)        
 
-<ins>Polymorphism</ins>: ability of somethings to have multiple forms   
+<ins>Polymorphism</ins>   
+1. ability of somethings to have multiple forms   
+2. compile time polymorphism - method overloading - (compiler knows which methods to call at compile time itself)   
+3. run time polymorphism - can be achieved using method overiding   
+
+
+<ins>Method overloading</ins>: multiple methods inside the same class, having the same name but different arguments or same arguments in different order      
+
+<ins>Method overiding</ins>: overide the method with same signature with different implementation in child class, the access modifier of overiding method should be same or more freedom than parent method   
 
 
