@@ -10,26 +10,25 @@ representation of a complex system in terms of idea (data & behaviour)
 2. Inheritance      
 3. Polymorphism   
 
+<ins>Basic OOP</ins>    
+| terminology | explanation
+:---: | :---:
+Class             | Blueprint
+Object            | Real world entity
+Constructor       | default, custom, copy constructor 
+Shallow copy      | point to same address
+Deep copy         | creates new object (no sharing of object)
+Access modifiers  | public, default, private, protected, classes can have only public or default modifier    
+Super keyword     | allows access to parent class members from child class (attributes, methods and constructors) 
 
 **<ins>Encapsulation</ins>**  
 1. stores data and behaviour of an idea together
 2. hides unneccessary details to the outside world
 3. only expose what we want to clients using access modifiers
 
-
-<ins>Class</ins>: Blueprint    
-<ins>Object</ins>: Real world entity        
-<ins>Constructor</ins>: default, custom, copy constructor   
-
-<ins>shallow copy</ins>:  point to same address   
-<ins>Deep copy</ins>: creates new object (no sharing of object)   
-
 **<ins>Inheritance</ins>**    
 1. OOP allows us to design hierarchial systems with categorisation         
 2. reduces duplicate code        
-
-<ins>Access modifiers</ins>: public, default, private, protected, classes can have only public or default modifier    
-<ins>Super keyword</ins>: allows access to parent class members from child class ( attributes, methods and constructors)        
 
 **<ins>Polymorphism</ins>**   
 1. ability of somethings to have multiple forms   
@@ -43,7 +42,9 @@ representation of a complex system in terms of idea (data & behaviour)
 
 
 **<ins>Interface</ins>**   
-> guides the behaviour of a group of entities       
+> guides the behaviour of a group of entities           
+
+> does java support multiple inheritance, for classes - no , for interfaces - yes   
 
 JVM is a specification, the implementation is given by oracle, openJDK etc, specification enforce a particular behaviour to be implemented, the various implementations follow this guideline, so that it can be swapped, we can remove oracle jdk and replace it with openJDK to run the same java program,    
 
@@ -54,4 +55,10 @@ Interface is similiar to specification, eg: defining the db related methods as i
 Serialization enables us to save the state of an object and recreate the object in a new location
 
 <ins>Functional interface</ins>: has only one abstract method
+
+
+**<ins>Abstract class</ins>**   
+It has attributes and behaviours, but not sure if some behaviours can be common to all childs, in that case declare the behaviour as abstract    
+
+
 
