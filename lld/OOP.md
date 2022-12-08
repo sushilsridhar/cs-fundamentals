@@ -54,7 +54,7 @@ Interface is similiar to specification, eg: defining the db related methods as i
 
 Serialization enables us to save the state of an object and recreate the object in a new location
 
-<ins>Functional interface</ins>: has only one abstract method
+<ins>Functional interface</ins>: has only one abstract method, check callables
 
 
 **<ins>Abstract class</ins>**   
