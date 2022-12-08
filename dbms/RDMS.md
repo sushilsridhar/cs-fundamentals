@@ -13,7 +13,7 @@ candidate key is a super key of minimum size
 
 # Schema design
 
-schema design how my database will be structured,
+schema design is how my database will be structured,
 
 1. how to decide what tables to create and it's attributes
 2. how to model cardinality between tables
