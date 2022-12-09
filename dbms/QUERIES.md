@@ -105,5 +105,3 @@ return highest 5 points
 ```
 select * from sql_store.customers order by points desc LIMIT 5;
 ```
-
-# Joins
