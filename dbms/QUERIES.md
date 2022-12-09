@@ -71,3 +71,23 @@ select * from sql_store.customers where (birth_date >='1985-01-01' OR (points >=
 ```
 select * from sql_hr.employees where office_id IN (1, 2);
 ```
+
+<ins>Between a range</ins>    
+inclusive of 1000 and 2000
+```
+select * from sql_store.customers where points between 1000 and 2000;
+```
+
+<ins>Like</ins>       
+% -> any character can be present, %bond% means any character can be present before and after bond    
+_ -> only single character should be present, \_bond% means only single character should be present before bond   
+
+```
+select * from sql_store.customers where last_name like '%bond%';
+```
+
+<ins>Is null?</ins>   
+do not use phone = null, use IS NULL  
+```
+select * from sql_store.customers where phone IS NULL;
+```
