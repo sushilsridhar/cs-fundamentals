@@ -91,3 +91,19 @@ do not use phone = null, use IS NULL
 ```
 select * from sql_store.customers where phone IS NULL;
 ```
+
+<ins>Order by</ins>   
+```
+select * from sql_store.customers order by state desc, customer_id desc;
+
+sort by state first, sort the result again by last_name,
+select * from sql_store.customers order by state, last_name;
+```
+
+<ins>Limit</ins>  
+return highest 5 points 
+```
+select * from sql_store.customers order by points desc LIMIT 5;
+```
+
+# Joins
