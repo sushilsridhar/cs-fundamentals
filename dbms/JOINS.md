@@ -1,6 +1,5 @@
-# Joins
+# Why Joins?
 
-<ins>Why joins</ins>    
 Student and Batch are two separate tables, if you want to get the student names along with their batch name, without joins,     
 we need to fetch and iterate over students, use the batch id in the students table, make another network call to get batch details from batch table,      
 
