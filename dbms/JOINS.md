@@ -24,6 +24,15 @@ from customers c
 join orders o
 on c.customer_id = o.customer_id;
 ```
+<ins>Self join</ins>    
+inner join with self       
+
+```
+select e.first_name, m.first_name
+from employees e 
+join employees m 
+on e.reports_to = m.employee_id;
+```
 
 # Outer Join
 
