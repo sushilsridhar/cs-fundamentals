@@ -39,6 +39,27 @@ COMMIT   : commits the data (persists the data) to the database, if everything i
 ROLLBACK : rollbacks the data to previous commited state, if any undesirable state occurs    
 ```
 
+<ins>Queries</ins>    
+
+If commit statement is not there, the data update will be temporary, it will not persist once you close the instance,   
+any failure in any statements after start transaction, all of them will be rollback to previous state,    
+
+```
+start transaction;
+
+update products set quantity_in_stock = quantity_in_stock + 10 where product_id = 1;
+update products set quantity_in_stock = quantity_in_stock - 10 where product_id = 8;
+
+commit;
+
+start transaction;
+
+update products set quantity_in_stock = 80 where product_id = 1;
+update products set quantity_in_stock = 26 where product_id = 8;
+
+rollback;
+```
+
 # Isolation level
 
 > solves concurrency issues in transactions
@@ -47,3 +68,11 @@ ROLLBACK : rollbacks the data to previous commited state, if any undesirable sta
 classic example of no isolation, Transaction t2 affects transaction t1,
 
 ![Screenshot 2022-12-18 at 10 32 31 AM](https://user-images.githubusercontent.com/16437905/208282351-02d59a53-7ac8-421f-bdf2-4ba2764b7f13.png)
+
+
+
+research on read only database, these are will isolation level read uncommited, hence faster      
+analytics database, we dump data, it will not change, kibana and new relic like tools just read that data,
+
+
+row wise locking  happens? check
