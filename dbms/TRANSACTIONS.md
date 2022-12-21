@@ -103,8 +103,19 @@ shared locks
 
 exclusive locks
 
+which isolation level - which lock is required - row lock or table lock in mysql - how to create database read only replica - it's usecases
+
+app code acquires lock or there is a lock within mysql that manages it
+
+types of locks
+
 
 research on read only database, these are will isolation level read uncommited, hence faster      
 analytics database, we dump data, it will not change, kibana and new relic like tools just read that data,
 
 row wise locking  happens? check
+
+https://www.scaler.com/topics/lock-based-protocol-in-dbms/
+https://www.scaler.com/topics/sql/lock-table/
+https://www.scaler.com/topics/dbms/
+https://www.scaler.com/topics/sql/
