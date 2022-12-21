@@ -94,7 +94,9 @@ Within a transaction if you try to read a value again, it will be same as earlie
 > there is no other way solve this problem but to have sequential transactions
 
 <ins>Serializable</ins>   
-Uses lock behind the scenes, if one transaction acquires a lock over a db row, other transaction have to wait to even read the row    
+> Uses lock behind the scenes    
+
+if one transaction acquires a lock over a db row, other transaction have to wait to even read the row    
 
 
 # Locks - investigate
