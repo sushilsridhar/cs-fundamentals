@@ -115,7 +115,7 @@ analytics database, we dump data, it will not change, kibana and new relic like 
 
 row wise locking  happens? check
 
-https://www.scaler.com/topics/lock-based-protocol-in-dbms/
-https://www.scaler.com/topics/sql/lock-table/
-https://www.scaler.com/topics/dbms/
-https://www.scaler.com/topics/sql/
+https://www.scaler.com/topics/lock-based-protocol-in-dbms/      
+https://www.scaler.com/topics/sql/lock-table/   
+https://www.scaler.com/topics/dbms/   
+https://www.scaler.com/topics/sql/    
