@@ -86,8 +86,8 @@ It is safeguard against dirty read, multiple transaction can write a data, but t
 
 <ins>Repeatable read</ins>    
 Within a transaction if you try to read a value again, it will be same as earlier   
-In mysql, the default transaction isolation level is repeatable reads   
 
+> In mysql, the default transaction isolation level is repeatable reads   
 
 > all isolation levels have concurrency issues    
 
