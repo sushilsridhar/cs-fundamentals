@@ -78,3 +78,53 @@ enums, how enums are stored, what are enums
 
 string vs char[] array for storing password     
 interface vs abstract class       
+
+comparable vs comparator    
+
+iterable , iterator on collections    
+
+Treemap   
+It provides an efficient means of storing key-value pairs in sorted order.
+
+
+LinkedHashMap
+    /**
+     * Constructs an empty <tt>LinkedHashMap</tt> instance with the
+     * specified initial capacity, load factor and ordering mode.
+     *
+     * @param  initialCapacity the initial capacity
+     * @param  loadFactor      the load factor
+     * @param  accessOrder     the ordering mode - <tt>true</tt> for
+     *         access-order, <tt>false</tt> for insertion-order
+     * @throws IllegalArgumentException if the initial capacity is negative
+     *         or the load factor is nonpositive
+     */
+    public LinkedHashMap(int initialCapacity,
+                         float loadFactor,
+                         boolean accessOrder) {
+        super(initialCapacity, loadFactor);
+        this.accessOrder = accessOrder;
+    }
+    
+    
+    ```
+     HashMap<String, Integer> stocks = new LinkedHashMap<>(16, 0.75f, true);
+        stocks.put("Apple", 123);
+        stocks.put("BMW", 54);
+        stocks.put("Google", 87);
+        stocks.put("Microsoft", 232);
+        stocks.put("Oracle", 76);
+
+
+        stocks.get("Google");
+        stocks.get("BMW");
+
+        System.out.println(stocks);
+    
+    
+    ```
+    
+    
+    need more than one type sorting logic, use comparator     
+    
+    treeset       
