@@ -99,9 +99,16 @@ Uses lock behind the scenes, if one transaction acquires a lock over a db row, o
 
 # Locks - investigate
 
-shared locks
+shared locks    
+Another transaction that tries to read the same data is permitted to read, but a transaction that tries to update the data will be prevented from doing so until the shared lock is released
+Shared lock is also called read lock, used for reading data items only
 
-exclusive locks
+exclusive locks   
+When a statement modifies data, its transaction holds an exclusive lock on data that prevents other transactions from accessing the data.
+This lock remains in place until the transaction holding the lock issues a commit or rollback
+They can be owned by only one transaction at a time
+With the Exclusive Lock, a data item can be read as well as written. Also called write lock
+
 
 which isolation level - which lock is required - row lock or table lock in mysql - how to create database read only replica - it's usecases
 
