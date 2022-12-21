@@ -62,7 +62,7 @@ rollback;
 
 # Isolation level
 
-> solves concurrency issues in transactions
+> to handle concurrency in transactions
 
 
 classic example of no isolation, Transaction t2 affects transaction t1,
@@ -70,9 +70,41 @@ classic example of no isolation, Transaction t2 affects transaction t1,
 ![Screenshot 2022-12-18 at 10 32 31 AM](https://user-images.githubusercontent.com/16437905/208282351-02d59a53-7ac8-421f-bdf2-4ba2764b7f13.png)
 
 
+<ins> Transaction isolation levels</ins>: in increasing order of severity        
+1. Read uncommitted (most efficient isolation level)    
+2. Read committed
+3. Repeatable read
+4. Serializable
+
+
+<ins>Read uncommitted</ins>   
+we read a data changed(written) in transaction t2 but not yet committed (possibility of a rollback in t2),    
+we read that data in transaction t1 (dirty read)    
+
+<ins>Read committed</ins>     
+It is safeguard against dirty read, multiple transaction can write a data, but t1 transaction reads only data that is committed   
+
+<ins>Repeatable read</ins>    
+Within a transaction if you try to read a value again, it will be same as earlier   
+In mysql, the default transaction isolation level is repeatable reads   
+
+
+> all isolation levels have concurrency issues    
+
+> there is no other way solve this problem but to have sequential transactions
+
+<ins>Serializable</ins>   
+Uses lock behind the scenes, if one transaction acquires a lock over a db row, other transaction have to wait to even read the row    
+
+
+# Locks - investigate
+
+shared locks
+
+exclusive locks
+
 
 research on read only database, these are will isolation level read uncommited, hence faster      
 analytics database, we dump data, it will not change, kibana and new relic like tools just read that data,
-
 
 row wise locking  happens? check
