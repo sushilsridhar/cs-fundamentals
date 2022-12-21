@@ -128,3 +128,6 @@ https://www.scaler.com/topics/lock-based-protocol-in-dbms/
 https://www.scaler.com/topics/sql/lock-table/   
 https://www.scaler.com/topics/dbms/   
 https://www.scaler.com/topics/sql/    
+https://www.mysqltutorial.org/mysql-table-locking/      
+https://dev.mysql.com/doc/refman/8.0/en/innodb-locks-set.html   
+https://www.google.com/search?safe=active&client=safari&rls=en&sxsrf=ALiCzsbW-kPrgnPiufi5T7eBTgf_EaldnA:1671597507101&q=which+queries+in+mysql+acquire+lock+on+row&spell=1&sa=X&ved=2ahUKEwjy2fj88Yn8AhUaSmwGHVOtCIoQBSgAegQIDxAB&biw=1920&bih=1000&dpr=1   
