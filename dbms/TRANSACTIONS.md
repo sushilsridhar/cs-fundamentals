@@ -99,8 +99,9 @@ Within a transaction if you try to read a value again, it will be same as earlie
 if one transaction acquires a lock over a db row, other transaction have to wait to even read the row    
 
 
-# Locks - investigate
+# Read further
 
+locks     
 shared locks    
 Another transaction that tries to read the same data is permitted to read, but a transaction that tries to update the data will be prevented from doing so until the shared lock is released
 Shared lock is also called read lock, used for reading data items only
