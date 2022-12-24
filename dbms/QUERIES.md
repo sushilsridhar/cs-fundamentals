@@ -56,7 +56,7 @@ JAmes
 JAMES
 ```
 
-<ins>Multiple conditions in where</ins>
+<ins>Logical and Relational operations</ins>
 ```
 select first_name, city, points from sql_store.customers where points * points < 100000;
 
@@ -65,6 +65,9 @@ select * from sql_store.customers where birth_date >='1985-01-01' OR points >= 2
 select * from sql_store.customers where NOT(birth_date >='1985-01-01' AND points >= 1000);
 
 select * from sql_store.customers where (birth_date >='1985-01-01' OR (points >= 2000 AND state = 'TX'));
+
+<> is same as !=
+select name from customer where referee_id <> 2 or referee_id IS NULL;
 ```
 
 <ins>IN</ins>
@@ -84,12 +87,16 @@ _ -> only single character should be present, \_bond% means only single characte
 
 ```
 select * from sql_store.customers where last_name like '%bond%';
+
+select patient_id, patient_name, conditions from patients where conditions like 'DIAB1%' or conditions like '% DIAB1%';
 ```
 
 <ins>Is null?</ins>   
 do not use phone = null, use IS NULL  
 ```
 select * from sql_store.customers where phone IS NULL;
+
+select * from sql_store.customers where phone IS NOT NULL;
 ```
 
 <ins>Order by</ins>   
