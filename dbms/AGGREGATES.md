@@ -8,6 +8,9 @@ select avg(points) from customers;
 select sum(points) from customers;
 select count(customer_id) from customers;
 select count(distinct state) from customers;
+
+select customer_number from orders group by customer_number order by count(order_number) desc limit 1;
+
 ```
 
 <ins>Group by</ins>   
@@ -32,6 +35,17 @@ select invoice_id, sum(amount) from payments group by invoice_id having sum(amou
 
 # Built-in Functions
 
+<ins>Functions</ins>    
+
+```
+MOD
+select id, movie, description, rating from cinema where MOD(id, 2) != 0 and description != 'boring' order by rating desc;
+```
+```
+IFNULL return 0 
+
+select q.id, q.year, IFNULL(n.npv, 0) as npv from queries q left join npv n on q.id = n.id and q.year = n.year;
+```
 <ins>Date and time</ins>    
 ```
 select now();
