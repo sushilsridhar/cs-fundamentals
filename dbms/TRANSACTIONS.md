@@ -29,6 +29,11 @@ C - consistent before and after
 I - not affected by other transactions    
 D - once succeeded, persist (no data loss)    
 ```
+
+Atomicity makes sure the system has Consistency,    
+All transactions are isolated using isolation levels,   
+committing the transactions, makes the system durable   
+
 # Types of operations in transactions     
 
 ```
@@ -76,6 +81,7 @@ classic example of no isolation, Transaction t2 affects transaction t1,
 3. Repeatable read
 4. Serializable
 
+> These isolation levels are applied and changed based on session to session, do not choose a single isolation level for the whole system      
 
 <ins>Read uncommitted</ins>   
 we read a data changed(written) in transaction t2 but not yet committed (possibility of a rollback in t2),    
@@ -85,18 +91,94 @@ we read that data in transaction t1 (dirty read)
 It is safeguard against dirty read, multiple transaction can write a data, but t1 transaction reads only data that is committed   
 
 <ins>Repeatable read</ins>    
-Within a transaction if you try to read a value again, it will be same as earlier   
+Within a transaction if you try to read a value again, it will be same as earlier,    
+it does not depend on commit of other transactions    
 
+```
+T1 - repeatable reads
+
+initial value quantity_in_stock = 94
+
+line 1: start transaction;
+
+line 2: select * from products where product_id = 5;
+
+line 3: commit;
+
+T2 - serializable
+
+line 1: start transaction;
+
+line 2: update products set quantity_in_stock = 942 where product_id = 5;
+
+line 3: commit;
+```
+
+```
+T1 and T2 starts at same time,  
+
+T2 line 2 completes first, T1 line 2 executes, quantity_in_stock will be 94 within T1       
+
+whatever the value of quantity_in_stock after the start of the transaction T1 will remain same inside T1, 
+even if the value changes in other transactions
+
+```
+
+<ins>Serializable</ins>   
+> Uses lock behind the scenes    
+
+if one transaction acquires a lock over a db row, other transaction have to wait to even read the row    
+
+<ins>Notes</ins>    
 > In mysql, the default transaction isolation level is repeatable reads   
 
 > all isolation levels have concurrency issues    
 
 > there is no other way solve this problem but to have sequential transactions
 
-<ins>Serializable</ins>   
-> Uses lock behind the scenes    
+```
+set session transaction isolation level serializable;
+show variables like 'transaction_isolation';
+```
 
-if one transaction acquires a lock over a db row, other transaction have to wait to even read the row    
+# Serializable
+
+<ins>select query</ins>   
+if one transaction is updating a row, other transaction must wait to update that row until first transactions completes updating, but other transactions can read that row,   
+
+```
+T1
+
+line 1: start transaction;
+
+line 2: update products set quantity_in_stock = 494 where product_id = 5;
+
+line 3: commit;
+
+T2
+line 1: start transaction;
+
+line 2: select * from products where product_id = 4;
+
+line 3: select * from products where product_id = 5;
+
+line 4: commit;
+
+T1 executed line 2, T2 can execute line 2, since rows are different, line 3 waits until line 3 of T1 completes,   
+
+```
+
+
+
+<ins>select query with for update</ins>   
+t1 -> select a row using for update query, other transactions can't even read that row until t1 commits or rollbacks,   
+
+> for update -> locks the rows returned by the select query
+
+![Screenshot 2022-12-26 at 1 19 35 PM](https://user-images.githubusercontent.com/16437905/209520651-296fdb8a-7979-46c9-a3f5-4efcbeaef393.png)
+
+![Screenshot 2022-12-26 at 1 19 43 PM](https://user-images.githubusercontent.com/16437905/209520666-c0e431fa-ec76-4959-8e4f-e41fe895b659.png)
+
 
 
 # Read further
@@ -119,6 +201,7 @@ app code acquires lock or there is a lock within mysql that manages it
 
 types of locks
 
+is one session for each transaction?
 
 research on read only database, these are will isolation level read uncommited, hence faster      
 analytics database, we dump data, it will not change, kibana and new relic like tools just read that data,
