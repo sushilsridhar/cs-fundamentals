@@ -67,8 +67,9 @@ rollback;
 
 # Isolation level
 
-> to handle concurrency in transactions
+> Isolation level is all about reading data
 
+> and to handle concurrency in transactions
 
 classic example of no isolation, Transaction t2 affects transaction t1,
 
@@ -82,9 +83,10 @@ classic example of no isolation, Transaction t2 affects transaction t1,
 4. Serializable
 
 > These isolation levels are applied and changed based on session to session, do not choose a single isolation level for the whole system      
+> The isolation levels are for READ operation(reading data), WRITE operation always happens sequentially    
 
 <ins>Read uncommitted</ins>   
-we read a data changed(written) in transaction t2 but not yet committed (possibility of a rollback in t2),    
+we read a data in T1 which is changed(written) in transaction t2 but not yet committed (possibility of a rollback in t2),    
 we read that data in transaction t1 (dirty read)    
 
 <ins>Read committed</ins>     
@@ -127,8 +129,14 @@ even if the value changes in other transactions
 <ins>Serializable</ins>   
 > Uses lock behind the scenes    
 
-if one transaction acquires a lock over a db row, other transaction have to wait to even read the row    
+T1 reads data, T1 updates the data (write operation acquires the lock over the row), T2 transaction can't read or update   
+T1 reads data using for update(read operation acquire the lock over the row), T2 transaction can't read or update
 
+<ins>Set isolation levels</ins>   
+```
+set session transaction isolation level serializable;
+show variables like 'transaction_isolation';
+```
 <ins>Notes</ins>    
 > In mysql, the default transaction isolation level is repeatable reads   
 
@@ -136,18 +144,34 @@ if one transaction acquires a lock over a db row, other transaction have to wait
 
 > there is no other way solve this problem but to have sequential transactions
 
-```
-set session transaction isolation level serializable;
-show variables like 'transaction_isolation';
-```
+# In-short
+
+Read uncommitted - allows to read changed values from other uncommitted transactions    
+Read committed - allows to read changed values from only other committed transactions or use the same value at the start of transaction   
+Repeatable read - use only value that is there at the start of transactions, ignore changes made by other transactions    
+Serializable - do not allow to read when other transactions are updating a row, wait untill the update operation of other transaction is complete   
 
 # Serializable
 
-<ins>select query</ins>   
-if one transaction is updating a row, other transaction must wait to update that row until first transactions completes updating, but other transactions can read that row,   
+> Write operation acquires lock by default    
+
+In Serializable     
+> WRITE operation acquires both read and write lock    
+> READ operation can acquires by using FOR UPDATE     
+
+
+<ins>WRITE operation</ins>   
+if one transaction is updating a row, other transaction must wait for both operation(read, write) to run on that row until first transactions completes updating      
+
+<ins>Default READ operation</ins>   
+if one transaction read a row, other transactions can do read or write    
+
+update operation is default running sequentially, but serializable stops the read also until other transactions update completes(i.e that transaction commits)
 
 ```
-T1
+quantity_in_stock initial value - 94
+
+T1 - serializable
 
 line 1: start transaction;
 
@@ -155,7 +179,8 @@ line 2: update products set quantity_in_stock = 494 where product_id = 5;
 
 line 3: commit;
 
-T2
+T2 - serializable
+
 line 1: start transaction;
 
 line 2: select * from products where product_id = 4;
@@ -163,26 +188,36 @@ line 2: select * from products where product_id = 4;
 line 3: select * from products where product_id = 5;
 
 line 4: commit;
+```
+```
+T1 and T2 starts at same time    
+T1 executed line 2, T2 can execute line 2, since rows are different, T2 line 3 waits until line 3 of T1 completes,   
 
-T1 executed line 2, T2 can execute line 2, since rows are different, line 3 waits until line 3 of T1 completes,   
+
+T1 and T2 starts at same time
+T2 line 3 executes, T1 line 2 has to wait for T2 line 4 to execute
 
 ```
 
+<ins>READ operation using FOR UPDATE</ins>   
+if one transaction read a row, other transactions can do read or write    
 
-
-<ins>select query with for update</ins>   
-t1 -> select a row using for update query, other transactions can't even read that row until t1 commits or rollbacks,   
-
-> for update -> locks the rows returned by the select query
+<ins>for update</ins>   
+locks the rows returned by the select query   
 
 ![Screenshot 2022-12-26 at 1 19 35 PM](https://user-images.githubusercontent.com/16437905/209520651-296fdb8a-7979-46c9-a3f5-4efcbeaef393.png)
 
 ![Screenshot 2022-12-26 at 1 19 43 PM](https://user-images.githubusercontent.com/16437905/209520666-c0e431fa-ec76-4959-8e4f-e41fe895b659.png)
 
 
+```
+
+
+```
 
 # Read further
 
+which query uses shared locks and which queries use exclusine locks and what on isolation levels?   
 locks     
 shared locks    
 Another transaction that tries to read the same data is permitted to read, but a transaction that tries to update the data will be prevented from doing so until the shared lock is released
