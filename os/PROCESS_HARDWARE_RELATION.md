@@ -84,3 +84,6 @@ example: microcontroller in a calculator (embedded system)
 <ins>RAM</ins>    
 ![ram](https://user-images.githubusercontent.com/16437905/199258147-1108bb42-8012-4a50-8439-1fda01bdf807.png)
 
+# CHECK 
+what is stored in cache l1 l2       
+add hardware for l1 l2 cache
