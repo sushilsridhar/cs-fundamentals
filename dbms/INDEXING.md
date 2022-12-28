@@ -1,5 +1,7 @@
 # Indexes
 
+Indexing is all about minimizing disk access
+
 <ins>Faster READ</ins>    
 > prevents unneccessary disk fetches    
 
@@ -85,11 +87,56 @@ value - B+ tree
 ![Screenshot 2022-12-28 at 7 30 18 AM](https://user-images.githubusercontent.com/16437905/209745582-b474d4f7-22df-4d00-9fe7-d542af4a7423.png)
 
 
+# Trade offs
+
+index table needs space, we can increase the number of disk access to reduce the index table storage, and viceversa
+
+![Screenshot 2022-12-28 at 9 30 59 AM](https://user-images.githubusercontent.com/16437905/209755299-c4474201-ad42-4813-9648-b6a3690253e1.png)
 
 
-# others
-wjat is stored in cache l1 l2
+# Queries
 
+```
+select * from customers where points = 2273;
 
-java hashmap treemap linkedhashmap btree 
-api latency got for indexing
+explain select * from customers where points = 2273; // disk fetch = total number of rows in that table
+
+create index idx_customer_points on customers(points);
+ 
+explain select * from customers where points = 2273; // disk fetch = number of rows whose points is 2273
+
+```
+```
+create index idx_customer_points on customers(points);
+drop index idx_customer_first_name on customers;
+
+show indexes in customers;
+```
+
+# Full text indexes      
+
+```
+# disk fetch = number of rows matching condition
+create index idx_customer_last_name on customers(last_name);
+drop index idx_customer_last_name on customers;
+
+explain select * from customers where last_name like '%sridhar%';
+
+# output 5 rows but returns the output in one disk fetch
+create fulltext index idx_customer_last_name on customers(last_name);
+
+select * from customers where match(last_name) against('sridhar' in boolean mode);
+explain select * from customers where match(last_name) against('sridhar' in boolean mode);
+
+```
+
+# Composite indexes
+
+using two columns as indexes, eg: (name, batch_id) or (batch_id, name)              
+
+use (name, batch_id), as the rows needs to be processed is lesser than (batch_id, name) index       
+
+> choose the column that has more distinct values than other column 
+
+![Screenshot 2022-12-28 at 12 12 38 PM](https://user-images.githubusercontent.com/16437905/209769854-a23db38a-d171-4977-a865-594c8f7e8798.png)
+
