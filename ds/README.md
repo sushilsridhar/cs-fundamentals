@@ -48,6 +48,9 @@ if we need ordering (insertion) of the items in a set
 check below items and update
 
 HashMap
+
+java hashmap treemap linkedhashmap btree 
+
 simplest way to store key-value pairs
 LinkedHashMap
 ordering of keys
