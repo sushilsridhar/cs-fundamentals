@@ -1,10 +1,15 @@
 # Indexes
 
+<ins>Faster READ</ins>    
 > prevents unneccessary disk fetches    
-> leads to faster queries
-> indexes are updated durning writes, which makes writes slower
 
-indexes are updated for all C|U|D queries
+> leads to faster queries   
+
+<ins>Slower WRITE</ins>       
+> indexes are updated durning writes, which makes writes slower   
+> indexes are updated for all C|U|D queries       
+
+> extra storage required to store index tables    
 
 <ins>When to create indexes?</ins>    
 
@@ -20,7 +25,7 @@ if this query has more load and triggered so many times, we can create indexes w
 to reduce the latency 
 
 <ins>Example</ins>    
-systems like twitter and social media are read heavy systems, where number of post created by single is less than number of post viewed by that user,   
+systems like twitter and social media are read heavy systems, where number of post created by single user is less than number of post viewed by that user,   
 indexes is best for read heavy systems,   
 
 systems like are write heavy, indexes makes writes slow, so avoid uses indexes with write heavy systems   
@@ -43,9 +48,11 @@ if the table has 1million, 1million rows are bought to RAM and checked, for ever
 In order to avoid 1million reads for a query, we create a extra table in RAM itself,     
 
 we choose a specific column as index and the extra table is sorted by that column, this table contains the choosen column value     
-and address of that row in original table
+and address of that row in original table inside disk   
 
-this extra table has been created for improved reads and is called indexes,   
+> this extra table has been created for improved reads and is called indexes,   
+
+> this index table is created and copied to RAM durning startup, it operates in RAM but persisted to disk (to save from system failure)    
 
 instead of 1million reads, for select * from students where batch_id = 1 query, we make only 3 disk reads as we have the direct address in extra table,   
 
@@ -55,6 +62,27 @@ instead of 1million reads, for select * from students where batch_id = 1 query, 
 
 
 # Data structure for indexing   
+
+<ins>Key</ins>    
+sorted    
+fast access
+
+<ins>Value</ins>    
+address of row in disk      
+
+> Treemap has key value pair, maintains order and time complexity is log n   
+    
+> Internally Treemap is implemented using BST (Red-Black tree or AVL tree)
+
+<ins>Data structure</ins>        
+```
+Treemap
+
+key   - B tree    
+value - B+ tree
+```
+![Screenshot 2022-12-28 at 7 30 02 AM](https://user-images.githubusercontent.com/16437905/209745578-4668209a-9aaf-4b02-85d4-e6ae3be2a6f2.png)
+![Screenshot 2022-12-28 at 7 30 18 AM](https://user-images.githubusercontent.com/16437905/209745582-b474d4f7-22df-4d00-9fe7-d542af4a7423.png)
 
 
 
