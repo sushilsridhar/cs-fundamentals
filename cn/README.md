@@ -10,11 +10,9 @@ Open Systems Interconnection
 
 > It is a logical representation of how the network systems are supposed to send data (or, communicate) to each other  
 
+![Screenshot 2022-12-29 at 9 36 12 AM](https://user-images.githubusercontent.com/16437905/209902138-a158630d-d749-40fa-ac7b-6895f509ed1f.png)
 
 <img src="https://user-images.githubusercontent.com/16437905/202834366-655b09c7-67ec-4f55-a690-2149fbdc744d.png" width="500">
-
-![osi](https://user-images.githubusercontent.com/16437905/202200438-ea1c47e3-966c-44aa-b5a9-db82375b0dce.png)
-
 
 # Internet Protocol Suite - TCP/IP 
 > OSI model is a reference model while TCP/IP is an implementation of OSI model
@@ -29,19 +27,61 @@ OSI model gives guidelines on how communication needs to be done, while TCP/IP p
 Application layer, Presentation layer and Session layer are managed as part of application code,   
 Transport layer is managed by OS, 
 
-<ins>Application Layer</ins>    
+> there are 4 layer in TCP/IP model   
+> The layered architecture provides abstraction from other layers, due to which any layer can be changed independently, 
+> each layer have single responsibility 
+
+# Application Layer   
 create data that has to be transferred over network  
 ``` 
-Protocols: 
+Protocols: HTTP
+```
+what HTTP actually does
+
+# Transport Layer     
+
+```
+Protocol  : Transmission Control Protocol (TCP)
+Job       : determine how to send the data packets from source to destination
 ```
 
+Transmission Control Protocol (TCP) The transmission control protocol (TCP) is a transport layer protocol that works along with the internet protocol to transmit data over the internet. It is a connection-oriented and reliable protocol i.e. it establishes the connection first and then only, sends data over the established connection hence, there is no packet loss in the transmission control protocol.
 
-<ins>Transport Layer</ins>     
-The physical layer receives the frames from the Data Link Layer and generates information on bits of electrical impulses or light depending on the medium being optical or electrical and transmits them physically bit by bit
+Transmission Control Protocol is responsible for the delivery of data once the Internet protocol gets the IP address of the destination.
+
+# Internet Layer     
+
+```
+Protocol  : Internet Protocol (IP)
+Job       : determine how to send the data packets from source to destination
+```
+
+Internet Protocol (IP) The internet protocol is a network layer protocol that is responsible for defining the rules that define how the information is sent over an internet connection from one computer to another    
+
+Internet Protocol is responsible for gathering the addresses to which the data is to be transmitted.
+
+# Network Interface Layer        
 
 
-<ins>Internet Layer</ins>     
-
-<ins>Network Interface Layer</ins>        
 
 
+Physical layer    
+```
+Protocol  : Ethernet
+Job       : transmission and reception of the signals(convert to/from bitstream of data) over the physical medium 
+```
+
+> The bits of data must be encoded into the form of signals for transmission    
+
+The physical layer receives the frames from the Data Link Layer and generates information on bits of electrical impulses or light depending on the medium being optical or electrical and transmits them physically bit by bit    
+
+<ins>Work</ins>   
+the physical layer sets the voltages, light speed(in the case of fiber optics cable), and data rates (numbers of bits to be transmitted per second)     
+
+deals with network topology       
+deals with direction and type of transmission (simplex, half-duplex, full-duplex)   
+
+# End to End flow
+
+DNS   
+Sending request to the server to access the webpage and receiving response Once we get the IP address of the website we want to access using DNS, the browser sends an HTTP (Hypertext Transfer Protocol) request to the server to extract the HTM (Hypertext Markup Language)L webpage corresponding to the IP address. This request is sent over PORT 80 using TCP (Transmission Control Protocol). Once the server receives this HTTP request, it responds back with an HTTP response. This HTTP response consists of the information related to the HTML page corresponding to the IP address of the website.
