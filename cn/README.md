@@ -30,11 +30,14 @@ OSI model gives guidelines on how communication needs to be done, while TCP/IP p
 ![Screenshot 2022-12-29 at 12 39 42 PM](https://user-images.githubusercontent.com/16437905/209916392-f23ef347-e173-4b8f-b455-3e5dcfd54aeb.png)
 
 # Application Layer   
-create data that has to be transferred over network  
+
 ``` 
-Protocols: HTTP
+Job       : Generate the data on the sender side to be sent / recieve the data on reciever side
+Protocols : HTTP
 ```
-what HTTP actually does
+[HTTP is Client-Server architecture protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/APP_LAYER_ARCHITECTURE.md)
+
+[HTTP is Stateless protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/HTTP.md)
 
 # Transport Layer     
 
