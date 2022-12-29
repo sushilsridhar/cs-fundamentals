@@ -41,3 +41,40 @@ select * from students s where EXISTS (
 ```
 select id, name, bid, ( select avg(psp) from students group by bid having bid = s.bid) as avg_psp from students s;
 ```
+
+<ins>Subqueries in from</ins>   
+```
+select s.name, i.name from (
+  select s.id, s.name, b.name, i.id, i.name 
+  from students s
+  join batches b
+  on s.bid = b.id
+  join instructors i
+  on b.inst.id = i.id );
+```
+
+# Views
+
+> Virtual table created for read operation
+
+![Screenshot 2022-12-29 at 5 29 01 AM](https://user-images.githubusercontent.com/16437905/209886654-a9b2b8b2-3287-4741-9fe4-459015e81979.png)
+
+```
+# creating view
+
+create view order_product_customer
+as select o.order_id, c.customer_id, c.first_name, c.points, p.product_id, p.name, p.unit_price, p.quantity_in_stock
+from orders o 
+inner join customers c
+on o.customer_id = c.customer_id
+inner join order_itemorder_product_customers oi
+on o.order_id = oi.order_id
+inner join products p 
+on oi.product_id = p.product_id order by o.order_id;
+
+
+# select data from view
+
+select customer_id, order_id, first_name, name from order_product_customer;
+
+```
