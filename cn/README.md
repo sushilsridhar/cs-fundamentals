@@ -40,7 +40,7 @@ It is combination of three layers, Application, Presentation and Session layer
 
 > The application layer isn't an application, Instead, it's a component within an application        
 
-> that manages how data is sent to and received from other devices, It's an abstraction layer service that hides the rest of the program from the transmission,         
+> that manages how data is sent to and received from other devices, It's an abstraction layer service that hides the rest of the program from the transmission             
 
 The Application layer uses Transport layer and any levels below it to communicate with or transfer data to a remote host    
 
