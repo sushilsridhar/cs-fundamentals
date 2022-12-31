@@ -21,3 +21,8 @@ extract the HTM (Hypertext Markup Language)L webpage corresponding to the IP add
 This request is sent over PORT 80 using TCP (Transmission Control Protocol). 
 Once the server receives this HTTP request, it responds back with an HTTP response. 
 This HTTP response consists of the information related to the HTML page corresponding to the IP address of the website.
+
+
+<ins>HTTP</ins>   
+
+what protocol does JDBC uses? is it http and tcp ?
