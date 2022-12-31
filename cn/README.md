@@ -33,8 +33,17 @@ OSI model gives guidelines on how communication needs to be done, while TCP/IP p
 
 ``` 
 Job       : Generate the data on the sender side to be sent / recieve the data on reciever side
-Protocols : HTTP
+Protocols : DHCP, DNS, HTTP, SMTP, FTP, TELNET
 ```
+
+It is combination of three layers, Application, Presentation and Session layer
+
+> The application layer isn't an application, Instead, it's a component within an application        
+
+> that manages how data is sent to and received from other devices, It's an abstraction layer service that hides the rest of the program from the transmission,         
+
+The Application layer uses Transport layer and any levels below it to communicate with or transfer data to a remote host    
+
 [HTTP is Client-Server architecture protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/APP_LAYER_ARCHITECTURE.md)
 
 [HTTP is Stateless protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/HTTP.md)
@@ -107,8 +116,3 @@ deals with direction and type of transmission (simplex, half-duplex, full-duplex
 
 <ins>Ethernet</ins>   
 Ethernet uses the logical bus topology to transfer data. Under a bus topology a node broadcasts the data to the entire network. All other nodes on the network hear the data and check if the data is intended for them
-
-# End to End flow
-
-DNS   
-Sending request to the server to access the webpage and receiving response Once we get the IP address of the website we want to access using DNS, the browser sends an HTTP (Hypertext Transfer Protocol) request to the server to extract the HTM (Hypertext Markup Language)L webpage corresponding to the IP address. This request is sent over PORT 80 using TCP (Transmission Control Protocol). Once the server receives this HTTP request, it responds back with an HTTP response. This HTTP response consists of the information related to the HTML page corresponding to the IP address of the website.
