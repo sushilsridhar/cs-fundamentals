@@ -24,7 +24,7 @@ Persistant Connection     - multiple request, single connection
 ![Screenshot 2023-01-02 at 6 41 55 PM](https://user-images.githubusercontent.com/16437905/210235992-a48856ca-40e2-4036-8b95-f3a947415de9.png)
 
 
-<ins>HTTPS</ins>    
+# HTTPS    
 > It uses cryptographic algorithms like SSL (Secure Socket Layer) and TLS (Transport Layer Security) which makes it more secure than HTTP   
 
 HTTPS is slower than HTTP since it includes additional steps for the cryptographic algorithms
