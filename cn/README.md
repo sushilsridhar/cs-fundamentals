@@ -4,6 +4,23 @@ computers need to talk to eachother to exchange data
 
 <ins>Protocol</ins> is a set of rules that governs the transmission between two computers       
 
+<ins>Internet</ins>   
+> Internet is the hardware part - it is a collection of computer networks connected through either copper wires, fiber-optic cables or wireless connections 
+
+<ins>Applications built on top of Internet</ins>    
+> World Wide Web, Electronic Email, Telnet, File Transfer(FTP)    
+    
+> Internet is the infrastructure, WWW and others are services build on top of the infrastructure    
+
+<ins>World Wide Web</ins>   
+> World Wide Web can be termed as the software part – it is a collection of web pages connected through hyperlinks and URLs  
+  
+> interconnected system of public webpages accessible through the Internet  
+
+> HTML, HTTP, URI are the fundamental technologies of WWW   
+
+The working of the world wide web is based on the client-server model, A web server is a software and hardware that uses HTTP (Hypertext Transfer Protocol) and other protocols to respond to client requests made over the World Wide Web    
+
 # OSI model
 Open Systems Interconnection
 > OSI model is a reference model/tool to actually model or trace the actual flow of how data transfers in networks 
@@ -46,7 +63,9 @@ The Application layer uses Transport layer and any levels below it to communicat
 
 [HTTP is Client-Server architecture protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/APP_LAYER_ARCHITECTURE.md)
 
-[HTTP is Stateless protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/HTTP.md)
+[HTTP is Stateless protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/HTTP.md)   
+
+[HTML, HTTP, URI are fundamental technologies of WWW](https://github.com/sushilsridhar/cs-fundamentals/edit/main/cn/README.md#computer-networks)
 
 # Transport Layer     
 
