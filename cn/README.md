@@ -61,11 +61,15 @@ It is combination of three layers, Application, Presentation and Session layer
 
 The Application layer uses Transport layer and any levels below it to communicate with or transfer data to a remote host    
 
+[HTML, HTTP, URI are fundamental technologies of WWW](https://github.com/sushilsridhar/cs-fundamentals/edit/main/cn/README.md#computer-networks)
+
 [HTTP is Client-Server architecture protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/APP_LAYER_ARCHITECTURE.md)
 
 [HTTP is Stateless protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/HTTP.md)   
 
-[HTML, HTTP, URI are fundamental technologies of WWW](https://github.com/sushilsridhar/cs-fundamentals/edit/main/cn/README.md#computer-networks)
+[HTTP internally uses TCP Connection](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/TCP.md)
+
+[HTTPS uses crytographic algorithms like SSL and TLS](https://github.com/sushilsridhar/cs-fundamentals/edit/main/cn/HTTP.md#https)
 
 # Transport Layer     
 
