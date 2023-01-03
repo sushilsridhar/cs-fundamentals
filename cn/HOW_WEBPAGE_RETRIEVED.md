@@ -23,14 +23,6 @@ Once we get the IP address of the website, the browser sends an HTTP request to 
 
 The browser receives the HTML information for the website along with the response and hence, it processes and displays the HTML page on the browser. Finally, the users can see a HTML page for the URL that they entered
 
-> An HTTP request consists of 3 parts i.e. a request line, request headers, and request body
-
-<ins>HTTP Request</ins>   
-![Screenshot 2023-01-03 at 5 08 12 AM](https://user-images.githubusercontent.com/16437905/210285140-625c7164-aa21-4dbb-8dcf-87893283b71c.png)
-
-<ins>HTTP Response</ins>   
-![Screenshot 2023-01-03 at 5 08 21 AM](https://user-images.githubusercontent.com/16437905/210285143-4aede94e-2830-4de7-8f1d-1e67db468086.png)
-
 
 
 <ins>TCP</ins>    
