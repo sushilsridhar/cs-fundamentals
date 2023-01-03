@@ -69,7 +69,7 @@ The Application layer uses Transport layer and any levels below it to communicat
 
 [HTTP internally uses TCP Connection](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/TCP.md)
 
-[HTTPS uses crytographic algorithms like SSL and TLS](https://github.com/sushilsridhar/cs-fundamentals/edit/main/cn/HTTP.md#https)
+[HTTPS uses crytographic algorithms like SSL and TLS for security](https://github.com/sushilsridhar/cs-fundamentals/edit/main/cn/HTTP.md#https)
 
 # Transport Layer     
 
@@ -78,7 +78,7 @@ Protocol  : Transmission Control Protocol (TCP)
 Job       : determine how to send the data packets from source to destination
 ```
 
-Transmission Control Protocol (TCP) The transmission control protocol (TCP) is a transport layer protocol that works along with the internet protocol to transmit data over the internet. It is a connection-oriented and reliable protocol i.e. it establishes the connection first and then only, sends data over the established connection hence, there is no packet loss in the transmission control protocol.
+Transmission Control Protocol (TCP) is a transport layer protocol that works along with the internet protocol to transmit data over the internet. It is a connection-oriented and reliable protocol i.e. it establishes the connection first and then only, sends data over the established connection hence, there is no packet loss in the transmission control protocol.
 
 Transmission Control Protocol is responsible for the delivery of data once the Internet protocol gets the IP address of the destination.
 
@@ -89,12 +89,21 @@ Protocol  : Internet Protocol (IP)
 Job       : determine how to send the data packets from source to destination, divides data recieved into packets
 ```
 
+The network layer does not guarantee the delivery of packets to the destination. There is no reliability guarantee as well.
+
 Internet Protocol (IP) The internet protocol is a network layer protocol that is responsible for defining the rules that define how the information is sent over an internet connection from one computer to another    
 
 Internet Protocol is responsible for gathering the addresses to which the data is to be transmitted.
 
 he network layer divides the data received from the transport layer in the form of packets.
 The network layer provides two ways of communication namely - connection-oriented and connectionless.
+
+Logical Addressing: The network layer adds the logical address i.e. IP address (Internet Protocol address) if the packet crosses the network boundary. It helps in the proper identification of devices on the network. Hence, the network layer adds the source and destination address to the header of the packet.
+
+Routing: Routing simply means determining the best (optimal) path out of multiple paths from the source to the destination. So the network layer must choose the best routing path for the data to travel.
+
+If many devices are connected on the same router then there is a change of packet drop due as a router may not be able to handle all the requests. So, the network layer controls the congestion on the network as well
+
 
 
 # Network Interface Layer        
