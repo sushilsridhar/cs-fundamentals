@@ -1,8 +1,19 @@
 # Transmission Control Protocol
 
-Transport layer protocol, which guaranty delivery of data and in-order delivery of data   
+> TCP is reliable (because connection oriented)          
 
-> TCP is reliable (because connection oriented), if you want to delivery data, it will get delivered    
+<ins>Things done by TCP in Transport Layer</ins>  
+```
+Guaranteed delivery  -  if you want to delivery data, it will get delivered  
+In-order delivery    -  the data must be received in the same sequence as it was sent by the sender   
+
+create segments      -  recieves data from application layer and converts them to segments
+port addressing      -  addition of a port number to the header of the data
+
+flow control         - 
+error control        -
+
+```
 
 <ins>Connection Oriented</ins>    
 the connection is established and the data is sent over the connection only after the establishment of the connection
