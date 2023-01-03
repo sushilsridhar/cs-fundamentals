@@ -64,7 +64,7 @@ if wrapper classes were mutable, all three Foo objects will have wrong values,
 
 where static variables are stored
 
-
+where methods are stored
 
 # add these 
 research on jvm       
