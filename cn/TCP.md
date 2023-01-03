@@ -29,3 +29,8 @@ the connection is established and the data is sent over the connection only afte
 
 
 ![Screenshot 2023-01-03 at 4 57 01 AM](https://user-images.githubusercontent.com/16437905/210284685-b604fcc0-c4f0-4040-9bd7-f3da07f7eac1.png)
+
+
+# Code
+read this 
+https://www.scaler.com/topics/computer-network/difference-between-transport-layer-and-network-layer/
