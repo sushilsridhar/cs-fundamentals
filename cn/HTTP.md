@@ -15,11 +15,12 @@ as it doesn't use the data that was sent in previous request and is independent 
 
 [HTTP internally uses TCP Connection](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/TCP.md)
 
-HTTP relies on the TCP (Transmission Control Protocol) and it works on the PORT number 80, Hence, a connection is first established (TCP connection) and then the data is transferred over this connection
-
 > HTTP uses TCP, so TCP connection (3-way handshake) is created for connection
 
+HTTP relies on the TCP (Transmission Control Protocol) and it works on the PORT number 80, Hence, a connection is first established (TCP connection) and then the data is transferred over this connection
 
+
+<ins>Types of HTTP Connection</ins>     
 ```
 Non-Persistant Connection - for every request, create a new connection      
 Persistant Connection     - multiple request, single connection 
