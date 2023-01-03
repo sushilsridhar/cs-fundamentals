@@ -72,3 +72,6 @@ meaning, the moment you login, ftp maintains that session and assumes the previo
 
 req 1 and req 2, req2 is dependent on req1 and use data that was sent in req1   
 
+https://www.scaler.com/topics/computer-network/file-transfer-protocol/
+
+
