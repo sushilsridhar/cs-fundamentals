@@ -52,6 +52,14 @@ current instructor attribute can id from instructor table, string name, decide u
 ![Screenshot 2023-01-04 at 9 37 52 AM](https://user-images.githubusercontent.com/16437905/210483224-4d4b65b2-0118-4ee6-89db-764880f6fe83.png)
 ![Screenshot 2023-01-04 at 9 38 25 AM](https://user-images.githubusercontent.com/16437905/210483230-2e49c611-9716-4af3-a467-60d9f78abad0.png)
 
+<ins>Represent cardinality in database</ins>   
+```
+1-1  : put the id of one entity in another entity 
 
+1-m 
+m-1  : put the id of 1 side to m side 
+
+m-m  : create a mapping table, to store ids of both the entities
+```
 
 
