@@ -62,4 +62,8 @@ m-1  : put the id of 1 side to m side
 m-m  : create a mapping table, to store ids of both the entities
 ```
 
+<ins>Caveats</ins>    
+1. If there are lots of null values(sparse table) in foreign key, consider representing that relationship with mapping table  
+2. when mapping table, starts to act like entity, consider breaking it out ( but be thoughtful not to overkill)
 
+![Screenshot 2023-01-05 at 8 58 24 PM](https://user-images.githubusercontent.com/16437905/210817015-335f0efc-e8f2-4bb6-9e5b-7fb9c005a3b7.png)
