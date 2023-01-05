@@ -8,6 +8,26 @@ drop database har;
 
 <ins>Table</ins>
 ```
+create table students (
+    student_id int primary key,
+    first_name varchar(20),
+    last_name varchar(20)
+);
+
+drop table students;
+
+alter table students add batch_id int;
+
+create table batches (
+    batch_id int primary key,
+    name varchar(20)
+);
+
+alter table students 
+    add constraint student_batch_id foreign key(batch_id) 
+    references batches(batch_id);
+```
+```
 select * from sql_store.customers;
 
 insert into sql_store.customers
