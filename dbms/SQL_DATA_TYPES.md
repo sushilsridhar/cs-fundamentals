@@ -88,3 +88,16 @@ car_type {SEDAN, HASHBACK, SUV}
 more efficient 
 
 ![Screenshot 2023-01-06 at 6 22 02 AM](https://user-images.githubusercontent.com/16437905/210907629-9b5a3e38-550a-499d-9aa0-ba54d803533b.png)
+
+# Blob
+
+storing files or images   
+
+tiny blob - 255 bytes
+blob - 64 kb
+medium blob - 16 mb
+long blob - 4 gb
+
+# Date and Time
+
+
