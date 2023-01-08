@@ -98,6 +98,21 @@ blob - 64 kb
 medium blob - 16 mb
 long blob - 4 gb
 
+> in real world content delivery network (like AWS S3 bucket) is used instead of blobs    
+> aws s3 bucket URLs are stored in database   
+
 # Date and Time
 
+DATE, TIME, YEAR, DATEANDTIME, TIMESTAMP
 
+The DATETIME type is used for values that contain both date and time parts, MySQL retrieves and displays DATETIME values in 'YYYY-MM-DD hh:mm:ss' format, The supported range is '1000-01-01 00:00:00' to '9999-12-31 23:59:59'   
+
+The TIMESTAMP data type is used for values that contain both date and time parts, TIMESTAMP has a range of '1970-01-01 00:00:01' UTC to '2038-01-19 03:14:07' UTC   
+
+> Do not used timestamp, since it's range limit is upto the year 2038   
+
+<ins>advantage of timestamp</ins>   
+
+> Internationalization    
+
+The main difference is that DATETIME is constant while TIMESTAMP is affected by the time_zone setting, since it is stored in millisecond, by changing the timezone, the time data changes when time_zone is changed     
