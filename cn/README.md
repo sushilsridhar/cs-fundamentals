@@ -50,7 +50,7 @@ OSI model gives guidelines on how communication needs to be done, while TCP/IP p
 
 ``` 
 Job       : Generate the data on the sender side to be sent / recieve the data on reciever side
-Protocols : DHCP, DNS, HTTP, SMTP, FTP, TELNET
+Protocols : DHCP, DNS, HTTP, SMTP, FTP, TELNET, SSH
 ```
 
 It is combination of three layers, Application, Presentation and Session layer
@@ -74,13 +74,34 @@ The Application layer uses Transport layer and any levels below it to communicat
 # Transport Layer     
 
 ```
-Protocol  : Transmission Control Protocol (TCP)
-Job       : determine how to send the data packets from source to destination
+Job       : logical communication between the processes running on different hosts
+Protocol  : Transmission Control Protocol (TCP), User Datagram Protocol (UDP)
 ```
+The transport layer mainly deals with process to process(running on different hosts) communication and             
+performs the port addressing, the addition of a port number to the header of the data       
 
-Transmission Control Protocol (TCP) is a transport layer protocol that works along with the internet protocol to transmit data over the internet. It is a connection-oriented and reliable protocol i.e. it establishes the connection first and then only, sends data over the established connection hence, there is no packet loss in the transmission control protocol.
+[TCP is Stateful protocol](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/TCP.md)            
 
-Transmission Control Protocol is responsible for the delivery of data once the Internet protocol gets the IP address of the destination.
+[TCP is reliable and connection oriented](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/TCP.md#reliable-and-connection-oriented)            
+
+[TCP three way handshake]()             
+
+[Break data into segments](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/TCP.md#tcp-segmentation)             
+
+[Process to Process communication on different host]()            
+
+[UDP is unreliable and connectionless](https://github.com/sushilsridhar/cs-fundamentals/blob/main/cn/TCP.md#user-datagram-protocol)
+
+
+# Network
+
+The network layer is the third layer of the OSI model which provides communication between hosts of different networks. The network layer divides the data received from the transport layer in the form of packets. The network layer provides two ways of communication namely - connection-oriented and connection-less.
+
+The network mainly deals with logical communication between the hosts present on the same or different network.
+The network layer provides communication between hosts of different networks.
+
+The network layer adds the logical address i.e. IP address (Internet Protocol address) if the packet crosses the network boundary.
+
 
 # Internet Layer     
 
