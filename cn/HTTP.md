@@ -1,6 +1,6 @@
 # Hyper Text Transfer Protocol
 
-HTTP is a stateless protocol,   
+> HTTP is a stateless protocol,   
 
 meaning, every request is independent and it will not be dependent on the previous request 
 
@@ -66,12 +66,17 @@ https://medium.com/@aswaikar123/what-is-http-and-https-learn-the-basics-of-http-
 
 # File Transfer Protocol 
 
-FTP is statefull protocol,        
+> FTP is statefull protocol,        
 
 meaning, the moment you login, ftp maintains that session and assumes the previous login data to do all the work    
 
 req 1 and req 2, req2 is dependent on req1 and use data that was sent in req1   
 
-https://www.scaler.com/topics/computer-network/file-transfer-protocol/
+The File Transfer Protocol (FTP) is designed to facilitate bi-directional transfer of files and records between hosts on a TCP/IP network, Unlike HTTP, the 
 
+> FTP protocol is stateful: the client establishes a Control Connection for the duration of an FTP session that typically spans multiple data transfers 
+
+FTP uses a separate TCP connection for data transfer, Commands are issued and acknowledged over the Control Connection, a TCP connection to well-known port 21. If the user issues a command that requires a response more elaborate than a one-line response code, a Data Connection is established between the client and the server, The response data—the contents of a file or a directory listing—is sent over that data connection     
+
+![Screenshot 2023-01-09 at 5 51 33 AM](https://user-images.githubusercontent.com/16437905/211226174-99e2c879-4607-4764-8179-208f17511df1.png)
 
