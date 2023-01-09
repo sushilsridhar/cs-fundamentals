@@ -22,8 +22,10 @@ error control        -  detecting and discarding corrupted packets,
 ```
 
 # Reliable and Connection Oriented    
-the connection is established and the data is sent over the connection only after the establishment of the connection,        
-establishes a virtual path before transmitting the data   
+the connection is established and the data is sent over the connection only after the establishment of the connection,   
+
+uses three way handshake and    
+establishes a virtual path before transmitting the data         
 
 ![Screenshot 2023-01-03 at 4 53 29 AM](https://user-images.githubusercontent.com/16437905/210284566-67d68bb6-b694-459f-8260-668072a5cc17.png)
 ![Screenshot 2023-01-03 at 4 55 08 AM](https://user-images.githubusercontent.com/16437905/210284613-53b2a994-bbe0-4907-b6ac-c4b80fd677e5.png)
@@ -40,11 +42,37 @@ Tracking of lost and discarded packets and re-transmit them
 
 ![Screenshot 2023-01-03 at 4 57 01 AM](https://user-images.githubusercontent.com/16437905/210284685-b604fcc0-c4f0-4040-9bd7-f3da07f7eac1.png)
 
-# Three way handshake 
+# Three way handshake (SYN - SYN ACK - ACK)
 
 before data transmission, connection is established using three way handshake    
 
+![Screenshot 2023-01-09 at 6 00 27 PM](https://user-images.githubusercontent.com/16437905/211308427-b6d4224d-4dd1-4ef6-ac8e-23f9bbb9d9d0.png)
 
+![Screenshot 2023-01-09 at 6 12 34 PM](https://user-images.githubusercontent.com/16437905/211310626-26e7e23e-8946-4ad1-add2-ce07417245fd.png)
+
+1. establish connection using three way handshake
+
+> SYN - SYN ACK - ACK
+
+2. Sending of data packets In the second step, 
+
+the data packets along with the sequence number are sent from the first computer system (client), The second computer (server) responds to these sent packets by sending an acknowledgment or ACK, This acknowledgment bit keeps on increasing with the number of packets sent this ACK bit helps to keep track of three things,    
+
+the successfully received packets,    
+the lost packets, and   
+the packets which were accidentally sent twice    
+
+3. Closing the connection
+
+> FIN - FIN ACK - ACK
+
+send FIN bit, recieve FIN ACK, send ACK bit - connection get closed       
+
+<ins>Congestion Control</ins>   
+Congestion means the amount of data transferred in the network. So, the transmission control protocol also accounts for the level of congestion and sends the packets accordingly   
+
+<ins>Stream-oriented data transfer</ins>    
+The transmission control protocol creates a virtual circuit or tube in which the data is exchanged in the form of a stream of bytes
 
 # TCP Segmentation
 
@@ -63,6 +91,8 @@ At the sender's end, transport layer collect data from application layer i.e mes
 
 <ins>At the receiver’s side</ins>        
 At the receiver's end, transport layer collects data from network layer and then reassembles the segmented data and identifies port number by reading its header to send that message to appropriate port in the session layer 
+
+reassembling of segments is done using sequence number in the header
 
 ![Screenshot 2023-01-09 at 10 35 34 AM](https://user-images.githubusercontent.com/16437905/211244026-bbd85186-09dc-4be2-8af7-a3cc754eb308.png)
 
