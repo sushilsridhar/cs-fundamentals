@@ -27,7 +27,7 @@ Open Systems Interconnection
 
 > It is a logical representation of how the network systems are supposed to send data (or, communicate) to each other  
 
-![Screenshot 2022-12-29 at 9 36 12 AM](https://user-images.githubusercontent.com/16437905/209902138-a158630d-d749-40fa-ac7b-6895f509ed1f.png)
+![Screenshot 2023-01-02 at 7 07 56 PM](https://user-images.githubusercontent.com/16437905/211294523-9de9275b-9dc7-42ee-bcb0-ff3b2a33bdfb.png)
 
 # Internet Protocol Suite - TCP/IP 
 > OSI model is a reference model while TCP/IP is an implementation of OSI model
