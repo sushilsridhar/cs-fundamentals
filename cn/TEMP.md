@@ -1,14 +1,3 @@
-# check
-Protocols: 
-
-```
-Presentation - encrypt/decrypt data, format data   
-Session      - create sessions    
-
-Transport    - TCP, UDP (transport Protocol are used)  
-Network      - IP layer (Internet Protocol layer), 
-```
-
 
 # IP
 
@@ -61,16 +50,6 @@ port number is unique to application running on same IP
 https: 443
 http : 80, what is relation between protocols and port number
 
-# application layer
-
-client server architecuter - centralized data,  clients consumes and server own any data
-peer to peer architecture - same apps running on end devices , blockchain bit torrent, no centralized server, everyone is client as weell as server 
-
-
-# HTTP 
-http is stateless protocol, tcp is stateful 
-
-it is application layer protocol, it uses TCP at transport layer
 
 
 # Questions
