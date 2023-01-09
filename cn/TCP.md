@@ -22,7 +22,8 @@ error control        -  detecting and discarding corrupted packets,
 ```
 
 # Reliable and Connection Oriented    
-the connection is established and the data is sent over the connection only after the establishment of the connection,    
+the connection is established and the data is sent over the connection only after the establishment of the connection,        
+establishes a virtual path before transmitting the data   
 
 ![Screenshot 2023-01-03 at 4 53 29 AM](https://user-images.githubusercontent.com/16437905/210284566-67d68bb6-b694-459f-8260-668072a5cc17.png)
 ![Screenshot 2023-01-03 at 4 55 08 AM](https://user-images.githubusercontent.com/16437905/210284613-53b2a994-bbe0-4907-b6ac-c4b80fd677e5.png)
@@ -38,6 +39,11 @@ Detecting and discarding corrupted packets,
 Tracking of lost and discarded packets and re-transmit them 
 
 ![Screenshot 2023-01-03 at 4 57 01 AM](https://user-images.githubusercontent.com/16437905/210284685-b604fcc0-c4f0-4040-9bd7-f3da07f7eac1.png)
+
+# Three way handshake 
+
+before data transmission, connection is established using three way handshake    
+
 
 
 # TCP Segmentation
@@ -80,3 +86,6 @@ UDP can identify that an error has happened, but UDP does not identify which pac
 
 ![Screenshot 2023-01-09 at 10 39 28 AM](https://user-images.githubusercontent.com/16437905/211244359-16d8da3b-b8f8-45fc-9780-89dc7dee88cf.png)
 
+UDP protocol is generally used for real-time applications that do not allow uneven delays between received message sections, 
+
+> UDP is used by DNS, DHCP for transport layer
