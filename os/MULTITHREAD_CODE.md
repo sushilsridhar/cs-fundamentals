@@ -36,4 +36,17 @@ ExecutorService executorService = Executors.newCachedThreadPool();
 
 > Like runnables, Callables are a way to define a task, unlike runnables, callables returns something back to the client    
 
+<ins>Future</ins>   
+a bucket(assurance) to give the real data when required
+
+```
+ Sorter leftSorter = new Sorter(leftArray, executorService);
+Sorter rightSorter = new Sorter(rightArray, executorService);
+
+Future<List<Integer>> leftArrayFuture = executorService.submit(leftSorter);
+Future<List<Integer>> rightArrayFuture = executorService.submit(rightSorter);
+
+List<Integer> leftSortedArray = leftArrayFuture.get();
+List<Integer> rightSortedArray = rightArrayFuture.get();
+```
 
