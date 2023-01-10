@@ -40,7 +40,7 @@ ExecutorService executorService = Executors.newCachedThreadPool();
 a bucket(assurance) to give the real data when required
 
 ```
- Sorter leftSorter = new Sorter(leftArray, executorService);
+Sorter leftSorter = new Sorter(leftArray, executorService);
 Sorter rightSorter = new Sorter(rightArray, executorService);
 
 Future<List<Integer>> leftArrayFuture = executorService.submit(leftSorter);
