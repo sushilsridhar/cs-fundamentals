@@ -30,3 +30,22 @@ more than one thread tries to enter or execute the critical section at the same
 
 # Mutex
 
+> Mutual Exclusion - only one thread is allowed to access critical section at a time    
+
+lock notifies other waiting threads when t1 completes   
+
+```
+Lock lock = new ReentrantLock();
+
+count is shared object
+lock is shared object
+
+@Override
+    public void run() {
+        for(int i=0; i<10000; i++) {
+            lock.lock();
+            count.value = count.value + 1; // critical section
+            lock.unlock();
+        }
+    }
+```
