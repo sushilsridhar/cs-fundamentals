@@ -49,3 +49,34 @@ lock is shared object
         }
     }
 ```
+
+# Synchronized keyword
+
+> implicit lock in every object
+
+```
+ @Override
+    public void run() {
+        for(int i=0; i<10000; i++) {
+            synchronized (random) { 
+                // convention is use count object as param but 
+                // can use any object (random), but other threads modifying the count object must acquire lock on random
+                count.value = count.value - 1;
+            }
+        }
+    }
+```
+
+# Locks vs Synchronized
+
+> locks give more control to developers    
+
+Locks can be implemented across the methods, you can invoke lock() in method1 and invoke unlock() in method2, this can't be done in synchronized    
+
+```
+Lock.lock();    
+myMethod();
+Lock.unlock();      
+```
+unlock() cant be executed in this code if any exception being thrown from myMethod(), synchronized release the lock automatically not requiring to write try catch finally   
+
