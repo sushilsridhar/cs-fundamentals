@@ -66,6 +66,12 @@ lock is shared object
         }
     }
 ```
+> use synchronized blocks rather than methods   
+
+because we have control on where the synchronized block starts and ends, more readable regards to what object is being locked   
+
+![Screenshot 2023-01-11 at 11 46 16 AM](https://user-images.githubusercontent.com/16437905/211731615-f8b4b225-c19b-4f8a-aa02-67a3775d080b.png)
+
 
 # Locks vs Synchronized
 
@@ -79,4 +85,6 @@ myMethod();
 Lock.unlock();      
 ```
 unlock() cant be executed in this code if any exception being thrown from myMethod(), synchronized release the lock automatically not requiring to write try catch finally   
+
+# Semaphores
 
