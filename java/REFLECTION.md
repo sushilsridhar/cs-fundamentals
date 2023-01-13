@@ -7,9 +7,13 @@ Java object exists only inside JVM, it is programming lanugage construct,
 <ins>Serialization</ins>: convert java object to bytes, (storage to disk or send over network)    
 <ins>deserializaiton</ins>: convert bytes to java object    
 
+> final variable in java can be changed using reflection
+
 <ins>Class class</ins>          
 
-        Class objClass = o.getClass();
+```
+Class objClass = o.getClass();
+```
 objClass is an object, a reference to a class itself, a place in memory which has the definition of class itself,               
 the blueprint itself can be refered as object and can be pointed to, passsed around             
 
