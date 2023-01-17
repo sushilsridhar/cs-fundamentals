@@ -1,4 +1,19 @@
+# Introduction
+
+A thread doesn't have to keep variables in its local cache -- but it is allowed to, when you tell it
+
+If you want to force a thread to share its state with other threads, you have to use synchronization of some sort (including synchronized blocks, volatile variables, etc)
+
+
 # Volatile 
+> The volatile modifier guarantees that any thread that reads a field will see the most recently written value, 
+
+static variables may be cached for individual threads, In multi-threaded environment if one thread modifies its cached data, that may not reflect for other threads as they have a copy of it,    
+
+volatile declaration makes sure that threads won't cache the data and uses the shared copy only
+
+![volatile](https://user-images.githubusercontent.com/16437905/212918097-3afd94fc-374c-4def-8bad-473929a09f2d.png)
+
 
 # Atomic 
 
@@ -10,8 +25,14 @@
 
 # Thread local cache
 
+If you want to prevent a thread from sharing its state with other threads, you have to use ThreadLocal (assuming the object that holds the variable is known to multiple threads -- if it's not, then everything is thread-local anyway)
+
 opposite to sharing data between threads    
 
+```
+ThreadLocal<Long> b = new ThreadLocal<>();
+b.set(11L + Thread.currentThread().getId()); // unique for each thread
+```
 
 # Double checked locking 
 
