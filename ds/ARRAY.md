@@ -20,6 +20,10 @@ so a[n] would be equal to doing 0x00 + (n * sizeof(type))
 
 Assume you have to write a code that takes the marks of five students, Instead of creating five different variables, you can just create an array of    lengths of five, As a result, it is so easy to store and access data from only one place, and also, it is memory efficient   
 
+```
+int[] number = new int[10]
+```
+![Screenshot 2023-01-18 at 3 40 11 PM](https://user-images.githubusercontent.com/16437905/213144169-ef97d9b1-7d94-4033-a33f-001676a6efd3.png)
 
 ![Screenshot 2023-01-18 at 1 32 46 PM](https://user-images.githubusercontent.com/16437905/213116371-49432122-ea0d-47f1-89fe-731c93285b05.png)
 
@@ -93,29 +97,7 @@ remove                | O(n)   | O(n)
 
 
 
-# Subarray
-Arrays.toString();
-cover arrays utils class 
+# Subarray Subsequence Subset
 
 [What is Subarray? Subsequence? Subset?](https://github.com/sushilsridhar/cs-fundamentals/blob/main/algo/SUBARRAY_SUBSEQUENCE_SUBSET.md)
-
-total number of subarray - n(n+1)/2
-
-
-# check
-
-To solve arrays,
-
-1) use HashSet or HashMap
-2) two pointer approach, where inserting into same array (in-place questions)
-   one index for iterating, other for tracking the lastNonZeroElementIndex (or any requirement)
-
-
-Array Techniques
-
-1)Contribution technique - Adding contribution of each and every element, finding the number of occurrence of one element in all subarrays, and adding them individually
-2)Carry forward - carring the previous subarray sum to new subarray
-3)Sliding window - for the new subarray, subtract the previous element to startindex and add the element of new end index
-4)Two pointer - for removing duplicate element, using the same input array itself for processing, without extra space
-5)Prefix Sum - for problems with queries, Add X to array, from startIndex to endIndex, eg 4-8, add 9 , 0-4, add 14
 
