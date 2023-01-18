@@ -1,5 +1,5 @@
 # Bit wise operators  
-& | ^ ~  
+& | ^ ~  >> <<     
 
 byte a = 10 , binary = 0000 1010  
 byte a = -10, binary = ?  
@@ -16,6 +16,9 @@ add 1, 0 0 0 0 0 0 0 1, this will become, 0 0 0 0 0 0 0 0 , the added 1 will ove
 1 1 1 1 1 1 1 1  
 0 0 0 0 0 0 0 1   
 
+![Screenshot 2023-01-18 at 5 29 58 AM](https://user-images.githubusercontent.com/16437905/213038494-3690c252-b765-40e6-a1f3-40cc55faffb4.png)
+
+
 # Left and Right shift 
 for left shift  <<, the MSD digit should be disguarded   
 for right shift >>, the MSD digit should be retained   
@@ -29,7 +32,7 @@ In general
 left shift operator  --> multiply by 2  
 right shift operator --> divide by 2
 
-# tricks    
+# tricks - Bitwise Operators are faster  
 a = 10 , a = 13  
 
 if(a&1 == 0) a is even  
