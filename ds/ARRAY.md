@@ -60,14 +60,27 @@ tc: O(n), but takes half the time of copying with for loop
 
 <ins>Java implementation</ins>      
 
+> Vector is same as ArrayList, but synchronized (even get method is synchronized)
+
+Vector is legacy class created before Arraylist, a Vector defaults to doubling the size of its array, while the ArrayList   
+increases its array size by 50 percent  
+
 ```
+ArrayList<Integer> list = new ArrayList<>();
 
-
+Vector<Integer> vector = new Vector<>();
 ```
 
 # When to choose Arrays
 
+<ins>static array</ins>  
 > when O(1) random access time is required    
+
+<ins>dynamic array</ins>  
+> variable size with O(1) random access
+
+<ins>Vector</ins>  
+> thread safe dynamic array  
 
 # Time complexity
 
@@ -84,28 +97,25 @@ remove                | O(n)   | O(n)
 Arrays.toString();
 cover arrays utils class 
 
-[SUBARRAY_SUBSEQUENCE_SUBSET](https://github.com/sushilsridhar/cs-fundamentals/blob/main/algo/SUBARRAY_SUBSEQUENCE_SUBSET.md)
+[What is Subarray? Subsequence? Subset?](https://github.com/sushilsridhar/cs-fundamentals/blob/main/algo/SUBARRAY_SUBSEQUENCE_SUBSET.md)
 
 total number of subarray - n(n+1)/2
 
 
+# check
 
-# Java implementation
+To solve arrays,
 
-ArrayList  
-Vector  
-
-find out what are the ds that uses array internally?
-
-
-Vectors are synchronized, ArrayLists are not.
-Data Growth Methods
-Use ArrayLists if there is no specific requirement to use Vectors.
-
-Internally, both the ArrayList and Vector hold onto their contents using an Array. When an element is inserted into an ArrayList or a Vector, 
-the object will need to expand its internal array if it runs out of room. 
-A Vector defaults to doubling the size of its array, while the ArrayList increases its array size by 50 percent.
+1) use HashSet or HashMap
+2) two pointer approach, where inserting into same array (in-place questions)
+   one index for iterating, other for tracking the lastNonZeroElementIndex (or any requirement)
 
 
-Applications
-1. freq array to map between indexes and values
+Array Techniques
+
+1)Contribution technique - Adding contribution of each and every element, finding the number of occurrence of one element in all subarrays, and adding them individually
+2)Carry forward - carring the previous subarray sum to new subarray
+3)Sliding window - for the new subarray, subtract the previous element to startindex and add the element of new end index
+4)Two pointer - for removing duplicate element, using the same input array itself for processing, without extra space
+5)Prefix Sum - for problems with queries, Add X to array, from startIndex to endIndex, eg 4-8, add 9 , 0-4, add 14
+
