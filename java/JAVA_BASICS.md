@@ -60,6 +60,47 @@ if wrapper classes were mutable, all three Foo objects will have wrong values,
     /*  1 2 3 */
  ```
 
+# Reading from console
+
+```
+Scanner in = new Scanner(System.in);
+
+reads line by line
+String a = in.nextLine();
+
+reads by space, space is delimiter
+int b = in.nextInt();
+String c = in.next();
+
+```
+
+<ins>Read one by one by space</ins>     
+```
+input: 1 2 3 4 5 6 7 
+
+int n = in.nextInt();
+int[] arr = new int[n];
+
+for(int i=0; i<n; i++) {
+    arr[i] = in.nextInt();
+}
+```
+
+<ins>Read entire line and split by space</ins>    
+```
+input: 1 2 3 4 5 6 7 
+
+String[] strArr = in.nextLine().split(" ");
+
+// way 1
+int[] intArr = Arrays.stream(strArr).mapToInt(Integer::parseInt).toArray();
+
+// way 2
+for(int i=0; i<strArr.length; i++) { 
+    intArr[i] = Integer.parseInt(strArr[i]);
+}
+```
+
 # Where variables in java are stored?
 
 where static variables are stored
