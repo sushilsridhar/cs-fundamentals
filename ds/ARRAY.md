@@ -96,6 +96,9 @@ add(index, element)   | O(n)   | O(n)
 remove                | O(n)   | O(n)
 
 
+# Real world application
+
+[String class is build on top of char array](https://github.com/sushilsridhar/cs-fundamentals/blob/main/ds/STRING.md)
 
 # Subarray Subsequence Subset
 
