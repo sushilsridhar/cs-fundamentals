@@ -1,5 +1,8 @@
 # String
 
+> Ordered sequence of characters    
+
+
 immutable, once created can't be changed  
 since it can't be changed, it can be shared 
 
@@ -88,8 +91,62 @@ String t6 = new String("hello");            | heap          | different
 
 ```
 
+<ins>ASCII value of</ins>  
+
+> 'a'-'A' gives 32, use this value instead of remembering ASCII values    
+
+```
+  'A' - 65
+  'B' - 66
+  'C' - 67
+  'Z' - 90
+
+  'a' - 97
+  'b' - 98
+  'c' - 99
+  'z' - 122
+
+  '0' - 48
+  '1' - 49
+  '9' - 57
+```
+
 # String methods  
 
+Replace multiple white spaces with a single white space,    
+
+```
+    String s = str.trim().replaceAll("\\s+"," ");
+```    
+
+Substring method
+``` 
+    
+  System.out.println("hello".substring(1, 5));
+  System.out.println("hello".substring(-1+1, 5));
+
+  prints ello, substring method is exclusive of start index and inclusive of end index
+  also for substring method, index starts from 1 not 0
+
+
+ Substring method internal working
+
+    prints ello,
+    0-1 -> prints h
+
+    substring method is exclusive of start index and inclusive of end index
+    also for substring method, index starts from 1 not 0, endIndex of 5 in substring means actual index of 4 in string
+
+    in other words,
+
+                // 0 1 2 3 4 - string index
+                // 1 2 3 4 5 - substring method index
+                // h e l l o
+    i-j (0-1) means, print from i+1 to j with starting index as 1
+
+    0-1 --> 1-1 -> since startindex is from 1 for substring, h is printed
+    0-5 --> 1-5 -> hello is printed
+```
 
 # When to think of Strings? 
 
