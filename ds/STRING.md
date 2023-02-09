@@ -148,7 +148,13 @@ Substring method
     0-1 --> 1-1 -> since startindex is from 1 for substring, h is printed
     0-5 --> 1-5 -> hello is printed
 ```
-
+```
+    char a = s.charAt(0);
+    boolean isPresent = s.contains("asd");
+    int index = s.indexOf("a");
+    String[] str = s.split("");
+    char[] arr = s.toCharArray();
+```
 # When to think of Strings? 
 
 When n number of String objects with same value (string literals) are to be created multiple times, Java String class can save heap space by using the concept of string pool and intern, it reduces load on memory and improves performance 
