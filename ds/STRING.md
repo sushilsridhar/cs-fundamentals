@@ -135,7 +135,8 @@ Substring method
     0-1 -> prints h
 
     substring method is exclusive of start index and inclusive of end index
-    also for substring method, index starts from 1 not 0, endIndex of 5 in substring means actual index of 4 in string
+    also for substring method, index starts from 1 not 0, 
+    endIndex of 5 in substring means actual index of 4 in string
 
     in other words,
 
@@ -199,8 +200,11 @@ new String objects are created in heap every time, wasting lot of memory space
 # Mutable Strings
 
 <ins>String Buffer</ins>  
+> thread safe   
 
 <ins>String Builder</ins>   
+> not thread safe, hence faster than String buffer    
 
+most commonly used for string problems,   
 
 
