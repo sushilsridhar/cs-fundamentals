@@ -148,6 +148,8 @@ Substring method
     0-1 --> 1-1 -> since startindex is from 1 for substring, h is printed
     0-5 --> 1-5 -> hello is printed
 ```
+
+<ins>Other methods</ins>    
 ```
     char a = s.charAt(0);
     boolean isPresent = s.contains("asd");
