@@ -3,6 +3,15 @@
 function calling itself   
 > recursion is a technique of solving a problem using smaller instance of the same given problem
 
+<ins>Steps for writing recursive code</ins>   
+1. Assume that your code work
+2. Identify recursive equation    
+   main logic to solve bigger problems using smaller subproblems
+3. Base condition,    
+   when your code to should stop
+
+> recursive code occupies stack space, which needs to be added to space complexity
+
 # Recurrence Relation
 
 <ins>Sum of n numbers</ins>
