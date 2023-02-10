@@ -18,18 +18,18 @@ function calling itself
 
 sum(n) = A<sub>1</sub> + A<sub>2</sub> + A<sub>3</sub> ... + A<sub>n</sub>
 
-> sum(n) = sum(n-1) + A<sub>n</sub>  
+> Recursive equation : sum(n) = sum(n-1) + A<sub>n</sub>  
 
 sum(n-1) is sum upto n-1 numbers + nth number, this is the recurrence relationship
 
 tc: O(n), sc: O(n)  
 
-<ins>calculate power</ins>  
+<ins>Calculate Power</ins>  
 
 A<sup>n</sup> = A<sup>n-1</sup> * A,   
 A<sup>n</sup> is defined in terms of smaller subproblems  
 
-> power(A, n) = power(A, n-1) * A
+> Recursive equation : power(A, n) = power(A, n-1) * A
 
 tc: O(n), sc: O(n)  
 
@@ -42,10 +42,10 @@ A<sup>n</sup> = A<sup>n/2</sup> * A<sup>n/2</sup> * A
 
 rewritten as when,  
 n is even,  
-> A<sup>n</sup> = (A<sup>n/2</sup>)<sup>2</sup>   
+> Recursive equation : A<sup>n</sup> = (A<sup>n/2</sup>)<sup>2</sup>   
 
 n is odd,    
-> A<sup>n</sup> = (A<sup>n/2</sup>)<sup>2</sup> * A    
+> Recursive equation : A<sup>n</sup> = (A<sup>n/2</sup>)<sup>2</sup> * A    
 
 ```
   int power(A, n) {
@@ -60,8 +60,7 @@ n is odd,
 ```
 
 n is divided into half for every function call, so the total number of function happens when n is divided by half on every step is log n,  
-tc: O(log n)  
-sc: O(log n)  
+tc: O(log n), sc: O(log n)
 
 # Time Complexity 
 
