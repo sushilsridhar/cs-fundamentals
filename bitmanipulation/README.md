@@ -27,15 +27,20 @@ for left shift  <<, the MSD digit should be disguarded
 for right shift >>, the MSD digit should be retained   
 
 to check if the ith bit is set or not  
+```
 return ((n >> i) & 1) == 1  
 return (n & (1 << i)) != 0  
 return (n & (1 << i)) == Math.pow(2, i)  
+```
 
 In general  
-left shift operator  --> multiply by 2  
-right shift operator --> divide by 2
+left shift operator means,    
+> ( << : multiply by 2 )     
 
-# tricks - Bitwise Operators are faster  
+right shift operator means,     
+> ( >> : divide by 2 )
+
+# Tricks - Bitwise Operators are faster  
 a = 10 , a = 13  
 
 ```
