@@ -207,6 +207,8 @@ new String objects are created in heap every time, wasting lot of memory space
 
 # Mutable Strings
 
+save lots of memory because no extra memory is used after updation on the StringBuilder or StringBuffer sequence,   
+
 <ins>String Buffer</ins>  
 > thread safe   
 
