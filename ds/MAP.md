@@ -88,36 +88,62 @@ map.put(key, value);
 <ins>Initial capacity</ins>      
 the default initial capacity is 16, set it to bigger number if you know there will be more values in hashmap, because rehashing is expensive    
 
-<ins>step 1:</ins> 
+<ins>step 1:</ins>      
+if the size for the hashmap reached the threshold size, which is load factor * capacity, resize and do rehashing 
+
+```
+Load Factor:    
+The capacity is expanded as the number of elements in the HashMap increases, The load factor is the measure 
+that decides when to increase the capacity of the Map, The default load factor is 75% of the capacity
+
+Rehashing:      
+Rehashing is the process of re-calculating the hash code of already stored entries, 
+When the number of entries in the hash table exceeds the threshold value, the Map is rehashed so that it has 
+approximately twice the number of buckets as before
+```
+
+<ins>step 2:</ins> 
 calculate the hashvalue using hash function  
 
-basic hash function,    
-Hash(key) = key%10 -> limits the range to 0-10,       
+basic hash functions,    
+Hash(key) = key%10 -> limits the range to 0-10,           
+
+Hash2(key) = key & (n-1),     
+Index = 63281940 & (16-1) = 4       
 
 ![Screenshot 2023-02-22 at 9 25 57 AM](https://user-images.githubusercontent.com/16437905/220518025-187097e0-2174-4350-8f54-8af1eff082ca.png)
 
 
-HashMap<K,V> manages an array of Node<K,V> objects, that will be replaced by another larger array if all of its elements has been assigned value  
+Hash Function in HashMap         
+```
+    static final int hash(Object key) {
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+    }
+    
+    hashCode() returns the integer value using a hashing algorithm
+```
 
+Hash Function in Hashtable         
+```
+    Entry<?,?>[] tab = table;
+    int hash = key.hashCode();
+    int index = (hash & 0x7FFFFFFF) % tab.length;
+```
+<ins>step 3:</ins>      
+use the hashvalue as the index of the array, where the node will be saved,     
 
+```
+Collision:      
+A collision occurs when a hash function returns the same hashvalue for two different keys
 
+Chaining: 
+if the keys are same, update the data, but if the keys are different, we need to use linkedlist to do chaining,      
 
-
-Internally, the HashMap is an array of nodes, HashMap makes use of array and LinkedList for storing key-value pairs  
-a node has a structure similar to a linked list node, An array of these nodes is called Bucket  
-
-<ins>step 2:</ins> based on hashvalue, calculate the index inside the bucket at which the value should be placed    
-<ins>step 3:</ins> if we get two same hashvalue for different keys, use the linkedlist structure, to place data in the same bucket sequentially   
-<ins>step 4:</ins> if the size for the hashmap is more than load factor * capacity (threshold), increase size and do rehashing  
-
-<ins>Load Factor:</ins> The capacity is expanded as the number of elements in the HashMap increases, The load factor is the measure that decides when to increase the capacity of the Map, The default load factor is 75% of the capacity
-
-<ins>Rehashing:</ins> Rehashing is the process of re-calculating the hash code of already stored entries, When the number of entries in the hash table exceeds the threshold value, the Map is rehashed so that it has approximately twice the number of buckets as before
-
-<ins>Collision:</ins> A collision occurs when a hash function returns the same bucket location for two different keys
-
-Chaining: Although the hash function should minimize the collision, if it still happens then we can use an array of LinkedList as a hash table to store data, the fundamental idea is for each hash table slot to point to a linked list of records with the same hash value. This technique is called chaining type of hashing in java.
-
+Although the hash function should minimize the collision, if it still happens then we can use 
+an array of LinkedList as a hash table to store data, the fundamental idea is for each hash table 
+slot to point to a linked list of records with the same hash value. This technique is called chaining
+```
 
 # Map
 
@@ -125,10 +151,6 @@ Chaining: Although the hash function should minimize the collision, if it still 
 hashmap
 
 concurrent hashmap
-
-why map is not part of collection
-
-hashmap internal working
 
 hashtable vs hashmap
 
