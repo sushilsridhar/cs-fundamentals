@@ -114,7 +114,7 @@ Index = 63281940 & (16-1) = 4
 ![Screenshot 2023-02-22 at 9 25 57 AM](https://user-images.githubusercontent.com/16437905/220518025-187097e0-2174-4350-8f54-8af1eff082ca.png)
 
 
-Hash Function in HashMap         
+<ins>Hash Function in HashMap</ins>             
 ```
     static final int hash(Object key) {
         int h;
@@ -124,7 +124,7 @@ Hash Function in HashMap
     hashCode() returns the integer value using a hashing algorithm
 ```
 
-Hash Function in Hashtable         
+<ins>Hash Function in Hashtable</ins>             
 ```
     Entry<?,?>[] tab = table;
     int hash = key.hashCode();
@@ -145,31 +145,22 @@ an array of LinkedList as a hash table to store data, the fundamental idea is fo
 slot to point to a linked list of records with the same hash value. This technique is called chaining
 ```
 
-# Map
+# Types of Map
 
+```
+hashtable          - all methods synchronized, just array of entry, no collision handling mechanism
+hashmap            - not synchronized, uses array and linkedlist (tree incase of java 8), no order maintained
+Concurrent hashmap - partially synchronized, get method is not synchronized, put method is synchonized, others same as hashmap
 
-hashmap
+LinkedHashmap - 
+Treemap       -
 
-concurrent hashmap
-
-hashtable vs hashmap
-
-treemap
-linkedhashmap
+```
 
 
 collections util class
 
 https://www.interviewbit.com/java-collections-interview-questions/
-
-https://www.javatpoint.com/working-of-hashmap-in-java
-
-
-# Java Implementation
-
-HashTable 
-HashMap
-
 
 
 # Time Complexity
