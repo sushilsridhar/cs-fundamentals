@@ -165,12 +165,15 @@ https://www.interviewbit.com/java-collections-interview-questions/
 
 # Time Complexity
 
+main use of hashmap is O(1) Average time complexity
 
-main use of hashmap , O(1) Average time complexity
-- map.containsKey(key)  -> O(1)
-- map.put(key, value)   -> O(1)
-- map.get(key)          -> O(1)
-- map.remove(key)       -> O(1)
+| Operations | hashmap |
+:---: | :---: |
+containsKey(key)    | O(1) Average tc |
+put(key, value)     | O(1) Average tc |
+get(key)            | O(1) Average tc |
+remove(key)         | O(1) Average tc |
+
 
 # Real world applications
 1. key-value pair data
