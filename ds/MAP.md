@@ -91,16 +91,15 @@ the default initial capacity is 16, set it to bigger number if you know there wi
 <ins>step 1:</ins>      
 if the size for the hashmap reached the threshold size, which is load factor * capacity, resize and do rehashing 
 
-```
-Load Factor:    
+<ins>Load Factor:</ins>        
 The capacity is expanded as the number of elements in the HashMap increases, The load factor is the measure 
 that decides when to increase the capacity of the Map, The default load factor is 75% of the capacity
 
-Rehashing:      
+<ins>Rehashing:</ins>            
 Rehashing is the process of re-calculating the hash code of already stored entries, 
 When the number of entries in the hash table exceeds the threshold value, the Map is rehashed so that it has 
 approximately twice the number of buckets as before
-```
+
 
 <ins>step 2:</ins> 
 calculate the hashvalue using hash function  
@@ -133,27 +132,29 @@ Index = 63281940 & (16-1) = 4
 <ins>step 3:</ins>      
 use the hashvalue as the index of the array, where the node will be saved,     
 
-```
-Collision:      
+<ins>Collision:</ins>            
 A collision occurs when a hash function returns the same hashvalue for two different keys
 
-Chaining: 
+<ins>Chaining:</ins>      
 if the keys are same, update the data, but if the keys are different, we need to use linkedlist to do chaining,      
-
+      
 Although the hash function should minimize the collision, if it still happens then we can use 
 an array of LinkedList as a hash table to store data, the fundamental idea is for each hash table 
 slot to point to a linked list of records with the same hash value. This technique is called chaining
-```
+
 
 # Types of Map
 
 ```
 hashtable          - all methods synchronized, just array of entry, no collision handling mechanism
 hashmap            - not synchronized, uses array and linkedlist (tree incase of java 8), no order maintained
-Concurrent hashmap - partially synchronized, get method is not synchronized, put method is synchonized, others same as hashmap
+Concurrent hashmap - partially synchronized, get method is not synchronized, put method is synchonized, otherwise same as hashmap
 
 LinkedHashmap - 
 Treemap       -
+
+hashset
+entry set
 
 ```
 
