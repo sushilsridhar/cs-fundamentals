@@ -62,3 +62,7 @@ example, n = 4, size of the original array, total number of possible combination
 {2, 3, 4}
 {1, 2, 3, 4}
 </pre>
+
+<ins>Bit manipulation technique to solve subset problem</ins>    
+
+![Screenshot 2023-02-25 at 9 01 26 AM](https://user-images.githubusercontent.com/16437905/221334024-45eab26b-dd98-4ec6-9a37-5bf4235031f9.png)
