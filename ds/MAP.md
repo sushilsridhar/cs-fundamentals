@@ -48,6 +48,8 @@ Node structure
 ```
 class HashMap<K, V> {
 
+ Node<K,V>[] table;
+
  static class Node<K,V> implements Map.Entry<K,V> {
         final int hash;
         final K key;
