@@ -195,6 +195,20 @@ remove(key)         | O(1) Average tc |
 
 choosing a good hashing which spreads the data across the storage evenly, is the most important factor in hashmap
 
+<ins>Basic hash function</ins>    
+```
+ int size = 2069;
+ private Node[] map = new Node[size];
+    
+ private int hashing(int key) {
+      return key % size;
+ }
+```
+
+In order to minimize the potential collisions, it is advisable to use a prime number as the base of modulo, e.g. 2069      
+
+> even number have multiple factors, prime numbers have only two factors, 1 and number itself, which helps in minimizing the collisions
+
 # Real world applications
 1. key-value pair data
 2. HashSet is built on top of HashMap
