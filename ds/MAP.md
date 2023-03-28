@@ -82,16 +82,19 @@ Hash table uses hash values as the location index to store the associated data i
 
 # Internal working
 
+for put operation, 
+
 ```
 HashMap<Integer, Integer> map = new HashMap<>();
 
 map.put(key, value);
 ```
+
+**<ins>STEP 1: check threshold</ins>**            
+if the size for the hashmap reached the threshold size, which is load factor * capacity, resize and do rehashing 
+
 <ins>Initial capacity</ins>      
 the default initial capacity is 16, set it to bigger number if you know there will be more values in hashmap, because rehashing is expensive    
-
-<ins>step 1:</ins>      
-if the size for the hashmap reached the threshold size, which is load factor * capacity, resize and do rehashing 
 
 <ins>Load Factor:</ins>        
 The capacity is expanded as the number of elements in the HashMap increases, The load factor is the measure 
@@ -103,7 +106,7 @@ When the number of entries in the hash table exceeds the threshold value, the Ma
 approximately twice the number of buckets as before
 
 
-<ins>step 2:</ins> 
+**<ins>STEP 2: calculate hash value</ins>**      
 calculate the hashvalue using hash function  
 
 basic hash functions,    
@@ -131,7 +134,7 @@ Index = 63281940 & (16-1) = 4
     int hash = key.hashCode();
     int index = (hash & 0x7FFFFFFF) % tab.length;
 ```
-<ins>step 3:</ins>      
+**<ins>STEP 3: saving in bucket and collision handling</ins>**        
 use the hashvalue as the index of the array, where the node will be saved,     
 
 <ins>Collision:</ins>            
@@ -165,6 +168,16 @@ collections util class
 
 https://www.interviewbit.com/java-collections-interview-questions/
 
+# When to choose HashMap?
+
+key value pair storage is required, 
+
+> no memory wastage durning memory allocation
+
+> O(1) average tc for insert/update
+
+> O(1) average tc for search/get
+
 
 # Time Complexity
 
@@ -178,7 +191,12 @@ get(key)            | O(1) Average tc |
 remove(key)         | O(1) Average tc |
 
 
+# Good Hash function
+
+choosing a good hashing which spreads the data across the storage evenly, is the most important factor in hashmap
+
 # Real world applications
 1. key-value pair data
-2. in-memory cache for static/near static values. All your system properties, static business data
-3. distributed caching systems like Couchbase, membase, redis are sort of hashmaps extended to handle high concurrency and large scale data through replication and distribution
+2. HashSet is built on top of HashMap
+3. in-memory cache for static/near static values. All your system properties, static business data
+4. distributed caching systems like Couchbase, membase, redis are sort of hashmaps extended to handle high concurrency and large scale data through replication and distribution
