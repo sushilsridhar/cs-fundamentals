@@ -90,7 +90,7 @@ HashMap<Integer, Integer> map = new HashMap<>();
 map.put(key, value);
 ```
 
-**<ins>STEP 1: check threshold</ins>**            
+**<ins>STEP 1:</ins>**            
 if the size for the hashmap reached the threshold size, which is load factor * capacity, resize and do rehashing 
 
 <ins>Initial capacity</ins>      
@@ -106,7 +106,7 @@ When the number of entries in the hash table exceeds the threshold value, the Ma
 approximately twice the number of buckets as before
 
 
-**<ins>STEP 2: calculate hash value</ins>**      
+**<ins>STEP 2:</ins>**      
 calculate the hashvalue using hash function  
 
 basic hash functions,    
@@ -134,7 +134,7 @@ Index = 63281940 & (16-1) = 4
     int hash = key.hashCode();
     int index = (hash & 0x7FFFFFFF) % tab.length;
 ```
-**<ins>STEP 3: saving in bucket and collision handling</ins>**        
+**<ins>STEP 3:</ins>**        
 use the hashvalue as the index of the array, where the node will be saved,     
 
 <ins>Collision:</ins>            
