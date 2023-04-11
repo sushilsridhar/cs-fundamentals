@@ -148,6 +148,18 @@ an array of LinkedList as a hash table to store data, the fundamental idea is fo
 slot to point to a linked list of records with the same hash value. This technique is called chaining
 
 
+# Iteration
+
+```
+for(Map.Entry<Integer, Integer> e: map.entrySet()) {
+   e.getValue();
+   e.getKey();
+}
+        
+map.entrySet().forEach(e -> e.getKey());
+
+```
+
 # Types of Map
 
 
