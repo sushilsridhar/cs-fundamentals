@@ -150,18 +150,7 @@ slot to point to a linked list of records with the same hash value. This techniq
 
 # Types of Map
 
-```
-hashtable          - all methods synchronized, just array of entry, no collision handling mechanism
-hashmap            - not synchronized, uses array and linkedlist (tree incase of java 8), no order maintained
-Concurrent hashmap - partially synchronized, get method is not synchronized, put method is synchonized, otherwise same as hashmap
 
-LinkedHashmap - 
-Treemap       -
-
-hashset
-entry set
-
-```
 
 
 collections util class
