@@ -31,6 +31,8 @@ Deep copy         | creates new object (no sharing of object)
 Access modifiers  | public, default, private, protected, classes can have only public or default modifier    
 Super keyword     | allows access to parent class members from child class (attributes, methods and constructors) 
 
+protected access modifier - is accessible inside package and by subclasses outside the package   
+
 # Encapsulation
 
 > achieves abstraction by using access modifiers
@@ -77,6 +79,29 @@ pc.startEngine();
 
 
 # Polymorphism  
+
+> Achieves abstraction by abstracting out what object is being passed
+
+```
+public static void main(String[] args) {
+
+        TA ta = new TA("TA", "ta@scaler.com");
+        Mentor mentor = new Mentor("Mentor", "mentor@scaler.com");
+        Student student = new Student("Student", "student@scaler.com");
+
+        printName(ta);
+        printName(mentor);
+        printName(student);
+}
+
+
+// Abstraction - this method is abstracted out from object being passed
+public static void printName(User user) {
+    System.out.println(user.getName());
+}
+
+```
+
 1. ability of somethings to have multiple forms   
 2. compile time polymorphism - method overloading - (compiler knows which methods to call at compile time itself)   
 3. run time polymorphism - can be achieved using method overiding   
@@ -86,6 +111,7 @@ pc.startEngine();
 
 <ins>Method overiding</ins>: overide the method with same signature with different implementation in child class, happens in child class, the access modifier of overiding method should be same or more freedom than parent method, name params and return type should match parent class method   
 
+![polymorphism](https://user-images.githubusercontent.com/16437905/232064474-bf453e35-dd76-484b-b75b-3426244d7360.png)
 
 # <ins>Interface</ins>  
 > guides the behaviour of a group of entities           
