@@ -1,5 +1,5 @@
 <ins>Step 1:</ins>    
-Gather requirements - ask questions and clarify the requirements, box requirements to a minimium as possible 
+Gather requirements - ask questions and clarify the requirements, box core requirements to a minimium as possible     
 Interviewer expectations    
 
 what problem statement is the system solving?   
