@@ -3,9 +3,19 @@
 > The fundamental principle of OOP is Abstraction   
 
 <ins>Abstraction</ins> - making something as abstract, representing something as idea     
-representation of a complex system in terms of idea (data & behaviour)   
 
-<ins>3 pillars of OOP</ins>   
+turning on the video in the interview in zoom, you don't know how video is transmitted, you just know the idea that if you click the video button, the other person can see the video, you just use it and the internal working is abstracted out
+
+the target is to achieve abstraction    
+
+> representation of a complex system in terms of idea (entities - data & behaviour)   
+  
+as a client we don't need to care about how a idea works internally   
+
+<ins>3 pillars of OOP</ins>  
+
+the 3 pillars are the way to achieve the core principle abstraction       
+
 1. Encapsulation    
 2. Inheritance      
 3. Polymorphism   
@@ -21,16 +31,52 @@ Deep copy         | creates new object (no sharing of object)
 Access modifiers  | public, default, private, protected, classes can have only public or default modifier    
 Super keyword     | allows access to parent class members from child class (attributes, methods and constructors) 
 
-**<ins>Encapsulation</ins>**  
+# Encapsulation
+
+> achieves abstraction by using access modifiers
+
+think of a medicine capsule,    
+
+a class encapsulates the data and behaviour of the entity together
+
 1. stores data and behaviour of an idea together
 2. hides unneccessary details to the outside world
 3. only expose what we want to clients using access modifiers
 
-**<ins>Inheritance</ins>**    
+
+# Inheritance  
+
+> achieves abstraction - the implementation of the behaviours in base class is abstracted out and unknown to the outside world
+
 1. OOP allows us to design hierarchial systems with categorisation         
 2. reduces duplicate code        
 
-**<ins>Polymorphism</ins>**   
+
+```
+abstract class Car {
+    abstract void startEngine();
+}
+
+class PetrolCar extends Car {
+
+    private void checkFuel() {}
+
+    public void startEngine() {
+        checkFuel();
+        // do other things
+    }
+}
+
+
+Car pc = new PetrolCar();
+pc.startEngine();
+
+```
+
+![inheritance](https://user-images.githubusercontent.com/16437905/232023869-74c64d54-8374-447c-9573-f3ecb8ca6f1b.png)
+
+
+# Polymorphism  
 1. ability of somethings to have multiple forms   
 2. compile time polymorphism - method overloading - (compiler knows which methods to call at compile time itself)   
 3. run time polymorphism - can be achieved using method overiding   
@@ -41,7 +87,7 @@ Super keyword     | allows access to parent class members from child class (attr
 <ins>Method overiding</ins>: overide the method with same signature with different implementation in child class, happens in child class, the access modifier of overiding method should be same or more freedom than parent method, name params and return type should match parent class method   
 
 
-**<ins>Interface</ins>**   
+# <ins>Interface</ins>  
 > guides the behaviour of a group of entities           
 
 > does java support multiple inheritance, for classes - no , for interfaces - yes   
