@@ -113,7 +113,7 @@ public static void printName(User user) {
 
 ![polymorphism](https://user-images.githubusercontent.com/16437905/232064474-bf453e35-dd76-484b-b75b-3426244d7360.png)
 
-# <ins>Interface</ins>  
+# Interface  
 > guides the behaviour of a group of entities           
 
 > does java support multiple inheritance, for classes - no , for interfaces - yes   
