@@ -30,6 +30,8 @@ Shallow copy      | point to same address
 Deep copy         | creates new object (no sharing of object)
 Access modifiers  | public, default, private, protected, classes can have only public or default modifier    
 Super keyword     | allows access to parent class members from child class (attributes, methods and constructors) 
+Interface         | Pure abstraction, and enforces a certain behaviour to be implemented
+Abstract class    | Partial abstraction
 
 protected access modifier - is accessible inside package and by subclasses outside the package   
 
@@ -114,22 +116,80 @@ public static void printName(User user) {
 ![polymorphism](https://user-images.githubusercontent.com/16437905/232064474-bf453e35-dd76-484b-b75b-3426244d7360.png)
 
 # Interface  
+> Pure abstraction    
+
 > guides the behaviour of a group of entities           
 
-> does java support multiple inheritance, for classes - no , for interfaces - yes   
+enforces a certain behaviour to be implemented, but how to implement is abstracted    
 
+![interface](https://user-images.githubusercontent.com/16437905/232286695-5f7a5930-80ef-4106-b180-734a2fe9c06f.png)
+
+
+<ins> Interface represents a abstract idea, and it enforces a certain behaviour to be implemented</ins>    
+
+```
+interface Deque<E> {
+    
+    void push(E e);
+    
+    E pop();
+
+    E peek();
+}
+
+
+Deque<Integer> stack = new LinkedList<>();
+Deque<Integer> stack = new ArrayDeque<>();
+
+```
+
+<ins>JVM example for interface</ins>   
 JVM is a specification, the implementation is given by oracle, openJDK etc, specification enforce a particular behaviour to be implemented, the various implementations follow this guideline, so that it can be swapped, we can remove oracle jdk and replace it with openJDK to run the same java program,    
 
 Interface is similiar to specification, eg: defining the db related methods as interface, so that the implementation can be swapped if required ( changing to another db)   
 
-<ins>Marker interface</ins>: has no methods, it just a marker to give run-time type information about objects to compiler and jvm   
+> does java support multiple inheritance, for classes - no , for interfaces - yes   
 
-Serialization enables us to save the state of an object and recreate the object in a new location
+<ins>Marker interface</ins>   
+> has no methods, it just a marker to give run-time type information about objects to compiler and jvm   
 
-<ins>Functional interface</ins>: has only one abstract method, check callables
+Serializable : If a class implements the Serializable interface, we can serialize or deserialize the state of an object of that class
+
+```
+class Employee implements Serializable  
 
 
-**<ins>Abstract class</ins>**   
+Employee emp =new Employee(1187345,"Andrew"); 
+
+//Creating stream and writing the object    
+FileOutputStream fout=new FileOutputStream("employee_data.txt");    
+ObjectOutputStream out=new ObjectOutputStream(fout);    
+out.writeObject(emp);    
+
+```
+
+Cloneable : If we do not implement the Cloneable interface in the class and invokes the clone() method, it throws the ClassNotSupportedException.
+
+```
+class Product implements Cloneable   
+
+Product p2 = (Product) p1.clone();  
+```
+
+<ins>Functional interface</ins>   
+has only one abstract method, it enables functional programming and parallel processing
+
+```
+@FunctionalInterface
+public interface Runnable {}
+
+@FunctionalInterface
+public interface Callable<V> {}
+
+```
+
+# Abstract class
+
 It has attributes and behaviours, but not sure if some behaviours can be common to all childs, in that case declare the behaviour as abstract    
 
 
