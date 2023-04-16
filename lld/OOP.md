@@ -79,6 +79,10 @@ pc.startEngine();
 
 ![inheritance](https://user-images.githubusercontent.com/16437905/232023869-74c64d54-8374-447c-9573-f3ecb8ca6f1b.png)
 
+<ins>Multiple inheritance</ins>   
+
+> does java support multiple inheritance, for classes - no , for interfaces - yes   
+
 
 # Polymorphism  
 
@@ -148,8 +152,6 @@ JVM is a specification, the implementation is given by oracle, openJDK etc, spec
 
 Interface is similiar to specification, eg: defining the db related methods as interface, so that the implementation can be swapped if required ( changing to another db)   
 
-> does java support multiple inheritance, for classes - no , for interfaces - yes   
-
 <ins>Marker interface</ins>   
 > has no methods, it just a marker to give run-time type information about objects to compiler and jvm   
 
@@ -185,12 +187,12 @@ public interface Runnable {}
 
 @FunctionalInterface
 public interface Callable<V> {}
-
 ```
+
+![phonepe interface](https://user-images.githubusercontent.com/16437905/232294779-08db3ee5-ed73-48ab-87c7-5a991eb10196.png)
 
 # Abstract class
 
 It has attributes and behaviours, but not sure if some behaviours can be common to all childs, in that case declare the behaviour as abstract    
-
 
 
