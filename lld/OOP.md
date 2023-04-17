@@ -195,4 +195,9 @@ public interface Callable<V> {}
 
 It has attributes and behaviours, but not sure if some behaviours can be common to all childs, in that case declare the behaviour as abstract    
 
+# Static 
 
+After java 8, static variables and objects are also stored in heap itself,    
+
+associated with class,    
+using variables and methods without object creation    
