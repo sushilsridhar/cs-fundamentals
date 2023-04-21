@@ -26,8 +26,8 @@ the 3 pillars are the way to achieve the core principle abstraction
 Class             | Blueprint
 Object            | Real world entity
 Constructor       | default, custom, copy constructor 
-Shallow copy      | point to same address
-Deep copy         | creates new object (no sharing of object)
+Shallow copy      | point to same address (just the reference address which points to same object in heap is copied to new variable)
+Deep copy         | creates new object (no sharing of object - creates new objects - copies the new address to reference variable in deep copy)
 Access modifiers  | public, default, private, protected, classes can have only public or default modifier    
 Super keyword     | allows access to parent class members from child class (attributes, methods and constructors) 
 Interface         | Pure abstraction, and enforces a certain behaviour to be implemented
