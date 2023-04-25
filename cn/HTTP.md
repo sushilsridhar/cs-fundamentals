@@ -62,6 +62,13 @@ https://medium.com/@aswaikar123/what-is-http-and-https-learn-the-basics-of-http-
 
 ```
 
+Symmetric cryptography - same key used to encrypt and decrypt - AES DES 3DES      
+Asymmetric cryptography - public and private key - key generating mechanism RSA DSA     
+
+world's unbreakable encryption algorithm is OTP (one time pad) cipher       
+
+RSA is default key generation algorithm for SSH protocol
+
 # Code
 
 # File Transfer Protocol 
