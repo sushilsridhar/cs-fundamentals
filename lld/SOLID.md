@@ -70,10 +70,34 @@ Abstracting behaviour using interface
 ![Screenshot 2023-05-10 at 5 06 46 PM](https://github.com/sushilsridhar/cs-fundamentals/assets/16437905/16c96522-0d57-4197-84e3-304ec8900410)
 
 
-
 # Liskov substitution principle  
-- None of the classes should be forced to implement any method which it is not supposed to implement  
-- Objects of the parent class should be completely replaceble by child object (eg. Stack class can't extend ArrayList class, all methods in arraylist is not supported by stack, Stack implements List interface)
+
+> None of the classes should be forced to implement any method which it is not supposed to implement     
+
+> Object of any child class should be "as-is" subsitutable in a variable of parent type without requiring any code change   
+
+> To accommodate a new child object in a parent variable we shouldn't modify existing code
+
+<ins>To add a new bird</ins>    
+we can simply take different functionality required (classess and interface) and implement or extend it   
+adding a new bird doesn't modify existing code and doesn't violates LS Principle    
+
+```
+public class LinkedList<E>
+    extends AbstractSequentialList<E>
+    implements List<E>, Deque<E>
+```
+
+<ins>Creating a new child class without modifying the existing code</ins>   
+
+```
+public class OWl extends Bird implements Flyable, Soundable
+```
+
+> Satisfies LSP, SRP, OCP
+
+![Screenshot 2023-05-10 at 5 24 22 PM](https://github.com/sushilsridhar/cs-fundamentals/assets/16437905/f11d910a-1988-4c7e-8fb6-ea6ee883ee94)
+
 
 # Interface segregation
 - Every interface should have a single responsibility
