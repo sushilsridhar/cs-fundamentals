@@ -3,7 +3,7 @@ MATH.max(a,b)
 MATH.min(a,b)    
 MATH.abs(a)    
 MATH.pow(double a, double b) return double    
-MATH.PI    
+MATH.PI -> return double       
 MATH.floor(double a) return double    
 MATH.ceil(double a) return double    
 MATH.sqrt(double a) return double    
